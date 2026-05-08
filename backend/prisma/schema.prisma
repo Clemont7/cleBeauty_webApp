@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  price       String
+  duration    String
+  createdAt   DateTime @default(now())
+}
+
+model Booking {
+  id        String   @id @default(cuid())
+  service   String
+  date      DateTime
+  time      String
+  name      String
+  contact   String
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+}
+
+model Class {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  videoUrl    String?
+  isLocked    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
+
+model PortfolioItem {
+  id          String   @id @default(cuid())
+  title       String
+  category    String
+  imageUrl    String
+  beforeAfter Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
