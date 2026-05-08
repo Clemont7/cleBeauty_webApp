@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clé Beauty Academy | Digital Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ff0080",
+                "tech-black": "#0a0a0c",
+                "tech-gray": "#1a1a1e",
+                "tech-border": "#2a2a2e",
+                "background-light": "#f0f0f2",
+                "background-dark": "#050505",
+              },
+              fontFamily: {
+                "display": ["Manrope", "monospace"],
+                "mono": ["JetBrains Mono", "monospace"]
+              },
+              borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .pixel-grid {
+            background-image: radial-gradient(circle, #ee2b8c22 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .pixel-border {
+            box-shadow: 4px 4px 0px 0px #ee2b8c;
+        }
+    </style>
+<style>
+        .tech-grid { background-image: linear-gradient(#ffffff05 1px, transparent 1px), linear-gradient(90deg, #ffffff05 1px, transparent 1px); background-size: 20px 20px; }
+        .pixel-corner { position: relative; }
+        .pixel-corner::before { content: ''; position: absolute; top: 0; left: 0; width: 8px; height: 8px; border-top: 2px solid #ff0080; border-left: 2px solid #ff0080; }
+        .loading-bar { background: repeating-linear-gradient(45deg, #ff0080, #ff0080 10px, #ff0080dd 10px, #ff0080dd 20px); animation: progress-move 2s linear infinite; }
+        @keyframes progress-move { from { background-position: 0 0; } to { background-position: 40px 0; } }
+    </style></head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 lg:px-20 py-4 bg-white dark:bg-background-dark/50 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-10 bg-primary flex items-center justify-center border-b-4 border-r-4 border-black/20">
+<span class="material-symbols-outlined text-white">terminal</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-white text-xl font-black leading-tight tracking-tighter uppercase">Clé Academy <span class="text-xs font-mono opacity-50">v2.0.4</span></h2>
+<span class="text-[8px] font-mono uppercase tracking-[0.3em] opacity-60">Educational Protocol Active</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-all text-[10px] font-bold uppercase tracking-widest border-l-2 border-transparent hover:border-primary pl-2" href="#">Core_Modules</a>
+<a class="text-primary text-[10px] font-bold uppercase tracking-widest border-l-2 border-primary pl-2" href="#">User_Library</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-all text-[10px] font-bold uppercase tracking-widest border-l-2 border-transparent hover:border-primary pl-2" href="#">Live_Sync</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<div class="hidden sm:flex items-center border border-primary/20 bg-black/5 dark:bg-white/5 px-3 py-1 font-mono text-[10px]">
+<span class="text-primary mr-2">SYS:</span>
+<input class="bg-transparent border-none focus:ring-0 p-0 text-[10px] uppercase w-40" placeholder="EXECUTE_SEARCH..."/>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex flex-col items-end hidden lg:flex">
+<span class="text-[10px] font-black uppercase tracking-tighter">Admin_User</span>
+<span class="text-[8px] font-mono text-primary">SECURE_CONNECTION</span>
+</div>
+<div class="border-2 border-primary p-1">
+<div class="size-8 bg-slate-200 dark:bg-slate-800" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9FnuyKDbQTIx-uFonFQXN9m8fsc34rOpQtUv2-zn-eK6wM1pqX0YpFX11ZxE8Z_ZiCKHtlUw0aqq-PvV59w-2KbUZ3BhIDjhM9nDC0ig-RtYbcqng4AsOdjCVB3w-kJUzg_186j1PGM0N_Vgv7512n8SgTusrfQaE09DfYV86gSIC4i1dPy6GlaenyziTdfVxAFjrzlRn2DzhE-CR0sayUJbPESj0D5NmhfqasrJjFQ4nyYseXPYu575s-4q5rtosWeqnsWVWCH4"); background-size: cover;'></div>
+</div>
+</div>
+</div></header>
+<main class="flex-1 flex flex-col max-w-[1400px] mx-auto w-full px-6 py-12 gap-12 bg-background-dark text-slate-100">
+<!-- Hero Feature Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<div class="lg:col-span-8 group relative overflow-hidden rounded-xl bg-slate-900 pixel-border">
+<div class="absolute inset-0 tech-grid opacity-20"></div>
+<div class="relative p-8 h-full flex flex-col justify-between border-2 border-tech-border bg-tech-black">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<div class="flex gap-2">
+<span class="bg-primary text-white text-[9px] font-black px-2 py-0.5 uppercase tracking-widest">Protocol: Masterclass</span>
+<span class="border border-white/20 text-white text-[9px] font-black px-2 py-0.5 uppercase tracking-widest">Status: New_Entry</span>
+</div>
+<div class="text-[8px] font-mono text-primary/60 mt-2">ID: 882-991-SIG-EVENT</div>
+</div>
+<div class="text-white/20">
+<span class="material-symbols-outlined text-4xl">deployed_code</span>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 items-end">
+<div class="flex-1">
+<h1 class="text-white text-5xl font-black mb-4 uppercase tracking-tighter">Signature Event Makeup</h1>
+<p class="text-slate-400 max-w-md mb-8 text-xs font-mono leading-relaxed">Initialize professional sequence for high-impact cosmetic application. Targets: Red Carpet, High-Fashion, Bridal.</p>
+<div class="flex gap-0 border border-primary/20 w-fit">
+<button class="bg-primary hover:brightness-110 text-white font-black py-4 px-8 flex items-center gap-3 transition-all uppercase text-xs tracking-widest">
+<span class="material-symbols-outlined text-sm">terminal</span> Execute_Lesson
+                </button>
+<button class="bg-white/5 hover:bg-white/10 text-white font-bold py-4 px-6 transition-all text-xs uppercase tracking-widest border-l border-primary/20">
+                    View_Data_Log
+                </button>
+</div>
+</div>
+<div class="w-48 aspect-square border border-primary/20 p-2 grayscale hover:grayscale-0 transition-all">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALNzoI0_SF9z-Vs5cSmtXUbZBn_k9-Uam725iINlLtcilEeRU4RH-OfMv1IbRepo1QqGD2eJGgfx-yQCwCj3OeCl_-j4SwD_CBlwwQPHiIOJYji5r9hf7HtVCzpwkA1AOK6otgfaihPBCcViCVuxm2oH7XDyI5gcj0RSznVc3I7XkPOq8_zaFScRew1QTxRIWMTSko63MTO8sJCvKBv9oe5RBD3WggbrO3TySfeP1Qbi24jJ1G9ry-JAX9HWUfX-n_P4PkjnNE_vk"/>
+</div>
+</div>
+</div></div>
+<!-- Side Stats/Up Next -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 flex flex-col justify-between h-full shadow-sm">
+<div class="pixel-corner p-6 h-full bg-tech-gray border border-tech-border">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-primary font-black uppercase text-[10px] tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">monitoring</span> System_Progress
+        </h3>
+<span class="text-[8px] font-mono text-white/40">Uptime: 142h</span>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-mono">
+<span class="text-white">Academy_Tier_04</span>
+<span class="text-primary">68.00% COMPLETE</span>
+</div>
+<div class="w-full bg-black h-4 border border-primary/30 p-0.5">
+<div class="loading-bar h-full w-[68%]"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-px bg-tech-border">
+<div class="bg-tech-black p-4">
+<div class="text-xs text-primary font-mono mb-1">DAT_UNITS</div>
+<div class="text-2xl font-black text-white">12</div>
+</div>
+<div class="bg-tech-black p-4">
+<div class="text-xs text-primary font-mono mb-1">SYNC_TIME</div>
+<div class="text-2xl font-black text-white">45<span class="text-xs font-normal opacity-50">h</span></div>
+</div>
+</div>
+<div class="border-t border-tech-border pt-6">
+<div class="bg-black border border-primary/20 p-4 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-8 h-8 bg-primary/10 rotate-45 translate-x-4 -translate-y-4"></div>
+<p class="text-[8px] text-primary font-mono uppercase mb-1">Next_Unlock</p>
+<p class="text-[10px] font-black uppercase text-white tracking-tight">Adv_Hairstyling_Cert.bin</p>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<!-- Video Library Filter -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-wrap items-end justify-between gap-4">
+<div>
+<h2 class="text-2xl font-black uppercase italic tracking-tighter">Browse Library</h2>
+<p class="text-slate-500 text-sm">Choose from our curated collection of professional tutorials.</p>
+</div>
+<div class="flex gap-0 border border-tech-border overflow-hidden">
+<button class="px-6 py-3 bg-primary text-white text-[9px] font-black uppercase tracking-widest">01_ALL</button>
+<button class="px-6 py-3 border-l border-tech-border text-slate-400 hover:text-white hover:bg-white/5 text-[9px] font-black uppercase tracking-widest">02_MAKEUP</button>
+<button class="px-6 py-3 border-l border-tech-border text-slate-400 hover:text-white hover:bg-white/5 text-[9px] font-black uppercase tracking-widest">03_HAIR</button>
+<button class="px-6 py-3 border-l border-tech-border text-slate-400 hover:text-white hover:bg-white/5 text-[9px] font-black uppercase tracking-widest">04_SKIN</button>
+<button class="px-6 py-3 border-l border-tech-border text-slate-400 hover:text-white hover:bg-white/5 text-[9px] font-black uppercase tracking-widest">05_BIZ</button></div>
+</div>
+<!-- Video Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Data Bloc 1 -->
+<div class="bg-tech-black border border-tech-border group hover:border-primary transition-all">
+<div class="relative aspect-video border-b border-tech-border">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz1Qs972gDgQZpcgXpJJ9uKyo0op_vsupvSAPzyPDHjOF7K4EkGl9AHaZnrcZ4WhsefoelEDyAirga16DrUQYD4krAtd33XI57vgto9G1vHuIKoPNtOv29psRT2t5M43pFLias34BlUlwaSUxtX8JpAVeieu9RBLjZ7ZF4cK2eOCNRf_Q8QKwIGHYUpHsUaJIvK3QFKp0QvbJ9CfnNybQIurrAo7yJBdzjx4YWLOloV1XIHrU8geufEd6vcL6cfveeZ8yQCbCO6ps"/>
+<div class="absolute top-2 left-2 bg-black/80 text-primary text-[8px] font-mono px-2 py-0.5">PRTCL: MKUP_V1.0</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white text-[10px] font-black px-2 py-1">24:15</div>
+</div>
+<div class="p-5">
+<h3 class="text-white text-md font-black uppercase tracking-tight mb-2">Everyday Natural Glow</h3>
+<div class="flex items-center gap-3 mb-4">
+<div class="h-px flex-1 bg-tech-border"></div>
+<span class="text-[9px] font-mono text-primary uppercase">Beginner_Set</span>
+</div>
+<button class="w-full py-3 border border-primary/40 text-primary hover:bg-primary hover:text-white font-black text-[10px] uppercase tracking-widest transition-all">Initialise_Data</button>
+</div>
+</div>
+<!-- Data Bloc 2 -->
+<div class="bg-tech-black border border-tech-border group hover:border-primary transition-all">
+<div class="relative aspect-video border-b border-tech-border">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYycO5zNfxbnkSx9HVT8F77aU7w2Rszs1fk9iWKbIe_gCJ4OQCz6U6qCoTERXb0E8khKdQ1vPJZt1D-nkGAfAJoxgiGHEnesGWEY6xFuxUvXbHyFjBjBDILsyBbO7QJk3NaWRJrCqc_2iXpbBJ5Iklr7c0wXJ_SQEriLmx8Z8iBmceGYWjYYEE2ACo9w5NfvDMlH-oefeC66Pa1JqwD9qxDZlzX-7y2IzdMc40EKmH465IShabJzDEJ-YcAjGsK5z9Pvio17GAYTA"/>
+<div class="absolute top-2 left-2 bg-black/80 text-primary text-[8px] font-mono px-2 py-0.5">PRTCL: HAIR_V2.1</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white text-[10px] font-black px-2 py-1">18:40</div>
+</div>
+<div class="p-5">
+<h3 class="text-white text-md font-black uppercase tracking-tight mb-2">Modern Minimalist Braids</h3>
+<div class="flex items-center gap-3 mb-4">
+<div class="h-px flex-1 bg-tech-border"></div>
+<span class="text-[9px] font-mono text-primary uppercase">Int_Module</span>
+</div>
+<button class="w-full py-3 border border-primary/40 text-primary hover:bg-primary hover:text-white font-black text-[10px] uppercase tracking-widest transition-all">Initialise_Data</button>
+</div>
+</div>
+<!-- Data Bloc 3 (Locked) -->
+<div class="bg-tech-black border border-tech-border relative">
+<div class="absolute inset-0 z-10 bg-black/90 flex flex-col items-center justify-center p-6 text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">encrypted</span>
+<p class="text-white font-black uppercase text-xs tracking-widest">Restricted_Access</p>
+<p class="text-[8px] font-mono text-primary/60 mt-2">Requires Pro_Level_Cipher</p>
+<button class="mt-6 px-6 py-2 bg-primary text-white font-black text-[10px] uppercase tracking-widest">Upgrade_To_Unlock</button>
+</div>
+<div class="aspect-video bg-tech-gray opacity-20"></div>
+<div class="p-5 opacity-20">
+<div class="h-4 w-2/3 bg-tech-border mb-4"></div>
+<div class="h-2 w-full bg-tech-border"></div>
+</div>
+</div>
+<!-- Data Bloc 4 -->
+<div class="bg-tech-black border border-tech-border group hover:border-primary transition-all">
+<div class="relative aspect-video border-b border-tech-border">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfmOQCbXyFzBFWvpCdYhAHldrLc5UmZqphznMShYc5JWA2ycL0sdtPI6MMxqeW2sOaXNHwqm-_Ck_1--gt2hrsHPv1pGAYEe4PHhwbC8mhFuM0Uj-xsOGXIClLS37dLHoUFdLds6RsyFG1F0LvrAMRn2zPHRK-Gkmw0ySvck0hmIsb2TeZRc-lALgcLqeIJMZ0dVdvA9MbeVq1L0F6XdYRWEnWqIgs_fy_0kchoXmpJibfiPSPNY0_ikOGfGG2bbBE8ny3zmysBMo"/>
+<div class="absolute top-2 left-2 bg-black/80 text-primary text-[8px] font-mono px-2 py-0.5">PRTCL: GLAM_V4.0</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white text-[10px] font-black px-2 py-1">32:50</div>
+</div>
+<div class="p-5">
+<h3 class="text-white text-md font-black uppercase tracking-tight mb-2">Classic Evening Glam</h3>
+<div class="flex items-center gap-3 mb-4">
+<div class="h-px flex-1 bg-tech-border"></div>
+<span class="text-[9px] font-mono text-primary uppercase">Standard_Ops</span>
+</div>
+<button class="w-full py-3 border border-primary/40 text-primary hover:bg-primary hover:text-white font-black text-[10px] uppercase tracking-widest transition-all">Initialise_Data</button>
+</div>
+</div>
+<!-- Data Bloc 5 -->
+<div class="bg-tech-black border border-tech-border group hover:border-primary transition-all">
+<div class="relative aspect-video border-b border-tech-border">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVdaV6Xi4FkkY9rAg-by2PGdl2dCHVYNUz8Jf7REoWPulG2SB1hV0J8Pq4jNXk0tvPBU5LkVgTpDMyDMApGUY8AM3XUv8ray0OHR7B3HY2kIAQ5ZpZ9YbbcXCZR0gCMkN3TEnv3VXBKGw_ImSeOJZlFz1cZBcad5tYLl3d9wxQRwsOY1x_FnBjvQ_Y7FL6pklJQaAXsK827T1Rzbi8MyxZXt14adX5_8JBgfzbOjSwPze9j3h5Xth_skrv-T2_melLS_PYGXbx98o"/>
+<div class="absolute top-2 left-2 bg-black/80 text-primary text-[8px] font-mono px-2 py-0.5">PRTCL: SKIN_V1.5</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white text-[10px] font-black px-2 py-1">12:05</div>
+</div>
+<div class="p-5">
+<h3 class="text-white text-md font-black uppercase tracking-tight mb-2">The Perfect Canvas Prep</h3>
+<div class="flex items-center gap-3 mb-4">
+<div class="h-px flex-1 bg-tech-border"></div>
+<span class="text-[9px] font-mono text-primary uppercase">All_Access</span>
+</div>
+<button class="w-full py-3 border border-primary/40 text-primary hover:bg-primary hover:text-white font-black text-[10px] uppercase tracking-widest transition-all">Initialise_Data</button>
+</div>
+</div>
+<!-- CTA Promo Bloc -->
+<div class="bg-primary p-8 relative overflow-hidden flex flex-col justify-center border-4 border-black/20">
+<div class="absolute top-0 right-0 tech-grid w-full h-full opacity-30"></div>
+<div class="relative z-10">
+<h3 class="text-white text-3xl font-black uppercase tracking-tighter mb-4">Upgrade to PRO_STATUS</h3>
+<p class="text-white/80 text-xs font-mono mb-8">Unlock the full technical archive. 200+ Protocols. Direct Mentorship.</p>
+<button class="bg-black text-white font-black py-4 px-8 text-xs uppercase tracking-widest hover:translate-x-1 hover:-translate-y-1 transition-transform border-b-4 border-l-4 border-black/40">
+            EXE_UPGRADE_NOW
+        </button>
+</div>
+</div></div>
+</div>
+<!-- Footer Section -->
+<footer class="mt-12 py-12 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined font-black">grid_view</span>
+<span class="font-black italic uppercase tracking-tighter">Clé Beauty Digital</span>
+</div>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">© 2024 Clé Beauty Academy. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">Support</a>
+<a class="text-slate-500 hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">Terms of Use</a>
+</div>
+<div class="flex gap-4">
+<div class="size-8 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div class="size-8 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+</body></html>

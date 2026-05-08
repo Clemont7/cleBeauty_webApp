@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cle_Beauty Academy | Digital Tech Pixel Blocs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b8c",
+                "background-light": "#f8f6f7",
+                "background-dark": "#221019",
+                "pixel-gray": "#e2d5da",
+              },
+              fontFamily: {
+                "display": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px"},
+            },
+          },
+        }
+      </script>
+<style>
+        .pixel-border {
+            box-shadow: 
+                4px 0 0 0 #ee2b8c,
+                -4px 0 0 0 #ee2b8c,
+                0 4px 0 0 #ee2b8c,
+                0 -4px 0 0 #ee2b8c;
+        }
+        .pixel-grid {
+            background-image: linear-gradient(to right, rgba(238, 43, 140, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(238, 43, 140, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(0,0,0,0.02) 50%);
+            background-size: 100% 4px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen selection:bg-primary selection:text-white">
+<div class="pixel-grid min-h-screen">
+<!-- TopNavBar -->
+<header class="border-b-4 border-primary bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center p-1">
+<img alt="Cle Beauty Academy Pixel Logo" class="w-full h-full object-contain" data-alt="Futuristic pixelated logo for beauty academy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1wP8joHQa0JKVaWZWmXraq-139jRktApcnXpJc1dCpKumGhuUf3zvSshswmnOGO0fZ6Ar_yv2sli_itMubyKAyjfzgwGLhlfShjssvlEtKqLZh8X9NrafcGH4falRIgz-wGcWpOji0wmNTEgjkGFKi43I6S6nF9FU50Rr6_6_Nq8dDE-s8ux5UEkN86wNL1w6uFJFV1dO8dOBIKBF06VVJ2-PQFy1O2juMDqsYtuOOVruDjsme3k8Le_ehz6bKC8Nl6ArPfVdGuw"/>
+</div>
+<h1 class="text-xl font-black tracking-tighter uppercase italic">Cle_Beauty <span class="text-primary">Academy</span></h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-xs font-bold uppercase tracking-widest border-b-2 border-primary text-primary" href="#">01_Dashboard</a>
+<a class="text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-primary transition-all" href="#">02_Lessons</a>
+<a class="text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-primary transition-all" href="#">03_System_Logs</a>
+<a class="text-xs font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-primary transition-all" href="#">04_Library</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-sm">search</span>
+<input class="bg-background-light border-2 border-pixel-gray focus:border-primary focus:ring-0 text-xs font-mono py-2 pl-10 pr-4 w-64 uppercase" placeholder="QUERY_DATABASE..." type="text"/>
+</div>
+<button class="w-10 h-10 flex items-center justify-center border-2 border-pixel-gray hover:border-primary text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 border-2 border-primary p-0.5">
+<div class="w-full h-full bg-cover bg-center" data-alt="User profile photo of a black woman" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJFQeKARLBfheO40XtV60wMiaCMImKtcR67fE2msEo2cB4ZMCkWwym79P5i8XM9ML75zh5FJMo48awHSVLp7JFXa_oDemGnY-mvbuxYxtmQpH6UMFkxRhkmm7yq3kzDWBtkxww3ocC7edhlV7lz0SJVWOXJRr7YuEmmkg64dorG4op4rBBdndV5VaDYEVxe8cyOA9Cs_7U0LLA5Q-ndsLk2vIjJqe3t8RGVR4ls8mJvEbcsOQrHCYbN09TV8v2ww99C2WDmmcsbSI')"></div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-8">
+<div class="grid grid-cols-12 gap-8">
+<!-- Sidebar / System Info -->
+<aside class="col-span-12 lg:col-span-3 space-y-6">
+<div class="border-2 border-slate-900 p-4 bg-white">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 bg-slate-900 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">terminal</span>
+</div>
+<div>
+<h3 class="text-xs font-black uppercase">System Admin</h3>
+<p class="text-[10px] font-mono text-slate-500">v1.0.4-PIXEL_BLOC</p>
+</div>
+</div>
+<nav class="space-y-1 font-mono text-xs">
+<a class="flex items-center gap-3 p-2 bg-primary text-white" href="#">
+<span class="material-symbols-outlined text-sm">dashboard</span> OVERVIEW.exe
+                            </a>
+<a class="flex items-center gap-3 p-2 hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">book</span> MY_COURSES.sys
+                            </a>
+<a class="flex items-center gap-3 p-2 hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">description</span> TECH_DOCS.pdf
+                            </a>
+<a class="flex items-center gap-3 p-2 hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">help</span> SUPPORT.cmd
+                            </a>
+</nav>
+</div>
+<div class="bg-slate-900 text-white p-4 font-mono text-[10px] leading-relaxed">
+<p class="text-primary mb-2">// SYSTEM_LOGS</p>
+<p class="opacity-70">&gt; Booting aesthetic core...</p>
+<p class="opacity-70">&gt; Loading pixel-makeup-v2...</p>
+<p class="opacity-70">&gt; Melanin optimization [OK]</p>
+<p class="opacity-70">&gt; Natural hair rendering...</p>
+<div class="mt-4 flex gap-1">
+<div class="h-1 flex-1 bg-primary"></div>
+<div class="h-1 flex-1 bg-primary"></div>
+<div class="h-1 flex-1 bg-primary"></div>
+<div class="h-1 flex-1 bg-primary/20"></div>
+</div>
+</div>
+</aside>
+<!-- Content Area -->
+<div class="col-span-12 lg:col-span-9 space-y-8">
+<!-- Hero Section -->
+<div class="relative bg-slate-900 p-12 overflow-hidden">
+<div class="absolute inset-0 opacity-20 scanline"></div>
+<div class="relative z-10">
+<h2 class="text-5xl font-black text-white italic uppercase tracking-tighter mb-4">
+                                Digital Tech <br/> <span class="text-primary underline decoration-4 underline-offset-8">Pixel Bloc</span>
+</h2>
+<p class="text-slate-400 max-w-md font-mono text-sm leading-relaxed mb-8">
+                                Welcome to the beauty mainframe. System online. Optimizing minimalist makeup routines and natural hair textures for the modern pixel era.
+                            </p>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-8 py-3 font-bold uppercase text-xs tracking-widest hover:translate-x-1 hover:-translate-y-1 transition-transform border-b-4 border-r-4 border-slate-700">Initialize Learning</button>
+<button class="bg-transparent text-white border-2 border-white px-8 py-3 font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-slate-900 transition-all">View Logs</button>
+</div>
+</div>
+<div class="absolute right-0 bottom-0 top-0 w-1/3 opacity-30 pointer-events-none">
+<div class="w-full h-full bg-gradient-to-l from-primary to-transparent"></div>
+</div>
+</div>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="border-2 border-pixel-gray p-6 bg-white hover:border-primary transition-colors">
+<p class="text-[10px] font-mono uppercase text-slate-500 mb-1">Total Credits</p>
+<h4 class="text-3xl font-black italic">1,240 <span class="text-primary text-sm not-italic">XP</span></h4>
+<div class="mt-4 flex items-center gap-2">
+<div class="w-full bg-slate-100 h-2">
+<div class="bg-primary h-full w-[70%]"></div>
+</div>
+<span class="text-[10px] font-mono text-green-600">+12%</span>
+</div>
+</div>
+<div class="border-2 border-pixel-gray p-6 bg-white hover:border-primary transition-colors">
+<p class="text-[10px] font-mono uppercase text-slate-500 mb-1">Active Modules</p>
+<h4 class="text-3xl font-black italic">04</h4>
+<div class="mt-4 flex gap-1">
+<div class="w-2 h-2 bg-primary"></div>
+<div class="w-2 h-2 bg-primary"></div>
+<div class="w-2 h-2 bg-primary"></div>
+<div class="w-2 h-2 bg-primary/20"></div>
+</div>
+</div>
+<div class="border-2 border-pixel-gray p-6 bg-white hover:border-primary transition-colors">
+<p class="text-[10px] font-mono uppercase text-slate-500 mb-1">System Uptime</p>
+<h4 class="text-3xl font-black italic">99.9 <span class="text-slate-400 text-sm not-italic">%</span></h4>
+<div class="mt-4 flex items-center text-[10px] font-mono text-primary italic">
+                                STATUS: OPTIMIZED
+                            </div>
+</div>
+</div>
+<!-- Course Grid -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-black uppercase tracking-tight flex items-center gap-2">
+<span class="w-2 h-6 bg-primary"></span> ACTIVE_LEARNING_MODULES
+                            </h3>
+<a class="text-xs font-bold uppercase border-b-2 border-primary" href="#">Explore_All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Course Card 1 -->
+<div class="group border-2 border-slate-900 bg-white hover:-translate-y-1 hover:translate-x-1 transition-transform">
+<div class="h-48 bg-slate-200 relative overflow-hidden">
+<div class="absolute inset-0 bg-slate-900/40 group-hover:bg-primary/20 transition-colors z-10"></div>
+<img alt="Minimalist Makeup Course" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Portrait of a black woman with minimalist makeup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8hUy--a5k31xFC-JZyD0qvzcLR3i74de43pmUWV7dkPc5yIwcZty4k1AG-aAVMziqx8r8xNpHDMJhsoz5o1GTlFtD-JwsD2-5rllqCu35krUKDITeWZPXQQq-FVj1aKkORnmtDvzuKxJlGJtOjvlibJYbVmJAsGri7ryUFiyJF5f6jm2zcczXchWM_Vx7MA6ArbV_WCn_kn_QaTxWvpEa64ggemqjfVjxVNoG4cwpM_5oeXev64LMHHhEZDvCMP_gqrPIq1yISLI"/>
+<div class="absolute top-4 left-4 z-20 bg-primary text-white text-[10px] font-mono px-2 py-1 uppercase">MODULE_01</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-black uppercase mb-2">Minimalist Aesthetic v2.0</h4>
+<p class="text-xs text-slate-600 mb-6 font-medium leading-relaxed">Systematic approach to "no-makeup" looks specifically calibrated for melanin-rich complexions.</p>
+<div class="flex items-center justify-between">
+<div class="text-[10px] font-mono uppercase text-slate-400">Progress: 45%</div>
+<button class="bg-slate-900 text-white p-2 flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="group border-2 border-slate-900 bg-white hover:-translate-y-1 hover:translate-x-1 transition-transform">
+<div class="h-48 bg-slate-200 relative overflow-hidden">
+<div class="absolute inset-0 bg-slate-900/40 group-hover:bg-primary/20 transition-colors z-10"></div>
+<img alt="Natural Hair Course" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Close up of beautiful natural curly hair texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKjFRx5NgMWZjL9wlcObSsKHOmF5XYtI16X_BIYJAxhtHsjfgA8kcFWpytX1xVcqhNQG9VvQdM6mHPJgl7k0vy01fEHqNyLBeNf_EGzsuSZpSjG-3f5EN1VOeakJtMXz3bG2dWlK4f1XpiK5ZuJimhaKRwrYDEjMzEoWLF7SSp_wZjPHsHmTFCfSMSI7rAdBp5A2Mn2v3HBenpIT1yUS7VHcFp9RTQurG19_meu9T4IWZPIMo4fTCe32MePY2yK1AKUHRO1f0DYFU"/>
+<div class="absolute top-4 left-4 z-20 bg-primary text-white text-[10px] font-mono px-2 py-1 uppercase">MODULE_02</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-black uppercase mb-2">Natural_Texture.obj</h4>
+<p class="text-xs text-slate-600 mb-6 font-medium leading-relaxed">The architecture of natural coils. Advanced hydration algorithms and structural maintenance protocols.</p>
+<div class="flex items-center justify-between">
+<div class="text-[10px] font-mono uppercase text-slate-400">Progress: 82%</div>
+<button class="bg-slate-900 text-white p-2 flex items-center justify-center hover:bg-primary transition-colors">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="max-w-7xl mx-auto px-6 py-12 border-t-2 border-pixel-gray mt-12 mb-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 font-mono text-[10px] text-slate-500 uppercase tracking-widest">
+<div class="flex items-center gap-4">
+<span class="text-primary font-black italic">Cle_Beauty</span>
+<span>© 2024 Pixel_Academy</span>
+</div>
+<div class="flex gap-8">
+<a class="hover:text-primary transition-colors" href="#">Terms_of_Service</a>
+<a class="hover:text-primary transition-colors" href="#">Privacy_Protocol</a>
+<a class="hover:text-primary transition-colors" href="#">API_Access</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+<span>All Systems Operational</span>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

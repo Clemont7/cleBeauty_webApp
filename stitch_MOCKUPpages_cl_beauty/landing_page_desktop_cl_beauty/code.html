@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b8c",
+                "background-light": "#f8f6f7",
+                "background-dark": "#221019",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        .pixel-grid {
+            background-size: 40px 40px;
+            background-image: radial-gradient(circle, #ee2b8c22 1px, transparent 1px);
+        }
+        .technical-border {
+            border: 1px solid rgba(238, 43, 140, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden pixel-grid">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/20 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<img alt="Clé Beauty Logo" class="h-8 w-auto" data-alt="Clé Beauty minimalist technical logo mark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0B88jZZTXr8BjqNNz0rcAV_keENwwcLzkzAgmhNiqmoNScYUPxZu4cbMvzexwa9TDurAE-pOTxPr56tZ4bLU2ouYIiVG81rIAbxiWccbgjUcGC5Kn7MmA9XkfVt0ygk9ANEOdZ4E6jsWFBLqBMi_poSRlokkTIf8SvKLdmNggHC9T-ctjYNN_ocGj3SygRYMnzBEoR_gDchlK7NDmqhfDI6-epncRHqK4TzOA0z5tIzw6hZPaydbhBY5OYEe0pUZSBTzEXMEAKE4"/>
+<span class="text-xl font-extrabold tracking-tighter text-slate-900 dark:text-slate-100 uppercase">Clé Beauty</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#philosophy">Philosophy</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#portfolio">Portfolio</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#services">Services</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#shop">Digital Shop</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-white px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">
+                        Book Now
+                    </button>
+<span class="material-symbols-outlined text-primary cursor-pointer">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<main class="flex-1">
+<section class="relative mx-auto max-w-7xl px-6 py-12 md:py-24">
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
+<div class="flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 border border-primary/30 bg-primary/5 px-3 py-1 w-fit rounded">
+<span class="h-2 w-2 bg-primary rounded-full animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-primary">System Status: Active // ID: CB-992-G</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-black leading-none tracking-tighter uppercase italic">
+                            Enhance Your <br/>
+<span class="text-primary underline decoration-4 underline-offset-8">Natural Glow</span>
+</h1>
+<p class="max-w-md text-lg font-light leading-relaxed text-slate-600 dark:text-slate-400">
+                            Where high-tech precision meets organic beauty. Digital Tech Pixel Blocs aesthetic engineered for the modern woman.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-lg text-sm font-bold uppercase tracking-[0.2em] shadow-lg shadow-primary/20">
+                                Explore Glow
+                            </button>
+<button class="border border-primary text-primary px-8 py-4 rounded-lg text-sm font-bold uppercase tracking-[0.2em] hover:bg-primary/5">
+                                Technical Guide
+                            </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 border border-primary/20 rounded-xl group-hover:border-primary/40 transition-colors"></div>
+<div class="relative h-[500px] w-full bg-cover bg-center rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="High-fashion close up of skin texture with technical overlay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARY-Ou8cSyQkWRrqFwVmmbqzqwwo2QEaqsqtEohXeM87N9XdisuR7LOFrzt5csU22czA7zq-keon6Xfi5gT3xsAqzpbqlvEX3wj1uhOplfxfZCkoBPpwkChZfbe9A5Y0iQea6BUkji6UzFa0auRRoIdCoOIUmcgikcNQetAwciSmvqP9q40L9GZlBsODmZbh9W8qALDmCpZ3OHd7VrMbIjUafOHdzJIG9YuKN2gBv0JDuo6JFV-kXb50EuAk4lOoVg6s0nYfhhFVA')">
+</div>
+<!-- Tech Accents Overlay -->
+<div class="absolute top-4 right-4 bg-primary text-white p-2 text-[10px] font-mono tracking-widest">
+                            COORD: 40.7128° N
+                        </div>
+<div class="absolute bottom-4 left-4 bg-background-dark text-white p-4 rounded border border-primary/40 max-w-[200px]">
+<p class="text-[10px] opacity-60 uppercase font-bold">Sync Progress</p>
+<div class="w-full bg-white/20 h-1 mt-2">
+<div class="bg-primary h-full w-[88%]"></div>
+</div>
+<p class="text-right text-[10px] mt-1 font-mono">88.42%</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stats Bar -->
+<section class="bg-slate-900 py-12 text-white overflow-hidden border-y border-primary/30">
+<div class="mx-auto max-w-7xl px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-1 border-l border-primary/40 pl-4">
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold">Process ID</span>
+<span class="text-2xl font-black font-mono tracking-tighter">#EE2B8C-01</span>
+<span class="text-[10px] text-green-400 font-bold">+12.4% EFFICIENCY</span>
+</div>
+<div class="flex flex-col gap-1 border-l border-primary/40 pl-4">
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold">Grid Matrix</span>
+<span class="text-2xl font-black font-mono tracking-tighter">48x48.PX</span>
+<span class="text-[10px] text-primary font-bold">OPTIMIZED</span>
+</div>
+<div class="flex flex-col gap-1 border-l border-primary/40 pl-4">
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold">Sync Rate</span>
+<span class="text-2xl font-black font-mono tracking-tighter">99.9%</span>
+<span class="text-[10px] text-green-400 font-bold">REAL-TIME</span>
+</div>
+<div class="flex flex-col gap-1 border-l border-primary/40 pl-4">
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold">User Latency</span>
+<span class="text-2xl font-black font-mono tracking-tighter">0.04ms</span>
+<span class="text-[10px] text-primary font-bold">LOW LATENCY</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="mx-auto max-w-7xl px-6 py-24" id="philosophy">
+<div class="flex flex-col md:flex-row gap-16 items-start">
+<div class="md:w-1/3">
+<h2 class="text-4xl font-black uppercase tracking-tighter border-l-8 border-primary pl-6">The Clé <br/>Standard</h2>
+<p class="mt-8 text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                            We believe in minimalist makeup and natural hair care powered by technical excellence. Our formulas are engineered to amplify your unique geometry.
+                        </p>
+</div>
+<div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="group relative bg-white dark:bg-slate-900 border border-primary/10 p-8 rounded-xl hover:border-primary/50 transition-all">
+<div class="bg-primary/10 w-12 h-12 flex items-center justify-center rounded-lg text-primary mb-6">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<h3 class="text-xl font-bold uppercase tracking-tight mb-2">Minimalist Makeup</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Breathable formulas that highlight your structural features without the mask of traditional cosmetics.</p>
+<div class="mt-8 h-1 w-full bg-slate-100 dark:bg-slate-800 rounded">
+<div class="bg-primary h-full w-2/3"></div>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-slate-900 border border-primary/10 p-8 rounded-xl hover:border-primary/50 transition-all">
+<div class="bg-primary/10 w-12 h-12 flex items-center justify-center rounded-lg text-primary mb-6">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<h3 class="text-xl font-bold uppercase tracking-tight mb-2">Natural Hair</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Nourishing digital-age treatments designed to restore your hair's innate vitality and molecular strength.</p>
+<div class="mt-8 h-1 w-full bg-slate-100 dark:bg-slate-800 rounded">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Highlights -->
+<section class="bg-primary/5 py-24 border-y border-primary/20" id="portfolio">
+<div class="mx-auto max-w-7xl px-6">
+<div class="flex items-end justify-between mb-12">
+<div>
+<span class="text-[10px] font-bold tracking-[0.4em] uppercase text-primary">Portfolio View</span>
+<h2 class="text-5xl font-black uppercase tracking-tighter mt-2">Latest Assets</h2>
+</div>
+<div class="hidden md:block font-mono text-[10px] opacity-50">
+                            FILE_SYSTEM: /VOL/ASSETS/2024
+                        </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="group relative overflow-hidden rounded-xl border-4 border-white dark:border-slate-800 shadow-xl">
+<img alt="Beauty Look 1" class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Editorial close up of minimalist beauty look with high-gloss finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJE2oWpT5Y33Lv88jPTEJqy2X1mqd40W7wRZQkP4B3SsSh2udDfr0Nme3hQgrnlplS88SWh7xAs96Ze1WqcPqPPSbXuklH2EyPyQg3vS93NRPLz3BfzlKYtgOiYaMPgPjSVq5o-J4KmJwwAiQtAqu13UnWoOiDJmUkZL7SD4JHPC8_OKJrZZRw5mAzZQGdKj5GwFwVI_VxosLwbXTSI4C9al433zcflvzpuiYR6klgyBZ5poSmy-WFeky4LxR_6MELuH1AMHzZZt0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+<span class="text-white text-[10px] font-bold tracking-widest uppercase">ID: SKIN-REF-01</span>
+<h4 class="text-white font-bold text-xl">Luminous Matrix</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl border-4 border-white dark:border-slate-800 shadow-xl">
+<img alt="Hair Design 1" class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Natural hair texture study with technical lighting and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbe0qVrYPw5b_wl5_gFjfB0f1uEk6xKPHkori3Pf5Uz8-tkVrE643P1v5FPgpBehvNh03WWkU1rfS3vjdQpQkcVe1wjy-eFC_iVJ0lzjzCKPc_Lw8DlKJuMHsLisTLIoUqYfuNoRv-_BAoK6feN0gWuxB5KE7i7hsh9OTl46DhNEb0FPPrswHD3EHZIaAKO_dfBfyM-_TGOHzyYy-MrnhEnWkHMCOchCtbLaMPs-sDHybW3O0o04x0RXpF0V9liKpAgHC1cZ9vgWs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+<span class="text-white text-[10px] font-bold tracking-widest uppercase">ID: HAIR-STR-09</span>
+<h4 class="text-white font-bold text-xl">Molecular Wave</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl border-4 border-white dark:border-slate-800 shadow-xl">
+<img alt="Product Feature" class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Technical product shot of beauty serum in a glass bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6VDhg9x8uChS-I3UNHfOGSAm7EJHbupBxYnPb7hGqELLqMiOCR6btnshmpUzVKUHCmdXL9eSgbk0RpSc9Pz6vSEKqSuLiy2hJ-jb40MndTpZftK-5KT1HT-_u0oR7JvSZaEXXTMP3uhq20CgFTsK7YEY8TTkWMxRZSOQUqdWCur4GqbMnSSkE-yz2oqnqhu4uoOp9UJIVEF4vHHlX26uoxoEVKcWFI0tqQDY1GJwM9T696xEv_yHN6tfX03l5IR3D3_PyGeLTSBQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+<span class="text-white text-[10px] font-bold tracking-widest uppercase">ID: PROD-SRM-44</span>
+<h4 class="text-white font-bold text-xl">Serum Synthesis</h4>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<button class="border-b-2 border-primary text-primary font-black uppercase tracking-widest py-2 px-4 hover:bg-primary hover:text-white transition-all">
+                            View All Data Points
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark text-white py-20">
+<div class="mx-auto max-w-7xl px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-2">
+<div class="flex items-center gap-3 mb-8">
+<img alt="Clé Beauty Logo" class="h-10 w-auto invert" data-alt="Footer logo version in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDns1z2I7ZaVmjT5bYPAZbiOFNFWZ0sV6YojLZUL-aMfYbz7mbXKqcqvdfHZe4450IdSPWqwVlqU_s_YkDtGEKeca2RkEkcC39uSzNbq_8OzBBdppnTK9WzdmHwFysi4lswx9ZcNoMtw6rdcbeGiPCOy4fnP-MmGry_1R1gdE70uvTaUnza5M2gViEzkXs4D4Ebntp78EJVbebPGVfQngSsjc5KrHvlEAjgADQbrJPR0lS9onZ0mkz8no6MlPkTrJOG32dELgOiLkQ"/>
+<span class="text-3xl font-black uppercase tracking-tighter">Clé Beauty</span>
+</div>
+<p class="text-slate-400 font-light max-w-sm">
+                            The future of personal care is here. Precise, digital-first, and fundamentally organic. Join the Clé Beauty revolution.
+                        </p>
+</div>
+<div>
+<h4 class="text-primary font-bold uppercase tracking-widest text-xs mb-6">Directory</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-300">
+<li><a class="hover:text-primary" href="#">System Home</a></li>
+<li><a class="hover:text-primary" href="#">Technical Specs</a></li>
+<li><a class="hover:text-primary" href="#">Client Portal</a></li>
+<li><a class="hover:text-primary" href="#">API Access</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-primary font-bold uppercase tracking-widest text-xs mb-6">Support</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-300">
+<li><a class="hover:text-primary" href="#">Help Center</a></li>
+<li><a class="hover:text-primary" href="#">Legal Terms</a></li>
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="#">Contact Dev</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] text-slate-500 font-mono">© 2024 CLÉ BEAUTY // ALL RIGHTS RESERVED // BUILD 2.0.4</p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="text-slate-500 hover:text-primary" href="#"><span class="material-symbols-outlined text-lg">share</span></a>
+<a class="text-slate-500 hover:text-primary" href="#"><span class="material-symbols-outlined text-lg">terminal</span></a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

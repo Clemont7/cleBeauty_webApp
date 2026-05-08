@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Clé Beauty Digital Academy</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center bg-white dark:bg-slate-900 p-4 sticky top-0 z-50 border-b border-primary/10">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight flex-1 text-center">Clé Beauty Academy</h1>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/10 text-primary">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 pb-24">
+<!-- Dashboard Stats -->
+<section class="px-4 py-6">
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight mb-4">Your Dashboard</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-primary/5 border border-primary/10">
+<span class="material-symbols-outlined text-primary mb-1">check_circle</span>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium">Completed</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">12</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-primary/5 border border-primary/10">
+<span class="material-symbols-outlined text-primary mb-1">play_circle</span>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium">In Progress</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">3</p>
+</div>
+</div>
+</section>
+<!-- Lessons List -->
+<section class="px-4 pb-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Available Lessons</h3>
+<button class="text-primary text-sm font-semibold">View All</button>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Lesson Card 1 -->
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-primary/5">
+<div class="relative h-48 w-full bg-slate-200">
+<img alt="Natural Makeup Tutorial" class="h-full w-full object-cover" data-alt="Close up of natural beauty makeup application" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGnJQ1VJM9QBpTJngTsNz7c3igdsDPLq7hgG-jsMjOnJAHVEhsq0aE9cX_6AnvDB8i8wtkhH23VR3EJ9zSqjnV8shXJWgLYWlsO5yAp6v14vRWGWZhirgTQZUK28Asx1v_aBKWUMz1mlwk3NMoHUesvHgKGIKuiQN8JN4Ix-ohkDATkUXhryifYVbF1mtYvDjyIPUAxNJMR8nZcJ3cecvdH86CnqgmwTiTLZ3Ph5sMMJ500Y2hQ9nvTsY7ZSKQ0CGBeEeD75UPBXU"/>
+<div class="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">
+                                15:20
+                            </div>
+</div>
+<div class="p-4">
+<h4 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1">Natural Makeup Look</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Master the "no-makeup" makeup look for daily wear using professional techniques.</p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-lg">play_arrow</span>
+                                Access Lesson
+                            </button>
+</div>
+</div>
+<!-- Lesson Card 2 -->
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-primary/5">
+<div class="relative h-48 w-full bg-slate-200">
+<img alt="Event Makeup Tutorial" class="h-full w-full object-cover" data-alt="Elegant evening makeup look with gold accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTKPyDHEPHKJzTM1Spk6QpLlHzIjTYGqtzKWY6H3_P6IDDbaAlUwB-bDBGFnbRnf_ynjLMqMawKqCxDJk2J7HaXILouheMf7O0Njf7_7FGM7q8dj21j29xMyyNr2hh3PO4_cLA8PKu6UMQMhhFJxJuU8JtqXV5IlJnN5s7C4MEwBQN9bWpJL6gvV8Km2IouGvsLjhMw8t7UKzeYudgxzT901mD-MrkW7-uEqEL_qSqEIqyjehiEeAWWhC0KMtRrSdQF5fi65vrHm4"/>
+<div class="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">
+                                24:45
+                            </div>
+</div>
+<div class="p-4">
+<h4 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1">Glamorous Event Makeup</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Bold eyes and perfect contouring for gala events and special nights out.</p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-lg">play_arrow</span>
+                                Access Lesson
+                            </button>
+</div>
+</div>
+<!-- Lesson Card 3 -->
+<div class="flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-primary/5">
+<div class="relative h-48 w-full bg-slate-200">
+<img alt="Simple Hairstyles" class="h-full w-full object-cover" data-alt="Step by step hair styling tutorial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxBQdswuVuuSekuM85qYrRVb_3BEKRdr0CSJ3Oql-jlsmkr-m1yR6pleqPgPsBLcK4DC1QNaQmNjLjgb2BhCHKKSXQ1des0j73e-rTplAXB2cp-juRVdOLuXtmYcxaB7u0LbUISGr_Y8SOQebTTMP0hTTC7jDX8e5UPa2WbbIo-ibr8UtT4HSmr4Rcu923EMueOOvWGfTk7-YB1Koe80Xw_UUo1s7M17ECuLTJkHDSvz8XcVDZ3u44YCa1orcRVoS_bEMqi1dvdm4"/>
+<div class="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">
+                                12:10
+                            </div>
+</div>
+<div class="p-4">
+<h4 class="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1">Simple Daily Hairstyles</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Quick and easy hair transformations you can do in under 10 minutes.</p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-lg">play_arrow</span>
+                                Access Lesson
+                            </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex border-t border-primary/10 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pb-4 pt-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">video_library</span>
+<p class="text-[10px] font-bold leading-normal">Lessons</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">insights</span>
+<p class="text-[10px] font-medium leading-normal">Progress</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal">Profile</p>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Clé Beauty Booking</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center bg-white dark:bg-background-dark p-4 border-b border-primary/10">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</div>
+<h1 class="text-lg font-extrabold leading-tight tracking-tight flex-1 text-center pr-10 uppercase italic">Clé Beauty</h1>
+</header>
+<!-- Progress Indicator -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-6">
+<div class="h-2.5 w-8 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+</div>
+<!-- Content Area -->
+<main class="flex-1 px-4 pb-24">
+<!-- Step 1 Title -->
+<div class="mb-6">
+<h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Select Service</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Choose the treatment you'd like to book today.</p>
+</div>
+<!-- Categories Horizontal Scroll -->
+<div class="flex gap-3 overflow-x-auto pb-4 no-scrollbar">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary px-5 text-white shadow-sm shadow-primary/30">
+<p class="text-sm font-semibold">All</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary/10 px-5 text-primary border border-primary/20">
+<p class="text-sm font-semibold">Hair</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary/10 px-5 text-primary border border-primary/20">
+<p class="text-sm font-semibold">Nails</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary/10 px-5 text-primary border border-primary/20">
+<p class="text-sm font-semibold">Facial</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary/10 px-5 text-primary border border-primary/20">
+<p class="text-sm font-semibold">Massage</p>
+</div>
+</div>
+<!-- Service Cards -->
+<div class="grid grid-cols-1 gap-4 mt-2">
+<!-- Card 1 -->
+<div class="group flex items-center gap-4 p-4 rounded-xl border border-primary/10 bg-background-light dark:bg-slate-800/50 hover:border-primary transition-all cursor-pointer">
+<div class="size-16 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Stylist washing hair at a salon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK-dsm1Fr2YNff4PQbTzrluNDvPgUm9n6biBwHzbggbe5Wo_28Dsw2mw0uJngJCVKeZ6tF9Ggy4ZR0lCY4PhXUJYIizyVAkrbGf2SmMSEPF3QBQkmBC2uka9igMJFu4SEnb6BWNMgdQ3fxh1Cz_AAhu6E77LtQ1_FafbfpxXB12x_VNkJUNryYfpEwxLAZT6wnYuOIb4dn7pdJQZosNZNQuoQFBXWjVWZCd-rxiwHTuEF97t7yMvMWUj5iV9fp5xf-zn5DmV1mqqs"/>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Signature Haircut</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Wash, cut, and style (60 min)</p>
+<p class="text-primary font-bold mt-1">$85</p>
+</div>
+<div class="size-6 flex items-center justify-center rounded-full border-2 border-primary/30 group-hover:bg-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[16px] text-white opacity-0 group-hover:opacity-100">check</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex items-center gap-4 p-4 rounded-xl border border-primary/10 bg-background-light dark:bg-slate-800/50 hover:border-primary transition-all cursor-pointer">
+<div class="size-16 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Nail artist applying pink gel polish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKwAXcHMvucuHzCJTkbeLp8r1z9W_sQunNxoQLhqoWXqdCYTKUE6f5_Puf68FV3LVqp-97-lrdF5SIVaAtZHZ6tBZ-K6-dLpmKvxi4VCSOBKV2rTV1JJbyTs23VfBxo18KkxTiBlmTJNcc1m7rTo4tfRTQp9onD5H_1BkioFL0qoZlRR4MgFVMEwGTTKR5JvrYDvZjXX5mBiQwLXQWFjwTx7iO2EH2FgEJwvmBVrR56T3-CsDj7458PcneYs4k25HK_r9QFsE1k9k"/>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Gel Manicure</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Includes nail art (45 min)</p>
+<p class="text-primary font-bold mt-1">$55</p>
+</div>
+<div class="size-6 flex items-center justify-center rounded-full border-2 border-primary/30 group-hover:bg-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[16px] text-white opacity-0 group-hover:opacity-100">check</span>
+</div>
+</div>
+<!-- Card 3 (Active) -->
+<div class="group flex items-center gap-4 p-4 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all cursor-pointer">
+<div class="size-16 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Relaxing facial treatment with steam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXJM8mDSwkEed8bBPFgB78hAynranMgjJXQ8PrbmIvV3bU9_Zn3lHp6KEGAONF4pMiLHcZVc5uQcBwGJVdHUYHjXFDmb7SY17_VnoD4_Fr_DTgy5YzBwY9VIUtMIfjH7Nof3KHEiaoH8d3dgMAir28wuYFpwv-IFiYg_S8HMxKJkQYqqRmYvds4rdwTBkHdx89reRtpGmOH2Xq9w4jRaTJ_-PToK_m3IyVkKYddqaeHRn7DSYj2V1WqGuDRYxeIyA4BFPjvVCy8EE"/>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Hydra Glow Facial</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Deep hydration boost (75 min)</p>
+<p class="text-primary font-bold mt-1">$120</p>
+</div>
+<div class="size-6 flex items-center justify-center rounded-full bg-primary border-2 border-primary transition-colors">
+<span class="material-symbols-outlined text-[16px] text-white">check</span>
+</div>
+</div>
+</div>
+<!-- Date/Time Preview (Simulating next step flow) -->
+<div class="mt-8">
+<h2 class="text-lg font-bold tracking-tight text-slate-900 dark:text-slate-100 mb-4">Availability</h2>
+<div class="bg-background-light dark:bg-slate-800/30 p-4 rounded-xl border border-primary/5">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-semibold">October 2024</h3>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-primary cursor-pointer">chevron_left</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">chevron_right</span>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-xs font-bold mb-2">
+<div class="text-slate-400">S</div>
+<div class="text-slate-400">M</div>
+<div class="text-slate-400">T</div>
+<div class="text-slate-400">W</div>
+<div class="text-slate-400">T</div>
+<div class="text-slate-400">F</div>
+<div class="text-slate-400">S</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center">
+<div class="p-2 text-slate-300">29</div>
+<div class="p-2 text-slate-300">30</div>
+<div class="p-2 bg-primary text-white rounded-lg font-bold">1</div>
+<div class="p-2 hover:bg-primary/10 rounded-lg cursor-pointer">2</div>
+<div class="p-2 hover:bg-primary/10 rounded-lg cursor-pointer">3</div>
+<div class="p-2 hover:bg-primary/10 rounded-lg cursor-pointer">4</div>
+<div class="p-2 hover:bg-primary/10 rounded-lg cursor-pointer">5</div>
+</div>
+</div>
+</div>
+<!-- Client Details Mini Form -->
+<div class="mt-8 mb-4">
+<h2 class="text-lg font-bold tracking-tight text-slate-900 dark:text-slate-100 mb-4">Your Details</h2>
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Full Name</label>
+<input class="w-full bg-white dark:bg-slate-800 border-primary/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary" placeholder="Sarah Jenkins" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Email Address</label>
+<input class="w-full bg-white dark:bg-slate-800 border-primary/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary" placeholder="sarah@example.com" type="email"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Actions -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 border-t border-primary/10">
+<button class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+                Continue Booking
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Sticky Nav Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto hidden">
+<!-- This would be used on main screens, currently booking flow has its own action bar -->
+</nav>
+<!-- Notification Toast Example (Hidden) -->
+<div class="hidden absolute top-20 left-4 right-4 bg-slate-900 text-white p-4 rounded-xl flex items-center gap-3 shadow-2xl z-50">
+<div class="bg-primary size-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Booking Confirmed!</p>
+<p class="text-[10px] text-slate-400">Oct 1st at 10:30 AM</p>
+</div>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer">close</span>
+</div>
+</div>
+<!-- Bottom Nav Bar from Component List (Themed) -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md z-40">
+<div class="flex gap-2 border-t border-primary/10 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Services</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined fill-1">calendar_month</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Bookings</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

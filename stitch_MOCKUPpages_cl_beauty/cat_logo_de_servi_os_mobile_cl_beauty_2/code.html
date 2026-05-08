@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clé Beauty Service Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#0d0d0d",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                },
+            },
+        }</script>
+<style>
+        .pixel-bg {
+            background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-2">
+<div class="rounded-none">
+<span class="material-symbols-outlined text-white">grid_view</span>
+</div>
+<div>
+<h1 class="text-lg font-extrabold leading-none tracking-tight">CLÉ BEAUTY</h1>
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">Digital Catalog</p>
+</div>
+</div>
+<button class="rounded-none">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">shopping_bag</span>
+</button>
+</div>
+</header>
+<main class="flex-1 pb-24">
+<!-- Search & Hero -->
+<div class="p-4 space-y-4">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-primary">search</span>
+</div>
+<input class="block w-full pl-10 pr-4 py-3 bg-white dark:bg-black border-2 border-primary/30 rounded-none focus:border-primary focus:ring-0 text-sm font-mono tracking-tight" placeholder="Search digital services..." type="text"/>
+</div>
+<!-- Tech Blocks Banner -->
+<div class="rounded-none">
+<div class="absolute top-0 right-0 p-4 opacity-20">
+<span class="material-symbols-outlined text-8xl">deployed_code</span>
+</div>
+<div class="relative z-10">
+<h2 class="text-2xl font-black mb-1">TECH GLAM</h2>
+<p class="text-sm opacity-90 mb-4 max-w-[200px]">Precision beauty blocks for the modern era.</p>
+<div class="rounded-none">
+<span class="rounded-none"></span>
+                        NEW: PIXEL FINISH
+                    </div>
+</div>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 px-4 py-2 overflow-x-auto no-scrollbar"><button class="flex h-10 shrink-0 items-center justify-center gap-x-2 bg-primary px-5 text-white border border-primary font-black uppercase text-xs">
+<span class="text-xs font-black">All_Nodes</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 bg-white dark:bg-black px-5 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-white/10">
+<span class="text-xs font-bold uppercase tracking-widest">Makeup</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 bg-white dark:bg-black px-5 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-white/10">
+<span class="text-xs font-bold uppercase tracking-widest">Hair</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 bg-white dark:bg-black px-5 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-white/10">
+<span class="text-xs font-bold uppercase tracking-widest">Bundles</span>
+</button></div>
+<!-- Service Grid -->
+<div class="p-4 space-y-4">
+<h3 class="text-xs font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4 flex items-center gap-2">
+<span class="h-[1px] flex-1 bg-slate-200 dark:bg-slate-800"></span>
+                ACTIVE PROTOCOLS
+                <span class="h-[1px] flex-1 bg-slate-200 dark:bg-slate-800"></span>
+</h3>
+<!-- Service Card 1 -->
+<div class="rounded-none">
+<div class="flex gap-4">
+<div class="rounded-none">
+<img class="object-cover w-full h-full" data-alt="Close up of minimalist neutral makeup look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpbUPt_jlR-K-d74Tqqz101vJRYEzzMhfnyfFNwNZJQad6gcZJyd0QNrmz1hfqw_5yVxLlMBU4prQiKOar99qqykn5B8QmcWE73zsqOdhsFxu4xJZd4IeuR8QcW4oeWvgOA_HxzoYS8CDnkAaqMbAKy-KLeP5EpF6N7xsGZEAYxlMtrNMqErPSNtIxvdqprvwuiixVaNFrDKU6dLhc8rtCa1dZCK3VSVqd19vmHtzFJbCK5YaY6id-RcWAdm_-3T1XmvzTRfKS4GY"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-slate-900 dark:text-white leading-tight">Minimalist Makeup</h4>
+<span class="text-primary font-black text-lg">$65</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1 text-[10px] uppercase font-bold tracking-tighter">
+<span class="material-symbols-outlined text-xs">schedule</span> 45 MIN
+                                </span>
+<span class="flex items-center gap-1 text-[10px] uppercase font-bold tracking-tighter">
+<span class="material-symbols-outlined text-xs">database</span> V.1.0
+                                </span>
+</div>
+</div>
+<button class="rounded-none">
+                            Book Module
+                        </button>
+</div>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="rounded-none">
+<div class="flex gap-4">
+<div class="rounded-none">
+<img class="object-cover w-full h-full" data-alt="Dramatic high-fashion event makeup with eyeliner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRwW6FtJN1e1go5zaytS7PEzJT55AZnQy_NSFfYq_HCxgkgo3JhXBWGqVOBUKoZMcfNJsf2qbLtKGMoW4n6M4DQhPPv3mkU02hGMWLVQ3A2f-tgiP5vl7HyP90tfgMPphE8rddjVxLD-iWwf-W4T5aAVpgQb-uvBOIEZ2y6Bpj8NgboftbRAVXCs8QiCt2e5ruznKjlcUcEA4nR558HzFoHJaog2CIhd65sQuITPTbXiQkkA-st5n0mdQrYCaoyHJi7Zfjtfcs4cQ"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-slate-900 dark:text-white leading-tight">Event Makeup</h4>
+<span class="text-primary font-black text-lg">$120</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1 text-[10px] uppercase font-bold tracking-tighter">
+<span class="material-symbols-outlined text-xs">schedule</span> 90 MIN
+                                </span>
+<span class="flex items-center gap-1 text-[10px] uppercase font-bold tracking-tighter">
+<span class="material-symbols-outlined text-xs">database</span> V.2.1
+                                </span>
+</div>
+</div>
+<button class="rounded-none">
+                            Book Module
+                        </button>
+</div>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="rounded-none">
+<div class="flex gap-4">
+<div class="rounded-none">
+<img class="object-cover w-full h-full" data-alt="Beautifully styled natural hair with soft waves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEMmYpiwiBoDfrRUoMpfAa4yrfkA8gF3x0KqcjjsUo9pc6whZybnqCWkGLKkCQ45rv2OKXzl-vAxF7W0NYel-y_NwNO8djNKPHNosn8GlTSoJMRx8OIUwIKt-sLrBtdblCojWd9EMwSCBaQ9bWH5fwjHaGYnMVHIPRgEBo0rV0GmfPVnZuTRpZzf_kxLdQHxgjCieAgCzT7mz9cM7PL8jNuv8d_OrxYE6w7gP_a2c4TDgPow8_f5vRqhzXLl1wPgNSTEzs8NHqv6Q"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-slate-900 dark:text-white leading-tight">Natural Hair Styling</h4>
+<span class="text-primary font-black text-lg">$85</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1 text-[10px] uppercase font-bold tracking-tighter">
+<span class="material-symbols-outlined text-xs">schedule</span> 60 MIN
+                                </span>
+<span class="flex items-center gap-1 text-[10px] uppercase font-bold tracking-tighter">
+<span class="material-symbols-outlined text-xs">database</span> V.1.5
+                                </span>
+</div>
+</div>
+<button class="rounded-none">
+                            Book Module
+                        </button>
+</div>
+</div>
+</div>
+<!-- Service Card 4 (Package) -->
+<div class="rounded-none">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary">auto_fix_high</span>
+</div>
+<div class="flex gap-4 relative z-10">
+<div class="rounded-none">
+<img class="object-cover w-full h-full" data-alt="Bridal makeup and hair styling session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApL6sUX--s5B-8wEVK0R2sRxV-DzQGF_GBNftq2qZKg7BDe6nlr3UWQ71W2hfddmE4tEBWKJtIBW_bs9sexfBdBMwxTIjWkJGCOXeuAGtaqTEAAq5s3z0DJ50ZFhwAci1iAr5iPwxZxTm4vdT6atr2r3Ax6HWlzyOPmZEniOaQtZGBGQwCFqxVcfJp6-OW_r9QGddiWGbkpyHcAWbD_90otyq8RzDPHoYWcYvqr2a8cPwGCJ4P4emWmvCx_QjnKf9kamrp3X6JGGU"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-white leading-tight">Bridal Package</h4>
+<span class="text-primary font-black text-lg">$350</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-slate-400">
+<span class="flex items-center gap-1 text-[10px] uppercase font-bold tracking-tighter">
+<span class="material-symbols-outlined text-xs">schedule</span> 180 MIN
+                                </span>
+<span class="flex items-center gap-1 text-[10px] uppercase font-bold tracking-tighter text-primary">
+<span class="material-symbols-outlined text-xs">verified</span> PREMIUM
+                                </span>
+</div>
+</div>
+<button class="rounded-none">
+                            Book Full Suite
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-black border-t-2 border-primary/30 px-6 pb-6 pt-3 flex items-center justify-between z-[100]">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-black uppercase tracking-tighter font-mono">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-black uppercase tracking-tighter font-mono">Services</span>
+</a>
+<div class="relative -mt-12">
+<button class="rounded-none">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-[10px] font-black uppercase tracking-tighter font-mono">Bookings</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-black uppercase tracking-tighter font-mono">Profile</span>
+</a>
+</nav>
+<!-- Pixel Decoration Layer -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05] pixel-bg z-0"></div>
+</body></html>

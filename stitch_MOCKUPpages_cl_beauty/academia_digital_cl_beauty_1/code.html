@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clé Beauty Academy | Digital Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b8c",
+                "background-light": "#f8f6f7",
+                "background-dark": "#221019",
+              },
+              fontFamily: {
+                "display": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .pixel-grid {
+            background-image: radial-gradient(circle, #ee2b8c22 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .pixel-border {
+            box-shadow: 4px 4px 0px 0px #ee2b8c;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 lg:px-20 py-4 bg-white dark:bg-background-dark/50 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 bg-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-white">grid_view</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tight uppercase italic">Clé Academy</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-semibold uppercase tracking-wider" href="#">All Courses</a>
+<a class="text-primary text-sm font-bold uppercase tracking-wider border-b-2 border-primary" href="#">My Library</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-semibold uppercase tracking-wider" href="#">Live Workshops</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden border border-primary/20">
+<div class="text-primary flex bg-white dark:bg-slate-800 items-center justify-center pl-3">
+<span class="material-symbols-outlined text-lg">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-white dark:bg-slate-800 focus:ring-0 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 text-sm" placeholder="Find a technique..."/>
+</div>
+</label>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 cursor-pointer">notifications</span>
+<div class="bg-primary/20 p-0.5 rounded-full border-2 border-primary">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="User profile avatar icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgcCO9hJpcgTW5bK8pqOcc_mcO4KQzmdC_AFVIOCpb1IK9j2jJodl6EyN5Rw-BQpZfgZdiGJEgBDLWVGUdAkETlo0KYCk0msw9ejintHjg3wpuTIOU0AkhlBTH5KKS8smjGOg__RB7gBoD9KwrOuQiFiPjsKQBqSYiHFW51_BLSL0twEicMZwIy_N2Y2-fUGNMpzTcS3nrhB-me0ne_0HRvGCday02Qyaow8JbUgHP5TKruOeOxCWbuitcap9BZHB-5-xaIzi6cGA");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col max-w-[1400px] mx-auto w-full px-6 py-8 gap-8">
+<!-- Hero Feature Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<div class="lg:col-span-8 group relative overflow-hidden rounded-xl bg-slate-900 pixel-border">
+<div class="absolute inset-0 opacity-40 pixel-grid"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+<div class="relative h-[400px] w-full flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-overlay group-hover:scale-105 transition-transform duration-700" data-alt="Sophisticated makeup artist applying blush in studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALNzoI0_SF9z-Vs5cSmtXUbZBn_k9-Uam725iINlLtcilEeRU4RH-OfMv1IbRepo1QqGD2eJGgfx-yQCwCj3OeCl_-j4SwD_CBlwwQPHiIOJYji5r9hf7HtVCzpwkA1AOK6otgfaihPBCcViCVuxm2oH7XDyI5gcj0RSznVc3I7XkPOq8_zaFScRew1QTxRIWMTSko63MTO8sJCvKBv9oe5RBD3WggbrO3TySfeP1Qbi24jJ1G9ry-JAX9HWUfX-n_P4PkjnNE_vk"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-widest">Masterclass</span>
+<span class="bg-white/20 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-widest">New</span>
+</div>
+<h1 class="text-white text-4xl font-black mb-2 uppercase tracking-tighter italic">Signature Event Makeup</h1>
+<p class="text-slate-300 max-w-lg mb-6 text-sm font-medium">Learn the professional secrets for long-lasting, high-impact makeup looks for red carpet and weddings.</p>
+<div class="flex gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg flex items-center gap-2 transition-all uppercase text-sm tracking-widest shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">play_circle</span> Resume Lesson
+                                    </button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold py-3 px-6 rounded-lg transition-all text-sm uppercase tracking-widest">
+                                        View Syllabus
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Stats/Up Next -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 flex flex-col justify-between h-full shadow-sm">
+<div>
+<h3 class="text-primary font-black uppercase text-xs tracking-[0.2em] mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">analytics</span> Learning Progress
+                                </h3>
+<div class="space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-bold uppercase">
+<span>Academy Level 04</span>
+<span class="text-primary">68%</span>
+</div>
+<div class="w-full bg-primary/10 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[68%]"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="bg-background-light dark:bg-slate-800/50 p-4 rounded-lg text-center">
+<div class="text-2xl font-black text-slate-900 dark:text-slate-100">12</div>
+<div class="text-[10px] text-slate-500 uppercase font-bold">Courses Done</div>
+</div>
+<div class="bg-background-light dark:bg-slate-800/50 p-4 rounded-lg text-center">
+<div class="text-2xl font-black text-slate-900 dark:text-slate-100">45h</div>
+<div class="text-[10px] text-slate-500 uppercase font-bold">Watch Time</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<div class="bg-primary/5 border border-dashed border-primary/30 p-4 rounded-lg flex items-center gap-4">
+<div class="size-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">emoji_events</span>
+</div>
+<div>
+<p class="text-[10px] text-primary font-bold uppercase">Next Reward</p>
+<p class="text-xs font-bold">Advanced Hairstyling Certification</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Library Filter -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-wrap items-end justify-between gap-4">
+<div>
+<h2 class="text-2xl font-black uppercase italic tracking-tighter">Browse Library</h2>
+<p class="text-slate-500 text-sm">Choose from our curated collection of professional tutorials.</p>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-4 py-2 bg-primary text-white rounded-lg text-xs font-bold uppercase tracking-widest transition-all">All Techniques</button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-primary/10 hover:border-primary text-slate-600 dark:text-slate-400 rounded-lg text-xs font-bold uppercase tracking-widest transition-all">Makeup Artistry</button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-primary/10 hover:border-primary text-slate-600 dark:text-slate-400 rounded-lg text-xs font-bold uppercase tracking-widest transition-all">Hairstyling</button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-primary/10 hover:border-primary text-slate-600 dark:text-slate-400 rounded-lg text-xs font-bold uppercase tracking-widest transition-all">Skincare</button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-primary/10 hover:border-primary text-slate-600 dark:text-slate-400 rounded-lg text-xs font-bold uppercase tracking-widest transition-all">Digital Business</button>
+</div>
+</div>
+<!-- Video Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Class 1: Natural Makeup -->
+<div class="group bg-white dark:bg-slate-800/30 rounded-xl overflow-hidden border border-primary/5 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Natural makeup look on a model in bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz1Qs972gDgQZpcgXpJJ9uKyo0op_vsupvSAPzyPDHjOF7K4EkGl9AHaZnrcZ4WhsefoelEDyAirga16DrUQYD4krAtd33XI57vgto9G1vHuIKoPNtOv29psRT2t5M43pFLias34BlUlwaSUxtX8JpAVeieu9RBLjZ7ZF4cK2eOCNRf_Q8QKwIGHYUpHsUaJIvK3QFKp0QvbJ9CfnNybQIurrAo7yJBdzjx4YWLOloV1XIHrU8geufEd6vcL6cfveeZ8yQCbCO6ps"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<div class="size-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 right-3 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded">24:15</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-lg font-black uppercase leading-tight italic tracking-tight">Everyday Natural Glow</h3>
+<span class="text-primary material-symbols-outlined">verified</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4 line-clamp-2">Master the "no-makeup" makeup look. Perfect for daily routines and commercial shoots.</p>
+<div class="flex items-center gap-4 mb-6 text-[10px] font-bold uppercase text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 12.4k</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">signal_cellular_alt</span> Beginner</span>
+</div>
+<button class="w-full py-3 bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold rounded-lg text-xs uppercase tracking-widest transition-all">Access Lesson</button>
+</div>
+</div>
+<!-- Class 2: Simple Hairstyles -->
+<div class="group bg-white dark:bg-slate-800/30 rounded-xl overflow-hidden border border-primary/5 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of an elegant braid hairstyle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYycO5zNfxbnkSx9HVT8F77aU7w2Rszs1fk9iWKbIe_gCJ4OQCz6U6qCoTERXb0E8khKdQ1vPJZt1D-nkGAfAJoxgiGHEnesGWEY6xFuxUvXbHyFjBjBDILsyBbO7QJk3NaWRJrCqc_2iXpbBJ5Iklr7c0wXJ_SQEriLmx8Z8iBmceGYWjYYEE2ACo9w5NfvDMlH-oefeC66Pa1JqwD9qxDZlzX-7y2IzdMc40EKmH465IShabJzDEJ-YcAjGsK5z9Pvio17GAYTA"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<div class="size-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 right-3 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded">18:40</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-lg font-black uppercase leading-tight italic tracking-tight">Modern Minimalist Braids</h3>
+<span class="text-primary material-symbols-outlined">favorite</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4 line-clamp-2">Creative braided styles that take less than 15 minutes. High speed techniques for busy mornings.</p>
+<div class="flex items-center gap-4 mb-6 text-[10px] font-bold uppercase text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 8.9k</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">signal_cellular_alt</span> Intermediate</span>
+</div>
+<button class="w-full py-3 bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold rounded-lg text-xs uppercase tracking-widest transition-all">Access Lesson</button>
+</div>
+</div>
+<!-- Class 3: Premium Locked Course -->
+<div class="group bg-slate-100 dark:bg-slate-900/50 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 transition-all grayscale hover:grayscale-0 relative">
+<div class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-background-dark/80 backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">lock</span>
+<p class="text-white font-black uppercase text-xs tracking-widest">Premium Content</p>
+</div>
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High fashion editorial makeup with bold colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKHsvFCl2HZifxysIO1JU-6iWdlAFwZwlahyBKHewfDCcIH2DupwfAtQUnBA948ImJZS0_xARJEVz1sAWrDZDMdklwUHJRrxhR4Zc5qySliraO75Nu7t4GWWjxSYvd3pvGw5tY9UuBOi_PvXVUfmzl9WBJAhtFDd3fS1Iwqd3-QN9ZyIeNZGJJFdYQQ9gVaQWH8iHEWmPlc8uM9vU5TKyZCMn1-8scIX_e47BxSjKGR-RcJcI3MtswRf9mo1dVuUGMyLZr-2h9Pao"/>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-black uppercase leading-tight italic tracking-tight text-slate-400 mb-3">Avant-Garde Editorial</h3>
+<p class="text-slate-500 text-xs mb-4 line-clamp-2">Push the boundaries of conventional beauty with this advanced artistic makeup course.</p>
+<div class="flex items-center gap-4 mb-6 text-[10px] font-bold uppercase text-slate-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 5.5 Hours</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">signal_cellular_alt</span> Expert</span>
+</div>
+<button class="w-full py-3 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg text-xs uppercase tracking-widest transition-all shadow-lg shadow-primary/30">Unlock Access</button>
+</div>
+</div>
+<!-- Class 4: Simple Event Look -->
+<div class="group bg-white dark:bg-slate-800/30 rounded-xl overflow-hidden border border-primary/5 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Evening makeup with winged eyeliner and red lips" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfmOQCbXyFzBFWvpCdYhAHldrLc5UmZqphznMShYc5JWA2ycL0sdtPI6MMxqeW2sOaXNHwqm-_Ck_1--gt2hrsHPv1pGAYEe4PHhwbC8mhFuM0Uj-xsOGXIClLS37dLHoUFdLds6RsyFG1F0LvrAMRn2zPHRK-Gkmw0ySvck0hmIsb2TeZRc-lALgcLqeIJMZ0dVdvA9MbeVq1L0F6XdYRWEnWqIgs_fy_0kchoXmpJibfiPSPNY0_ikOGfGG2bbBE8ny3zmysBMo"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<div class="size-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 right-3 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded">32:50</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-lg font-black uppercase leading-tight italic tracking-tight">Classic Evening Glam</h3>
+<span class="text-primary material-symbols-outlined">star</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4 line-clamp-2">The timeless look that never fails. Learn perfect eyeliner and red lip application.</p>
+<div class="flex items-center gap-4 mb-6 text-[10px] font-bold uppercase text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 15.1k</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">signal_cellular_alt</span> Beginner</span>
+</div>
+<button class="w-full py-3 bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold rounded-lg text-xs uppercase tracking-widest transition-all">Access Lesson</button>
+</div>
+</div>
+<!-- Class 5: Skincare Prep -->
+<div class="group bg-white dark:bg-slate-800/30 rounded-xl overflow-hidden border border-primary/5 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Skincare products being applied to a face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVdaV6Xi4FkkY9rAg-by2PGdl2dCHVYNUz8Jf7REoWPulG2SB1hV0J8Pq4jNXk0tvPBU5LkVgTpDMyDMApGUY8AM3XUv8ray0OHR7B3HY2kIAQ5ZpZ9YbbcXCZR0gCMkN3TEnv3VXBKGw_ImSeOJZlFz1cZBcad5tYLl3d9wxQRwsOY1x_FnBjvQ_Y7FL6pklJQaAXsK827T1Rzbi8MyxZXt14adX5_8JBgfzbOjSwPze9j3h5Xth_skrv-T2_melLS_PYGXbx98o"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<div class="size-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 right-3 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded">12:05</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-lg font-black uppercase leading-tight italic tracking-tight">The Perfect Canvas Prep</h3>
+<span class="text-primary material-symbols-outlined">spa</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4 line-clamp-2">Great makeup starts with skincare. Professional prep routine for all skin types.</p>
+<div class="flex items-center gap-4 mb-6 text-[10px] font-bold uppercase text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 6.2k</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">signal_cellular_alt</span> All Levels</span>
+</div>
+<button class="w-full py-3 bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold rounded-lg text-xs uppercase tracking-widest transition-all">Access Lesson</button>
+</div>
+</div>
+<!-- CTA Promo Card -->
+<div class="bg-primary p-8 rounded-xl flex flex-col justify-center pixel-grid relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-20">
+<span class="material-symbols-outlined text-8xl text-white">bolt</span>
+</div>
+<h3 class="text-white text-2xl font-black uppercase tracking-tighter italic mb-4 relative z-10 leading-tight">Join the Elite Professional Academy</h3>
+<p class="text-white/90 text-sm mb-6 relative z-10">Get unlimited access to over 200+ exclusive masterclasses, certification paths, and private community.</p>
+<button class="bg-white text-primary font-black py-4 px-6 rounded-lg text-xs uppercase tracking-[0.2em] relative z-10 transition-transform active:scale-95 shadow-xl">Upgrade To PRO Now</button>
+</div>
+</div>
+</div>
+<!-- Footer Section -->
+<footer class="mt-12 py-12 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined font-black">grid_view</span>
+<span class="font-black italic uppercase tracking-tighter">Clé Beauty Digital</span>
+</div>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">© 2024 Clé Beauty Academy. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">Support</a>
+<a class="text-slate-500 hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">Terms of Use</a>
+</div>
+<div class="flex gap-4">
+<div class="size-8 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div class="size-8 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+</body></html>

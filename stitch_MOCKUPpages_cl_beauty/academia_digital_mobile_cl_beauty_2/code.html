@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Clé Beauty Digital Academy</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 bg-slate-950">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex flex-col"><div class="flex items-center justify-between w-full px-4 border-b-2 border-primary/30 py-4 bg-slate-900/50 backdrop-blur-xl">
+<div class="flex items-center gap-2">
+<div class="size-2 bg-primary"></div>
+<h1 class="text-primary font-bold tracking-tighter uppercase text-sm">System.Dashboard</h1>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">terminal</span>
+<div class="size-8 bg-primary text-slate-950 flex items-center justify-center font-bold text-xs rounded-none">JD</div>
+</div>
+</div></header>
+<!-- Main Content -->
+<main class="flex-1 pb-24">
+<!-- Dashboard Stats -->
+<section class="px-4 py-6"><div class="flex justify-between items-end mb-6">
+<div>
+<p class="text-[10px] text-primary/60 font-mono uppercase tracking-[0.2em]">User Statistics</p>
+<h2 class="text-white text-3xl font-black uppercase tracking-tighter italic">Metrics.v1</h2>
+</div>
+<div class="text-primary/40 text-[10px] font-mono">SCANNING_ACTIVE...</div>
+</div>
+<div class="grid grid-cols-2 gap-px bg-primary/20 p-px">
+<div class="bg-slate-900 p-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 size-4 border-t border-r border-primary/50"></div>
+<span class="material-symbols-outlined text-primary/40 text-sm mb-4">data_object</span>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-1">Completed</p>
+<p class="text-white text-4xl font-black">12<span class="text-primary text-xs">pts</span></p>
+</div>
+<div class="bg-primary p-4 relative overflow-hidden">
+<div class="absolute top-0 right-0 size-2 bg-slate-950"></div>
+<span class="material-symbols-outlined text-slate-950/40 text-sm mb-4">pending</span>
+<p class="text-slate-900 text-[10px] font-bold uppercase tracking-widest mb-1">Progress</p>
+<p class="text-slate-950 text-4xl font-black">03</p>
+</div>
+</div></section>
+<!-- Lessons List -->
+<section class="px-4 pb-6"><div class="flex items-center justify-between mb-8 border-l-4 border-primary pl-3">
+<div>
+<h3 class="text-white text-xl font-bold uppercase italic">Lesson_Archive</h3>
+<p class="text-primary/50 text-[10px] font-mono">SELECT MODULE TO INITIALIZE</p>
+</div>
+<button class="border border-primary/30 px-3 py-1 text-primary text-[10px] font-bold uppercase tracking-widest">All_Files</button>
+</div>
+<div class="grid grid-cols-1 gap-8">
+<!-- Pixel Block Card 1 -->
+<div class="group relative">
+<div class="absolute -top-2 -left-2 size-4 bg-primary/20"></div>
+<div class="relative bg-slate-900 border border-slate-800">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Tutorial" class="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGnJQ1VJM9QBpTJngTsNz7c3igdsDPLq7hgG-jsMjOnJAHVEhsq0aE9cX_6AnvDB8i8wtkhH23VR3EJ9zSqjnV8shXJWgLYWlsO5yAp6v14vRWGWZhirgTQZUK28Asx1v_aBKWUMz1mlwk3NMoHUesvHgKGIKuiQN8JN4Ix-ohkDATkUXhryifYVbF1mtYvDjyIPUAxNJMR8nZcJ3cecvdH86CnqgmwTiTLZ3Ph5sMMJ500Y2hQ9nvTsY7ZSKQ0CGBeEeD75UPBXU"/>
+<div class="absolute top-2 right-2 bg-primary text-slate-950 text-[10px] font-black px-2 py-0.5">15:20</div>
+<div class="absolute bottom-0 left-0 p-2">
+<div class="size-2 bg-primary"></div>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-white text-lg font-bold tracking-tighter">NATURAL_MAKEUP.EXE</h4>
+<span class="text-primary/30 font-mono text-[10px]">[01]</span>
+</div>
+<p class="text-slate-500 text-xs leading-relaxed mb-6">Optimization of daily visual presentation through professional application protocols.</p>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-black py-4 uppercase tracking-widest text-xs flex items-center justify-center gap-3 group-hover:bg-primary group-hover:text-slate-950 transition-all">
+<span>Initialize_Lesson</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pixel Block Card 2 -->
+<div class="group relative">
+<div class="relative bg-slate-900 border border-slate-800">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Tutorial" class="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTKPyDHEPHKJzTM1Spk6QpLlHzIjTYGqtzKWY6H3_P6IDDbaAlUwB-bDBGFnbRnf_ynjLMqMawKqCxDJk2J7HaXILouheMf7O0Njf7_7FGM7q8dj21j29xMyyNr2hh3PO4_cLA8PKu6UMQMhhFJxJuU8JtqXV5IlJnN5s7C4MEwBQN9bWpJL6gvV8Km2IouGvsLjhMw8t7UKzeYudgxzT901mD-MrkW7-uEqEL_qSqEIqyjehiEeAWWhC0KMtRrSdQF5fi65vrHm4"/>
+<div class="absolute top-2 right-2 bg-primary text-slate-950 text-[10px] font-black px-2 py-0.5">24:45</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-white text-lg font-bold tracking-tighter">GLAMOUR_GALA.EXE</h4>
+<span class="text-primary/30 font-mono text-[10px]">[02]</span>
+</div>
+<p class="text-slate-500 text-xs leading-relaxed mb-6">High-contrast contouring and optical enhancement for evening environmental conditions.</p>
+<button class="w-full bg-primary text-slate-950 font-black py-4 uppercase tracking-widest text-xs flex items-center justify-center gap-3 transition-all">
+<span>Initialize_Lesson</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="absolute -bottom-2 -right-2 size-6 bg-primary/10 flex flex-wrap p-1">
+<div class="size-1.5 bg-primary/40 m-0.5"></div>
+<div class="size-1.5 bg-primary/40 m-0.5"></div>
+</div>
+</div>
+</div>
+</div></section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex border-t-2 border-primary/20 bg-slate-950 px-2 pb-6 pt-3"><a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+<p class="text-[9px] font-black uppercase tracking-tighter">Index</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary relative" href="#">
+<div class="absolute -top-2 size-1 bg-primary"></div>
+<span class="material-symbols-outlined text-xl">layers</span>
+<p class="text-[9px] font-black uppercase tracking-tighter">Modules</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl">query_stats</span>
+<p class="text-[9px] font-black uppercase tracking-tighter">Stats</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl">settings_input_component</span>
+<p class="text-[9px] font-black uppercase tracking-tighter">System</p>
+</a></nav>
+</div>
+</body></html>

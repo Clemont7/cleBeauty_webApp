@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pixel-grid {
+            background-image: radial-gradient(circle, #ee2b8c 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .tech-border {
+            border: 1px solid rgba(238, 43, 140, 0.2);
+        }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #ee2b8c, transparent);
+            position: absolute;
+            top: 50%;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-background-light font-display text-slate-900 selection:bg-primary selection:text-white">
+<div class="relative min-h-screen flex flex-col border-x border-primary/10 max-w-[1440px] mx-auto bg-white">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-primary/20 px-8 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Clé Beauty Logo" class="h-10 w-auto" data-alt="Clé Beauty geometric minimalist brand logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5ToHSpVNgYV_fTwAIMUCOLH4u9cJuOn21G9X_TnWOSL7F-bfc3GxJFxPQx9pCEJE5TD17qaUt2zqjTKM0djVUQ4qnGLesrxCRLGiPKZSRLKcubRWdx6ZS3lg74exZZXdPmTAEaL0N5w7ofUe-SpKM1wbtxiogKhHeijLWkcbGcdu3QIKx6j6PA8cbePLURcCjqVvJn4peAnEkYCQWmhx6z6bKAwE4tCYFG7w5CNUsp_6YOObtX9KuKcFunicX9fgYjSae2_ijKUU"/>
+<div class="flex flex-col">
+<span class="text-xs font-bold tracking-widest text-primary uppercase">System.Status: Active</span>
+<span class="text-[10px] text-slate-400 font-mono">ID: CLE-SRC-001</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-bold uppercase tracking-tighter hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">grid_view</span> [Services]
+                </a>
+<a class="text-sm font-bold uppercase tracking-tighter hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">memory</span> [Process]
+                </a>
+<a class="text-sm font-bold uppercase tracking-tighter hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">database</span> [Gallery]
+                </a>
+<button class="bg-primary text-white px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary/90 transition-all flex items-center gap-2">
+                    Initialize_Booking <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</nav>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative border-b border-primary/10 grid grid-cols-1 lg:grid-cols-12 min-h-[70vh]">
+<div class="lg:col-span-7 p-8 lg:p-20 flex flex-col justify-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full pixel-grid opacity-10"></div>
+<div class="relative z-10">
+<div class="inline-block border border-primary text-primary text-[10px] px-2 py-1 mb-6 font-mono tracking-[0.2em]">
+                            LAT: 48.8566° N | LON: 2.3522° E
+                        </div>
+<h1 class="text-6xl lg:text-8xl font-extrabold leading-[0.9] tracking-tighter text-slate-900 mb-8">
+                            DIGITAL <span class="text-primary italic">AESTHETIC</span><br/>REDEFINED.
+                        </h1>
+<p class="max-w-md text-slate-600 text-lg mb-10 leading-relaxed border-l-2 border-primary pl-6">
+                            Minimalist beauty architecture for the digital age. We specialize in natural hair textures and pixel-perfect makeup precision for black women.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-10 py-4 font-bold uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(238,43,140,0.3)]">
+                                RUN_PROTOCOL
+                            </button>
+<div class="flex items-center gap-4 text-xs font-mono text-slate-400">
+<span>REFRESH: 120Hz</span>
+<span class="text-primary">●</span>
+<span>UPTIME: 99.9%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative bg-slate-100 min-h-[500px] border-l border-primary/10">
+<div class="absolute inset-0 bg-cover bg-center grayscale-[0.2] hover:grayscale-0 transition-all duration-700" data-alt="Close up of stunning black woman with natural afro hair and minimalist glowing skin makeup" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLttLNdjwXbDnUQh_8EzbFp49esWX5H3Qpz7M_EtTP82aKBHE-cxZEDXbq1361AB7DAAOruoAfYjUfy5N8BEHJkJyXGEMeyGWssMiwqj408BlH_8u1qIfW4s3cFbljvQpsLsG2GFcqq10dg0fNQz06YEBfBmX712vFM-_dThbi9_2lMj3VpgO5Rr9eJRga8L4dubuMYGnEJROKomyTu6Jv1i4deXbyVWGEwEXByWhaGcnSGYIVkHg1KgFPeN2isVe25W0DfHY2K68')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light/80 via-transparent to-transparent"></div>
+<!-- Pixel Blobs Overlay -->
+<div class="absolute bottom-8 right-8 flex flex-wrap w-32 gap-1">
+<div class="w-4 h-4 bg-primary/40"></div>
+<div class="w-4 h-4 bg-primary/60"></div>
+<div class="w-4 h-4 bg-primary"></div>
+<div class="w-4 h-4 bg-primary/20"></div>
+<div class="w-4 h-4 bg-primary/40"></div>
+<div class="w-4 h-4 bg-primary/80"></div>
+</div>
+</div>
+</section>
+<!-- Data Stats Bar -->
+<section class="grid grid-cols-2 md:grid-cols-4 border-b border-primary/10">
+<div class="p-8 border-r border-primary/10 flex flex-col gap-1">
+<span class="text-[10px] font-mono text-slate-400 uppercase">Process ID</span>
+<span class="text-2xl font-extrabold tracking-tight">#CLE-2024</span>
+</div>
+<div class="p-8 border-r border-primary/10 flex flex-col gap-1">
+<span class="text-[10px] font-mono text-slate-400 uppercase">Natural Density</span>
+<span class="text-2xl font-extrabold tracking-tight">4C-OPTIMIZED</span>
+</div>
+<div class="p-8 border-r border-primary/10 flex flex-col gap-1">
+<span class="text-[10px] font-mono text-slate-400 uppercase">Tone Mapping</span>
+<span class="text-2xl font-extrabold tracking-tight">TRUE_SKIN v2.0</span>
+</div>
+<div class="p-8 flex flex-col gap-1">
+<span class="text-[10px] font-mono text-slate-400 uppercase">System Latency</span>
+<span class="text-2xl font-extrabold tracking-tight">0.002ms</span>
+</div>
+</section>
+<!-- Core Services -->
+<section class="py-24 px-8 lg:px-20 relative">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-extrabold tracking-tighter mb-4">[CORE_SERVICES]</h2>
+<p class="text-slate-600">Our robotic precision meets organic textures. Each treatment is a calculated sequence designed to enhance your natural architecture.</p>
+</div>
+<div class="text-primary font-mono text-sm animate-pulse">
+                        SCANNING_AVAILABLE_SLOTS...
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-primary/10 border border-primary/10">
+<!-- Service 1 -->
+<div class="bg-white p-8 group hover:bg-primary transition-all duration-300">
+<div class="aspect-square bg-slate-100 mb-8 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Microscopic view of healthy natural black hair texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSU6P2XeKY6tppZwu4RJuiRqNmErCmuy2jH2heSF9EukiBBQwENCp9nkoZG72wzcykf5CaIVj4HBYBgSnntN-43Qwii_g02rXQZ9xAKOrqG7VxYkfKVUNDRxqaZYmQFKpfKejyJBUgkeFJKZyavRLbIdOyGjGhPBQ5CUJhntEDLxzTJlOscJyOt85M5hDJ2tzCBz0nNCS23upE4NfT5uKZrORto940hHI1t4QztNzvIA6mwSUR-K7fzvn6Fvme7TC0JNL86q_2poA"/>
+<div class="absolute top-4 left-4 bg-white/90 text-[10px] font-mono px-2 py-1">SCULPT_V1</div>
+</div>
+<h3 class="text-xl font-bold group-hover:text-white mb-2">Pixel-Perfect Hair</h3>
+<p class="text-slate-500 text-sm group-hover:text-white/80 leading-relaxed">Sculpting natural textures with geometric precision and data-driven moisture mapping.</p>
+</div>
+<!-- Service 2 -->
+<div class="bg-white p-8 group hover:bg-primary transition-all duration-300">
+<div class="aspect-square bg-slate-100 mb-8 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Minimalist glowing makeup on beautiful dark skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo3bKUxm86zGzCzjTt31y4NPdx9XosRIl1e3Y24Hb5yLkfcHiNNA-NnYJ5edsjTpi8tc4wb3V0G1Clk6MAgMWRufqciBO8S9jsAtNQiEjF8af0e_MshT_Ahp8xFqGwU1WK96fC6POplSd0hFJRJxDoHrrh-72PQpskPzP_j5471nbUhrQ_-Q1ql7NXaHXrNlPorBKQVsTU05omeX61LeCfVdc3PdpNgdmKQlp3tBvGh1R2KPwn6pAlA46nguSrDkP59CFStsErKIo"/>
+<div class="absolute top-4 left-4 bg-white/90 text-[10px] font-mono px-2 py-1">GLOW_X2</div>
+</div>
+<h3 class="text-xl font-bold group-hover:text-white mb-2">Digital Radiance</h3>
+<p class="text-slate-500 text-sm group-hover:text-white/80 leading-relaxed">Minimalist makeup that enhances your digital and physical presence using sub-surface scattering tech.</p>
+</div>
+<!-- Service 3 -->
+<div class="bg-white p-8 group hover:bg-primary transition-all duration-300">
+<div class="aspect-square bg-slate-100 mb-8 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Close up of eye with precise eyeliner and natural lashes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsJ4jDRw7iepb9JRVFvNjCr4gi2Q1C3-SbxRUSMgMNO5UjrOmORUVnbzqG-Waz97K5lC3dCus4lvYy9EfNq52jHo3IyE3hiDi4IlsaurssDcbU5qlPKSHybWVVVvK5DELM4Ld_HF93-i333EfWaHBJ83k242gEnjX3GzAt0XVSGF1TJrMDcGXsqhzx58HvRT_8D-fhVS-ZoPtftTLyLzYDfFu-ACq1QCjQngwT3DHCF5EnyRi4kHcmNrQTtV6-I_JoZlYpYYhQqhQ"/>
+<div class="absolute top-4 left-4 bg-white/90 text-[10px] font-mono px-2 py-1">DATA_CARE</div>
+</div>
+<h3 class="text-xl font-bold group-hover:text-white mb-2">Neural Scalp Treatment</h3>
+<p class="text-slate-500 text-sm group-hover:text-white/80 leading-relaxed">Personalized health algorithms for your roots. Deep penetration protocols for 4C matrices.</p>
+</div>
+</div>
+</section>
+<!-- System Process Section -->
+<section class="bg-slate-900 text-white py-24 px-8 lg:px-20 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full border-l border-white/5 pixel-grid opacity-20"></div>
+<div class="relative z-10 flex flex-col lg:flex-row gap-20">
+<div class="lg:w-1/2">
+<div class="text-primary font-mono text-sm mb-6 flex items-center gap-2">
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+                            PROTOCOL_EXECUTION_SEQUENCE
+                        </div>
+<h2 class="text-5xl font-extrabold tracking-tighter mb-12">The Clé Process</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="font-mono text-primary text-2xl font-bold">01</div>
+<div>
+<h4 class="text-xl font-bold mb-2 uppercase tracking-tight">Texture Analysis</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Scanning hair porosity and scalp health to determine the optimal hydration algorithm for your unique profile.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="font-mono text-primary text-2xl font-bold">02</div>
+<div>
+<h4 class="text-xl font-bold mb-2 uppercase tracking-tight">Geometric Mapping</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Plotting facial symmetry and hair growth patterns to create a bespoke aesthetic blueprint.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="font-mono text-primary text-2xl font-bold">03</div>
+<div>
+<h4 class="text-xl font-bold mb-2 uppercase tracking-tight">Final Compilation</h4>
+<p class="text-slate-400 text-sm leading-relaxed">The physical execution of the beauty protocol, resulting in a high-fidelity, minimalist finish.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 flex items-center justify-center">
+<div class="relative w-full aspect-square max-w-md border border-primary/30 p-4">
+<div class="absolute -top-1 -left-1 w-4 h-4 bg-primary"></div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-primary"></div>
+<img class="w-full h-full object-cover brightness-75" data-alt="Professional beauty studio setup with ring light and tech equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSL0OxdjOtQlzO-zzd8r2XEn0KqLjnFBF7FPqv7Q6mR-hfcdu5hFLjkQXAuaRwVQW_y2Rqpv6GGZLnZC3xswNZeom6Quzv_UDkJ-z_oEzmRroDlEwfnnw5PDGTGtAdCsAVac0AqPuKfdPSlmOCPH9LXPYjgY05ZKzpwn0o22zgTtCabIprBNyubZhdQY2rliIplXpRJhPZGXch24d6JhHKcvSj-YrWGrVd9oZU1C23RhH1JikdMp4oPOYguyIFqY6Xs3VYvLu0QL4"/>
+<div class="absolute inset-0 scanline"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Terminal -->
+<section class="p-8 lg:p-20 bg-background-light">
+<div class="max-w-4xl mx-auto border border-primary/20 bg-white p-1">
+<div class="bg-slate-900 px-4 py-2 flex items-center justify-between">
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-red-500"></div>
+<div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+</div>
+<span class="text-[10px] font-mono text-white/50">beauty_terminal_v1.0.sh</span>
+</div>
+<div class="p-12 text-center">
+<h3 class="text-3xl font-extrabold tracking-tighter mb-4">JOIN THE NETWORK</h3>
+<p class="text-slate-500 mb-8 max-w-md mx-auto">Subscribe for early access to booking slots and exclusive product drops in our digital boutique.</p>
+<form class="flex flex-col md:flex-row gap-0 max-w-lg mx-auto border border-primary/30">
+<input class="flex-1 bg-transparent border-none focus:ring-primary font-mono text-sm px-6 py-4 outline-none" placeholder="USER@NETWORK.COM" type="email"/>
+<button class="bg-primary text-white px-8 py-4 font-bold uppercase tracking-widest text-sm hover:brightness-110 transition-all">
+                                SUBSCRIBE
+                            </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-primary/10 p-10 flex flex-col md:flex-row justify-between items-center gap-8 bg-white">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-primary"></div>
+<span class="text-lg font-bold tracking-tighter uppercase">Clé Beauty Systems</span>
+</div>
+<p class="text-[10px] font-mono text-slate-400 uppercase">© 2024 DIGITAL_BEAUTY_ORG. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-12 font-mono text-[10px] uppercase tracking-widest text-slate-600">
+<div class="flex flex-col gap-2">
+<span class="text-primary font-bold">Location_Data</span>
+<span>12.456, 45.789</span>
+<span>Paris, Sector 7</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-primary font-bold">Social_Sync</span>
+<a class="hover:text-primary" href="#">Instagram.exe</a>
+<a class="hover:text-primary" href="#">Pinterest.bat</a>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="w-8 h-8 tech-border flex items-center justify-center hover:bg-primary/5 cursor-pointer">
+<span class="material-symbols-outlined text-sm">terminal</span>
+</div>
+<div class="w-8 h-8 tech-border flex items-center justify-center hover:bg-primary/5 cursor-pointer">
+<span class="material-symbols-outlined text-sm">settings</span>
+</div>
+<div class="w-8 h-8 tech-border flex items-center justify-center hover:bg-primary/5 cursor-pointer">
+<span class="material-symbols-outlined text-sm">hub</span>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clé Beauty Digital Academy - Tech Pixel Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pixel-border {
+            box-shadow: 4px 0 0 0 #ee2b8c, 0 4px 0 0 #ee2b8c, -4px 0 0 0 #ee2b8c, 0 -4px 0 0 #ee2b8c;
+        }
+        .pixel-bg {
+            background-image: radial-gradient(#ee2b8c 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-primary/10 bg-white dark:bg-background-dark flex flex-col hidden lg:flex">
+<div class="p-6 flex items-center gap-3">
+<img alt="Clé Beauty Logo" class="w-10 h-10 object-contain" data-alt="Clé Beauty professional digital academy logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2xRJVsw3RHtOIffbY_GJCBMUWVOg_RtBwLVbLii7Gn06iIrH2BeWRnyKVzBOkRyyyd9F2qZbDO-bfkdAtwFqzsy9YaVldREqqE2enkUgst99W-tNsh9GuA5b2Em_4M7PTENXJGCMP7r431CNVwDdZiZgZfA8oUJ84COxAIpcqWZK5d51Pk-YAjWiOS_fL3ziex4IWAr6I8vfbhbZ0LqdHUw1S3QCtSE0qM1KFy8lkvb01v_Jx53NMk_niYQfPJdgHuMK01EUN8aY"/>
+<span class="font-extrabold text-xl tracking-tighter text-primary">CLÉ BEAUTY</span>
+</div>
+<nav class="flex-1 px-4 py-6 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-white font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+                    Modules
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+                    Certification
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">groups</span>
+                    Community
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-primary/5 rounded-xl p-4 border border-primary/20">
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Pro Access</p>
+<p class="text-sm font-medium mb-3">Upgrade to unlock advanced 4K masterclasses.</p>
+<button class="w-full py-2 bg-primary text-white rounded-lg text-sm font-bold">Go Pixel Pro</button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto bg-background-light/50 dark:bg-background-dark/50">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-8 py-4 flex items-center justify-between">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-full focus:ring-2 focus:ring-primary text-sm" placeholder="Search tech modules..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full ring-2 ring-white"></span>
+</button>
+<div class="flex items-center gap-3 border-l border-primary/10 pl-6">
+<div class="text-right">
+<p class="text-sm font-bold">Sarah Jenkins</p>
+<p class="text-xs text-slate-500">Lv. 12 Pixel Stylist</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary/20 border-2 border-primary overflow-hidden" data-alt="User profile avatar">
+<img alt="Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnCuMcKx5T33DUxIn7ukef4duAeNbn2OgudVnDuqG_6f81_iilJWbIjCPfT50LFb2CbgC_7GeKNxqYNEl4JLP1lcfIyXsKgUCA-kSqWaro1Q-PXlMJc7DXIX8bn9L0LMXAO64_9K1FsaDCrk_2yu-swqs3Q_0MGspr9GRhTfGIxdziGlt_jKjO3hoGLBUqZX0lUXmuzNOkHNQy_DIg1_b8HK_gSiUeK9PcGJVsB_4F9etlhcam2Dpe9JATRfN8QaHbrO56DPuJLig"/>
+</div>
+</div>
+</div>
+</header>
+<div class="p-8 max-w-7xl mx-auto">
+<!-- Welcome Stats -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-primary/10 flex items-center gap-5">
+<div class="p-3 bg-primary/10 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+</div>
+<div>
+<p class="text-slate-500 text-sm font-medium">Learning Streak</p>
+<p class="text-2xl font-black">15 Days</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-primary/10 flex items-center gap-5">
+<div class="p-3 bg-primary/10 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">extension</span>
+</div>
+<div>
+<p class="text-slate-500 text-sm font-medium">Blocks Completed</p>
+<p class="text-2xl font-black">24 / 48</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-primary/10 flex items-center gap-5">
+<div class="p-3 bg-primary/10 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">stars</span>
+</div>
+<div>
+<p class="text-slate-500 text-sm font-medium">Skill Points</p>
+<p class="text-2xl font-black">4,850 XP</p>
+</div>
+</div>
+</div>
+<!-- Section Title -->
+<div class="flex items-end justify-between mb-6">
+<div>
+<h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white uppercase">Digital Tech Pixel Blocs</h2>
+<p class="text-slate-500 font-medium">Module Library: Select your training circuit</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:underline">
+                        View all tracks <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+<!-- Lessons Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Lesson 1 -->
+<div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-primary/10 hover:border-primary/40 transition-all shadow-lg hover:shadow-primary/5 relative">
+<div class="absolute top-4 right-4 z-10">
+<span class="bg-background-dark/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/30">Module 01</span>
+</div>
+<div class="h-48 overflow-hidden relative">
+<img alt="Natural Makeup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="High quality professional natural makeup photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnjOnVhYVZUan5PJAXjUzGNPBCTtLoUscV2RYiXz1ou7vVkPW0hdM0n8N62TtYiclhZUB2QNHpmpFOPZn9kAc7A4Kkn3b1bGl8p5X9SIivpxIa-6BNeBxOv-t_Mz4APQhz4yAfCjHhUVFDsXj2IIZR7lIPFa9JMSpPyx_ODHj2b7TrdJiyL6frm6o9tuGBFtouIohFTnqxk7CdVXjEL0okI1biPrOYwCe4bJPf0GZCDDDGPw2pI2a_fNynyAPohidIfiKitfcvvhk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded uppercase">Foundation</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-extrabold mb-2 group-hover:text-primary transition-colors">Natural Makeup Circuit</h3>
+<p class="text-slate-500 text-sm mb-6 leading-relaxed">Master the art of 'no-makeup' makeup using pixel-perfect blending techniques for digital photography.</p>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tighter">
+<span>Sync Progress</span>
+<span class="text-primary">85%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[85%]"></div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200" data-alt="Student avatar 1"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-300" data-alt="Student avatar 2"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-400" data-alt="Student avatar 3"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary flex items-center justify-center text-[10px] text-white font-bold">+12</div>
+</div>
+<button class="p-2 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Lesson 2 -->
+<div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-primary/10 hover:border-primary/40 transition-all shadow-lg hover:shadow-primary/5 relative">
+<div class="absolute top-4 right-4 z-10">
+<span class="bg-background-dark/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/30">Module 05</span>
+</div>
+<div class="h-48 overflow-hidden relative">
+<img alt="Event Makeup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Glamorous event makeup with bold colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwssQQuRlqxxi3acr3DNcXRzpZBCCcKAPLwVLRrV0hVirhNmB0V6M789EsP9HLuvQRD_LkFKliISNwGTTsAQU0SpKohU3OZbCBjxmIL1i0bA9g69lnfIysalFizoL0uWT-7SlXvXBDOApkR8DdEULHY7TNNCcSnwRFWe8Cu9-1BzRWGTyt0BtLQNTb9704zY-JNfvQFnl6-9XRi7ucbE3HYPjSqeAjEvSnjQIsnnKGMS3Iu1CbriK89q1DoQcXmN3AuEo6LmRa4jo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded uppercase">Advanced</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-extrabold mb-2 group-hover:text-primary transition-colors">Event Makeup Protocols</h3>
+<p class="text-slate-500 text-sm mb-6 leading-relaxed">High-definition event styling for gala appearances and professional studio shoots.</p>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tighter">
+<span>Sync Progress</span>
+<span class="text-primary">32%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[32%]"></div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200" data-alt="Student avatar 4"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-300" data-alt="Student avatar 5"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary flex items-center justify-center text-[10px] text-white font-bold">+45</div>
+</div>
+<button class="p-2 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">lock</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Lesson 3 -->
+<div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-primary/10 hover:border-primary/40 transition-all shadow-lg hover:shadow-primary/5 relative">
+<div class="absolute top-4 right-4 z-10">
+<span class="bg-background-dark/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-primary/30">Module 08</span>
+</div>
+<div class="h-48 overflow-hidden relative">
+<img alt="Simple Hairstyles" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Elegant simple hair styling photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwEtucyNRpmCGyjXEvf4ZM1n9OtCc-_A3PBkGHoSp5vzDSqRuKp0gfcs4nWVed34my8B3PL6nFPWLcD9pa6W873sQ6MFfohPfOfIkS3U15UsOv3dUpmjjml4jnIm9Xa6HtLTS2q06hC7SHjsiYdByg1wRXe4wdeR9jqxRTPIAhtHQrtWIcNFjd1DvEhE_zD92fxNhvmujnTi4gOx511NCK52o_mvmGLcARL0MKRmedP_95DROV4t0ddVjEjWg5MrtxBeduCtgQhHs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded uppercase">Styling</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-extrabold mb-2 group-hover:text-primary transition-colors">Pixel Hair Structures</h3>
+<p class="text-slate-500 text-sm mb-6 leading-relaxed">Quick and effective hair architecture for digital content creators and daily elegance.</p>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tighter">
+<span>Sync Progress</span>
+<span class="text-primary">12%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[12%]"></div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200" data-alt="Student avatar 6"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary flex items-center justify-center text-[10px] text-white font-bold">+8</div>
+</div>
+<button class="p-2 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Footer/Log Section -->
+<div class="mt-12 bg-background-dark text-slate-400 p-6 rounded-2xl font-mono text-xs border border-primary/20">
+<div class="flex items-center gap-2 mb-4 text-primary">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+<span class="font-bold uppercase tracking-widest">System Log // Active Sessions</span>
+</div>
+<div class="space-y-1 opacity-70">
+<p>[14:22:01] AUTHENTICATED: Sarah Jenkins (Level 12)</p>
+<p>[14:25:33] MODULE_START: Natural Makeup Circuit - Lesson 4 (Contouring)</p>
+<p>[14:48:12] SYNC_COMPLETE: progress data pushed to master_cloud</p>
+<p>[15:01:05] ALERT: New pixel block "Holographic Highlighting" available</p>
+<p class="text-primary/60">&gt; Waiting for input...</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

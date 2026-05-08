@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#1a0b12",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pixel-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(238, 43, 140, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(238, 43, 140, 0.05) 1px, transparent 1px);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(238, 43, 140, 0.02) 50%);
+            background-size: 100% 4px;
+        }
+        .pixel-border {
+            box-shadow: 
+                0 -4px 0 0 #000,
+                0 4px 0 0 #000,
+                -4px 0 0 0 #000,
+                4px 0 0 0 #000;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ee2b8c;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pixel-grid">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b-4 border-solid border-slate-900 dark:border-primary px-10 py-4 bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-slate-900 dark:text-slate-100">
+<div class="size-8 bg-primary flex items-center justify-center">
+<img alt="Clé Beauty Logo" class="size-6" data-alt="Geometric pixel art logo for Clé Beauty" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV5NQye3fzWfRz0FFtf_9seVDQet_2RrO5H5miK915LsBdITFaa-0RQpUbksCKA1uOXYpP2oxwKz3_BNXaC32MzSyPb0m5157B2dRCJ4uUE0xxFZ9EtiCtNK9Hv3BlZpLsFCoMZIdaevoEPida8KBL92a7il4CnV5KM9lgSBnfKAGzQPixlf6SCgHAqNFQXlMIsfhVZwIoCc4DGaDKayrpUWjxqRrLvgxVdd7JIO8sYA7Ikmuk6rYP_Soh4uRtAM2s7hOH1SliP34"/>
+</div>
+<h2 class="text-xl font-extrabold uppercase tracking-tighter italic">Clé Beauty <span class="text-primary">SYS_v2.0</span></h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-bold uppercase hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary" href="#">Terminal</a>
+<a class="text-sm font-bold uppercase text-primary border-b-2 border-primary" href="#">Booking_Flow</a>
+<a class="text-sm font-bold uppercase hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary" href="#">Assets</a>
+<a class="text-sm font-bold uppercase hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary" href="#">Profile_Data</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center border-2 border-slate-900 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+<span class="material-symbols-outlined px-2 text-slate-500">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs py-2 w-48 uppercase font-bold" placeholder="SEARCH_DATABASE..." type="text"/>
+</div>
+<div class="size-10 border-2 border-primary bg-slate-200 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="User avatar profile placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEL5mqo_XMeDQ9gXI_dzVMHVa6epwYdJbS0CbqSuFVFSN6MhVt9o90JdsIBFm6ruhUR6JE9tfST9dpCK1p1jETCPw05TUikmjbDR-CF8eHWRGdhDTjU8_Azu9lTtb-RL2uAgcXNFZrFZ7i8UaMSJy9e7LvARpVAOwQvBWsuuBrUSuJgf8myP3uRP2sTmmwEONwXvZv4D1LeaulncVEPk5BGDwp7A2HaQajT2GTAMaCJxtVYLPIqJLjZRgO9NDi8eXhwVA2l9fl0os')"></div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col md:flex-row p-6 gap-6 max-w-[1440px] mx-auto w-full">
+<!-- Sidebar Nav (Left) -->
+<aside class="w-full md:w-64 flex flex-col gap-4">
+<div class="border-4 border-slate-900 dark:border-primary p-4 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-3 bg-primary animate-pulse"></div>
+<span class="text-xs font-black uppercase tracking-widest text-slate-500">Status: Online</span>
+</div>
+<nav class="flex flex-col gap-2">
+<button class="flex items-center gap-3 p-3 bg-primary text-white font-bold uppercase text-xs w-full text-left">
+<span class="material-symbols-outlined text-sm">grid_view</span>
+                                Dashboard
+                            </button>
+<button class="flex items-center gap-3 p-3 hover:bg-primary/10 text-slate-900 dark:text-slate-100 font-bold uppercase text-xs w-full text-left border-2 border-transparent hover:border-primary">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+                                Services
+                            </button>
+<button class="flex items-center gap-3 p-3 hover:bg-primary/10 text-slate-900 dark:text-slate-100 font-bold uppercase text-xs w-full text-left border-2 border-transparent hover:border-primary">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                Calendar
+                            </button>
+<button class="flex items-center gap-3 p-3 hover:bg-primary/10 text-slate-900 dark:text-slate-100 font-bold uppercase text-xs w-full text-left border-2 border-transparent hover:border-primary">
+<span class="material-symbols-outlined text-sm">settings_input_component</span>
+                                Settings
+                            </button>
+</nav>
+</div>
+<div class="border-4 border-slate-900 dark:border-slate-700 p-4 bg-slate-900 text-primary overflow-hidden relative">
+<div class="scanline absolute inset-0 pointer-events-none"></div>
+<h4 class="text-[10px] font-black uppercase mb-2">System_Logs</h4>
+<div class="text-[9px] font-mono space-y-1 opacity-80">
+<p>&gt; Initializing core...</p>
+<p>&gt; Scanning beauty_params...</p>
+<p>&gt; Syncing with cloud_v4...</p>
+<p class="animate-pulse">&gt; Ready for input_</p>
+</div>
+</div>
+</aside>
+<!-- Main Booking Interface -->
+<section class="flex-1 flex flex-col gap-6">
+<!-- Progress Bar (Blocky) -->
+<div class="flex gap-2 h-4 w-full">
+<div class="flex-1 bg-primary"></div>
+<div class="flex-1 bg-primary/40 border-2 border-primary"></div>
+<div class="flex-1 bg-slate-200 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700"></div>
+<div class="flex-1 bg-slate-200 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700"></div>
+</div>
+<div class="border-4 border-slate-900 dark:border-primary bg-white dark:bg-background-dark p-8 relative overflow-hidden">
+<!-- Step Header -->
+<div class="mb-8 border-l-8 border-primary pl-4">
+<h3 class="text-3xl font-black uppercase italic tracking-tighter">Phase 01: Service_Select</h3>
+<p class="text-slate-500 font-bold text-sm uppercase">Choose your technical enhancement package</p>
+</div>
+<!-- Service Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Service Block 1 -->
+<div class="border-4 border-slate-900 dark:border-slate-700 p-4 hover:border-primary transition-all cursor-pointer group bg-slate-50 dark:bg-slate-800/50">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary text-white text-[10px] px-2 py-1 font-black uppercase">Core</span>
+<span class="font-mono text-primary font-bold">$120.00</span>
+</div>
+<h4 class="text-lg font-black uppercase leading-none mb-2 group-hover:text-primary">Neon_Facial_Sync</h4>
+<p class="text-xs text-slate-500 mb-4 uppercase font-bold">45 MINS // DEPTH LVL 2</p>
+<button class="w-full border-2 border-slate-900 dark:border-slate-600 py-2 text-[10px] font-black uppercase group-hover:bg-primary group-hover:text-white group-hover:border-primary">Select_Module</button>
+</div>
+<!-- Service Block 2 (Selected) -->
+<div class="border-4 border-primary p-4 transition-all cursor-pointer bg-primary/10 relative">
+<div class="absolute -top-1 -right-1 bg-primary text-white size-6 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary text-white text-[10px] px-2 py-1 font-black uppercase">Advanced</span>
+<span class="font-mono text-primary font-bold">$245.00</span>
+</div>
+<h4 class="text-lg font-black uppercase leading-none mb-2 text-primary">Dermal_Pixel_Repair</h4>
+<p class="text-xs text-slate-400 mb-4 uppercase font-bold">90 MINS // DEPTH LVL 4</p>
+<button class="w-full bg-primary text-white py-2 text-[10px] font-black uppercase">Module_Active</button>
+</div>
+<!-- Service Block 3 -->
+<div class="border-4 border-slate-900 dark:border-slate-700 p-4 hover:border-primary transition-all cursor-pointer group bg-slate-50 dark:bg-slate-800/50">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary text-white text-[10px] px-2 py-1 font-black uppercase">Elite</span>
+<span class="font-mono text-primary font-bold">$499.00</span>
+</div>
+<h4 class="text-lg font-black uppercase leading-none mb-2 group-hover:text-primary">Total_Body_Override</h4>
+<p class="text-xs text-slate-500 mb-4 uppercase font-bold">180 MINS // DEPTH LVL 9</p>
+<button class="w-full border-2 border-slate-900 dark:border-slate-600 py-2 text-[10px] font-black uppercase group-hover:bg-primary group-hover:text-white group-hover:border-primary">Select_Module</button>
+</div>
+</div>
+<!-- Date & Time Selection Section -->
+<div class="mt-12 pt-12 border-t-4 border-slate-900 dark:border-slate-800 grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Calendar Component -->
+<div>
+<h5 class="text-sm font-black uppercase mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+                                    Select_Date_Buffer
+                                </h5>
+<div class="grid grid-cols-7 gap-1 border-2 border-slate-900 dark:border-slate-700 p-2 bg-slate-50 dark:bg-slate-900/50">
+<!-- Days Header -->
+<div class="text-[10px] font-black text-center py-2 bg-slate-900 text-white uppercase">M</div>
+<div class="text-[10px] font-black text-center py-2 bg-slate-900 text-white uppercase">T</div>
+<div class="text-[10px] font-black text-center py-2 bg-slate-900 text-white uppercase">W</div>
+<div class="text-[10px] font-black text-center py-2 bg-slate-900 text-white uppercase">T</div>
+<div class="text-[10px] font-black text-center py-2 bg-slate-900 text-white uppercase">F</div>
+<div class="text-[10px] font-black text-center py-2 bg-slate-900 text-white uppercase">S</div>
+<div class="text-[10px] font-black text-center py-2 bg-slate-900 text-white uppercase">S</div>
+<!-- Date Blocks -->
+<div class="aspect-square flex items-center justify-center text-xs font-bold opacity-30">28</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold opacity-30">29</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">01</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">02</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer bg-primary text-white">03</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">04</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">05</div>
+<!-- Row 2 -->
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">06</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">07</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">08</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">09</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">10</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">11</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold border-2 border-transparent hover:border-primary cursor-pointer">12</div>
+</div>
+</div>
+<!-- Time Selection -->
+<div>
+<h5 class="text-sm font-black uppercase mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">schedule</span>
+                                    Temporal_Slot
+                                </h5>
+<div class="grid grid-cols-2 gap-2">
+<button class="border-2 border-slate-900 dark:border-slate-700 py-3 text-xs font-black uppercase hover:bg-primary/20 hover:border-primary">09:00_AM</button>
+<button class="border-2 border-slate-900 dark:border-slate-700 py-3 text-xs font-black uppercase hover:bg-primary/20 hover:border-primary">10:30_AM</button>
+<button class="border-4 border-primary py-3 text-xs font-black uppercase bg-primary text-white">12:00_PM</button>
+<button class="border-2 border-slate-900 dark:border-slate-700 py-3 text-xs font-black uppercase hover:bg-primary/20 hover:border-primary">02:30_PM</button>
+<button class="border-2 border-slate-900 dark:border-slate-700 py-3 text-xs font-black uppercase hover:bg-primary/20 hover:border-primary">04:00_PM</button>
+<button class="border-2 border-slate-200 dark:border-slate-800 py-3 text-xs font-black uppercase text-slate-300 dark:text-slate-700 cursor-not-allowed line-through">05:30_PM</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="flex justify-between items-center bg-slate-900 p-6 border-4 border-slate-900">
+<div class="text-white">
+<p class="text-[10px] font-bold uppercase opacity-60">Estimated_Uptime</p>
+<p class="text-xl font-black italic tracking-tight">90 MINS <span class="text-primary">//</span> DEC 03 @ 12:00PM</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white font-black px-10 py-4 uppercase tracking-tighter text-lg flex items-center gap-2 group">
+                            INITIATE_SESSION
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Order Summary (Right) -->
+<aside class="w-full md:w-80 flex flex-col gap-4">
+<div class="border-4 border-slate-900 dark:border-primary bg-white dark:bg-background-dark p-6">
+<h4 class="text-sm font-black uppercase border-b-2 border-slate-100 dark:border-slate-800 pb-2 mb-4">Summary_Data</h4>
+<div class="space-y-4">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Selected_Service</span>
+<span class="text-sm font-black uppercase">Dermal_Pixel_Repair</span>
+<span class="text-primary font-mono font-bold">$245.00</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Technician_Node</span>
+<span class="text-sm font-black uppercase">Unit_88_Sarah</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-slate-400 uppercase">System_Tax</span>
+<span class="text-sm font-black uppercase">$19.60</span>
+</div>
+<div class="pt-4 border-t-4 border-dotted border-slate-200 dark:border-slate-800 flex justify-between items-end">
+<span class="text-sm font-black uppercase">Total_Credit</span>
+<span class="text-2xl font-black text-primary">$264.60</span>
+</div>
+</div>
+</div>
+<div class="border-4 border-slate-900 dark:border-slate-700 aspect-square relative bg-cover bg-center" data-alt="Cyberpunk futuristic aesthetic beauty close up" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlCoZZymjTwLvCpcVVbS6T95dyCoMyC-QPEQIYLTEGsqZgr8ZfNChMlCZStOukkzOvJQXTqXCXza8p3lXrDrOsUryw0nEWif6KE8hBboJXdmbvB4T6_j0qLglUlhOGvprjhuCTYUKuLM9J41aWsTmXwlM-PXHTZP5jcSYd-zkXgFDFnRjaQM5qmQtWiwsF1eTXkYCrBKHJubtcMc9Rh3SWrkLj9FlT8fCewpezWpWP6QvWd3vuw-InpQg9e0YZsCAwoduqSgqaoPg')">
+<div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+<div class="absolute bottom-4 left-4 right-4 bg-slate-900/90 p-3">
+<p class="text-[10px] text-primary font-mono uppercase mb-1">Visual_Preview_04</p>
+<p class="text-xs text-white font-bold uppercase">Expected result: High-def radiance</p>
+</div>
+</div>
+</aside>
+</main>
+<!-- Footer (Pixel) -->
+<footer class="mt-auto border-t-4 border-slate-900 dark:border-primary bg-white dark:bg-background-dark px-10 py-6">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="size-4 bg-primary"></div>
+<p class="text-[10px] font-black uppercase tracking-widest">© 2024 Clé Beauty Digital. All modules reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[10px] font-black uppercase hover:text-primary transition-colors" href="#">Safety_Protocol</a>
+<a class="text-[10px] font-black uppercase hover:text-primary transition-colors" href="#">Privacy_Encryption</a>
+<a class="text-[10px] font-black uppercase hover:text-primary transition-colors" href="#">Hardware_Support</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

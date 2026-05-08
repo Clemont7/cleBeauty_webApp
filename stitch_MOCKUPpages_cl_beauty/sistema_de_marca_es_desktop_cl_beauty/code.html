@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pixel-grid {
+            background-image: linear-gradient(to right, rgba(238, 43, 140, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(238, 43, 140, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .tech-border {
+            border: 1px solid rgba(238, 43, 140, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pixel-grid">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-10 flex items-center justify-center bg-primary text-white rounded">
+<img alt="Clé Beauty Logo" class="size-8 object-contain" data-alt="Minimalist geometric beauty salon brand logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL6IOjEt1P69SA1WuR2mrP0YiK1lTobs7jcEVO-4BIb8-ezeR7csW9niazu7Hihbm5tcMQcrwuBkqvCyd97fLVFgFtIQrzzktFbaEdeIDeLzuM5UEiaOv7z02huBTHZE1wOZu-7dCORH5BVHKPI2gMrIkxtCMTaPp5FlVx9EnwmONu_7AMOHnKe8rHVhyo1uKAKogsFBtP2PhaG6OWjlo9ypkLAqwojP_b7KpSYveganHQKsINUtaYhDszDrsHMMMov7gJq-55Jaw"/>
+</div>
+<div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-extrabold leading-tight tracking-tighter uppercase">Clé Beauty</h2>
+<p class="text-[10px] text-primary font-bold tracking-widest uppercase">System v2.0.4</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex flex-col items-end mr-4">
+<span class="text-xs font-bold text-slate-500 uppercase">Terminal Status</span>
+<span class="text-xs font-bold text-primary animate-pulse uppercase">● Online</span>
+</div>
+<button class="flex items-center justify-center rounded bg-primary/10 border border-primary/30 text-primary h-10 w-10">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded border-2 border-primary size-10" data-alt="User profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXW1vycmvO5ZB-9-reuZ5Te0463-yTycEmuInDrZV0OBcAs04o74OxutQC_ubtNiI_lnmj3wQczfm6xQum-G7mY1zPdPhT6RfL9iG_3X8MLpueq6T17E-0HtyQji_uspwg3OE9ykkGktcvJR5gq88zOTtTyUDAFqvp3ZzTsLM0HoXj23_g6A2LUU3xKAO1bLefzIS3g-CA-OzYWnrQhjnXwWnldH2DG3X-lBGguWD5Hl1Tkdozx8Lk3b5DEBKiHCIwFlEoVckYjlc");'></div>
+</div>
+</header>
+<main class="flex-1 max-w-6xl mx-auto w-full p-4 md:p-8">
+<!-- Progress Stepper -->
+<div class="flex flex-wrap items-center gap-2 mb-8 bg-white/50 dark:bg-slate-900/50 p-3 rounded-lg border border-primary/10">
+<div class="flex items-center gap-2 text-primary font-bold text-sm">
+<span class="bg-primary text-white size-6 flex items-center justify-center rounded-sm text-xs">01</span>
+<span>SELECT TREATMENT</span>
+</div>
+<span class="text-primary/30 font-light px-2"><span class="material-symbols-outlined text-sm">chevron_right</span></span>
+<div class="flex items-center gap-2 text-slate-400 font-bold text-sm">
+<span class="bg-slate-200 dark:bg-slate-800 text-slate-500 size-6 flex items-center justify-center rounded-sm text-xs">02</span>
+<span>SCHEDULE DATE</span>
+</div>
+<span class="text-primary/30 font-light px-2"><span class="material-symbols-outlined text-sm">chevron_right</span></span>
+<div class="flex items-center gap-2 text-slate-400 font-bold text-sm">
+<span class="bg-slate-200 dark:bg-slate-800 text-slate-500 size-6 flex items-center justify-center rounded-sm text-xs">03</span>
+<span>CLIENT DETAILS</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Content Area (Left/Middle) -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Header Section -->
+<div class="tech-border bg-white dark:bg-slate-900 p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<h2 class="text-2xl font-black text-slate-900 dark:text-slate-100 tracking-tight uppercase mb-1">01. Service Catalog</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Select one or more treatments to begin your booking session.</p>
+</div>
+<!-- Category Tabs -->
+<div class="flex flex-wrap gap-2">
+<button class="px-6 py-2 bg-primary text-white font-bold text-xs tracking-widest uppercase rounded-sm border border-primary">Nails</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-xs tracking-widest uppercase rounded-sm border border-primary/20 hover:border-primary transition-colors">Lashes</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-xs tracking-widest uppercase rounded-sm border border-primary/20 hover:border-primary transition-colors">Facials</button>
+<button class="px-6 py-2 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-xs tracking-widest uppercase rounded-sm border border-primary/20 hover:border-primary transition-colors">Waxing</button>
+</div>
+<!-- Service Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Service Card 1 -->
+<div class="group tech-border bg-white dark:bg-slate-900 p-4 transition-all hover:bg-primary/5 cursor-pointer relative">
+<div class="flex gap-4">
+<div class="size-24 bg-center bg-cover rounded-sm grayscale group-hover:grayscale-0 transition-all border border-primary/10" data-alt="Classic manicure close up shot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHvO49uMiPBMXpIerB8RaH-ryTrSMJtPSYiMu26o-Pm6-QDQfQXcAZ_Epogjy0DDL3oJglaxY2u_UV2A6Owm02c--UJ6K47yBsMwy_293CitLXpamfwGlboehtGoDYtRPG02ot7Wq9tiH6PRoOpVV5w-p6m95kCcq7cWh1YSZRHU9vpFe8cacNi_soe3zDhLDI_COSwRKV7QFUU0ouRLuv4sh266gAxNQAUF3XrpRjmdMwPyLGg-_0e6AAV9DdR6qcS-f8bMHfUFE");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase text-sm tracking-tight">Classic Manicure</h3>
+<span class="text-xs font-mono font-bold text-primary">$45.00</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-3">Shape, buff, and polish with premium organic lacquer.</p>
+<div class="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs">schedule</span> 45 MIN
+                                        </div>
+</div>
+</div>
+<div class="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_circle</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group tech-border border-primary bg-primary/5 p-4 transition-all cursor-pointer relative">
+<div class="flex gap-4">
+<div class="size-24 bg-center bg-cover rounded-sm border border-primary/10" data-alt="Gel nail extensions application process" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACNvUJcIpje93P4J_GrtoAf9eshh159aoHN8-xYzjfSQ0xdL3kR4O0rt7xcMsZVCYomYV95gGXlMHJ_J2qGHKjuZg0NkMJUitta2puDm50Y-eEIC1ConYu5NqIZOKFYbal1ary2grD1kAEJWXu-MszgS3nXzVxjwffSecqartsWD3dA4hTbF-CrSlDE2p2iWpK3tKIuP_YIxaA8QIsRty8GhZCB53vvMhES3iuKHeuXZbi6368hPTKcNcOC8W328rmC6MNEsbeR6I");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase text-sm tracking-tight">Gel Extensions</h3>
+<span class="text-xs font-mono font-bold text-primary">$85.00</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-3">Sculpted gel enhancements for long-lasting durability.</p>
+<div class="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs">schedule</span> 90 MIN
+                                        </div>
+</div>
+</div>
+<div class="absolute bottom-2 right-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group tech-border bg-white dark:bg-slate-900 p-4 transition-all hover:bg-primary/5 cursor-pointer relative">
+<div class="flex gap-4">
+<div class="size-24 bg-center bg-cover rounded-sm grayscale group-hover:grayscale-0 transition-all border border-primary/10" data-alt="Detailed nail art design with jewels" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAy9AtYy0OeDLiQnrdx_EE8fEw34Wxn7fCyXU8YOex-HScappQhJRkZ0XE6pRCNwO_ihB2TM9Kn6cl9BkdCuZi02GitQ_7Br7Q7CaHrOQ4k7TlgkS1gH3syMdSu9tYjc-58mj-2qyAibDyg7xwFmrI1ablvwvktQq_P71RkfKZJzwxEk6baK1Z-xYLRjechMCdw0wKjXdSLxJ9XYWcXTu4oBs4d6YqwzTsGl1-Ngb8Kcw17_BT02-k4O2TUTOMU9gKyQcD89R7Iqhg");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase text-sm tracking-tight">Nail Art Deluxe</h3>
+<span class="text-xs font-mono font-bold text-primary">$110.00</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-3">Custom hand-painted designs and luxury embellishments.</p>
+<div class="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs">schedule</span> 120 MIN
+                                        </div>
+</div>
+</div>
+<div class="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_circle</span>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="group tech-border bg-white dark:bg-slate-900 p-4 transition-all hover:bg-primary/5 cursor-pointer relative">
+<div class="flex gap-4">
+<div class="size-24 bg-center bg-cover rounded-sm grayscale group-hover:grayscale-0 transition-all border border-primary/10" data-alt="Nail care specialist working on client" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLoaTrj6dtca_JFfK17HAoZuAMrAo2CJsirue4tr3-ocFmrJ_a1ezM66K2xYXiYZkaFVzrnbdc66QW7x7sG-CG0f4ntgsBpG4o12QSIrswDRHybKH2UXL6xlRDpAhv17COU2JZRij7-GaVSaYnPneIYKasb3j_h5tMeus9NBhRtqUEmGXk4khd6ZsJZyWrsU72Pw5qJC8d4USpygh2xvcTBC8uTH7I5HkIpGDi_UIqpQKmn-kv1xQ53Uot4Td8VKBX6wvpfSvPpuA");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase text-sm tracking-tight">Russian Manicure</h3>
+<span class="text-xs font-mono font-bold text-primary">$75.00</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-3">E-file cuticle care for perfectly clean nail beds.</p>
+<div class="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs">schedule</span> 75 MIN
+                                        </div>
+</div>
+</div>
+<div class="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Summary (Right) -->
+<div class="lg:col-span-4">
+<div class="sticky top-24 space-y-4">
+<div class="tech-border bg-white dark:bg-slate-900 p-6 flex flex-col">
+<div class="flex items-center gap-2 mb-6 border-b border-slate-100 dark:border-slate-800 pb-4">
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+<h3 class="font-black text-slate-900 dark:text-slate-100 uppercase text-lg tracking-tight">Booking Summary</h3>
+</div>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-center group">
+<div>
+<p class="text-xs font-bold text-slate-900 dark:text-slate-100 uppercase">Gel Extensions</p>
+<p class="text-[10px] text-slate-500 uppercase">90 MIN SESSION</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-mono text-primary">$85.00</span>
+<button class="text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t-2 border-dashed border-primary/20 pt-4 space-y-2">
+<div class="flex justify-between text-xs font-bold text-slate-500 uppercase">
+<span>Subtotal</span>
+<span>$85.00</span>
+</div>
+<div class="flex justify-between text-xs font-bold text-slate-500 uppercase">
+<span>System Fee</span>
+<span>$2.50</span>
+</div>
+<div class="flex justify-between text-lg font-black text-slate-900 dark:text-slate-100 uppercase pt-2">
+<span>Total</span>
+<span class="text-primary font-mono">$87.50</span>
+</div>
+</div>
+<button class="mt-8 w-full bg-primary hover:bg-primary/90 text-white font-black py-4 uppercase tracking-[0.2em] rounded-sm transition-all flex items-center justify-center gap-2 group">
+                                    Next Phase
+                                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-[9px] text-center text-slate-400 dark:text-slate-500 mt-4 uppercase tracking-widest font-bold italic">SECURE TRANSACTION ENCRYPTED 256-BIT</p>
+</div>
+<div class="tech-border bg-primary/5 p-4">
+<h4 class="text-[10px] font-black text-primary uppercase mb-2">Location Terminal</h4>
+<div class="w-full h-32 bg-slate-200 dark:bg-slate-800 rounded-sm mb-2 overflow-hidden border border-primary/10">
+<img alt="Map Location" class="w-full h-full object-cover opacity-50 contrast-125" data-alt="Stylized map showing salon location in Paris" data-location="Paris, France" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFjD8m0QEQzz1HuZSh62H1wgjqYVljQ6t4m-8SOzDhFcb37l76lJ9pYM3CnhTvcqpbZfNsfKhHaQdEi_7FsQEnWNg3xAaTEUKTeO6XeN9mPL_zxUixdSUaVBJlnQU-BlUZPvH0ak1eETT2fxOqJlZKxs3xdfvouEmJeEcsCUD-rADletb7nL-ru7hHYsRjtsDE48uHCwe1LK4zT5U6Q4qihjlVc8Ou-ghmYEQbSWKDM5CqS_PxW0m6kOuXOLM8krE0pjK6QjapqAU"/>
+</div>
+<p class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase">34 Rue de Rivoli, Paris, 75004</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Data Bar -->
+<footer class="mt-auto border-t border-primary/20 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm px-10 py-3 text-[10px] flex justify-between items-center text-slate-400 font-mono">
+<div class="flex gap-6 uppercase">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> System: Operational</span>
+<span>Lat: 48.8566° N</span>
+<span>Long: 2.3522° E</span>
+</div>
+<div class="uppercase">
+                    © 2024 CLE BEAUTY PIXEL BLOCS UI
+                </div>
+</footer>
+</div>
+</div>
+</body></html>

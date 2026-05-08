@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pixel-border {
+            box-shadow: 4px 0 0 0 #ee2b8c, -4px 0 0 0 #ee2b8c, 0 4px 0 0 #ee2b8c, 0 -4px 0 0 #ee2b8c;
+        }
+        .tech-grid {
+            background-size: 20px 20px;
+            background-image: linear-gradient(to right, rgba(238, 43, 140, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(238, 43, 140, 0.05) 1px, transparent 1px);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(238, 43, 140, 0.02) 50%);
+            background-size: 100% 4px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen tech-grid">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b-2 border-primary/20 bg-background-light/80 backdrop-blur-md px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary flex items-center justify-center rounded-sm">
+<img class="size-8 object-contain invert" data-alt="Clé Beauty technical logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuWBmwxYzEDE6IE8RDRuNwQ-4RoEMsueIjuGqL28sl0TbZLAwBmeOdULXBy0D5NBPGc7riDQdwIQAN0-r-tGnElVKyYvJ453vyKK2RYTAX5LiaR_fQCS4k8e_wUyWu5WJDRLczex4mzKBBfBP5TsSlYUDh1BatgHfkZvQ8IX59F6tOHiEE5fXbxUfmld3fe1IjCiQTiUCflD2u9jGsGqoVoEQa5mv6AB_dBAuyomvthSKeEhTpRe5pCsS_rSmg84lRz-RDFNAdQHY"/>
+</div>
+<div class="flex flex-col">
+<h2 class="text-primary text-xl font-extrabold leading-tight tracking-tighter uppercase">Clé Beauty</h2>
+<span class="text-[10px] text-primary/60 font-mono tracking-widest">SYSTEM_VERSION_4.02</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-900 dark:text-slate-100 text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">terminal</span> CORE_SYSTEM
+                        </a>
+<a class="text-slate-900 dark:text-slate-100 text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">settings_input_component</span> SERVICES
+                        </a>
+<a class="text-slate-900 dark:text-slate-100 text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">folder_open</span> DATA_ARCHIVE
+                        </a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<div class="relative hidden lg:block w-64">
+<div class="flex items-center bg-primary/5 border border-primary/20 rounded-none px-3 py-1.5">
+<span class="material-symbols-outlined text-primary text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-primary/40 uppercase font-mono" placeholder="SCAN_DATABASE..." type="text"/>
+</div>
+</div>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden border-2 border-primary bg-primary text-white text-xs font-black uppercase tracking-[0.2em] h-10 px-6 hover:bg-transparent hover:text-primary transition-all duration-300">
+                        INITIALIZE_BOOKING
+                    </button>
+<div class="size-10 border-2 border-primary p-0.5">
+<div class="w-full h-full bg-primary/20 bg-cover bg-center" data-alt="User profile avatar of a beautiful black woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAONlzFgR6a0-LjOTuJHGfxcdBZT5uAgsA6c5IVjqVdz1O4NRYp2IzLhrtDErduVtoC58P1UN22U0W5DpzkveMX2cooC2KqukmQY2CKJ9-vdIH2cQEWBC2bU8n4E-VD2uchjGsQYKWlW45RM0nOQ9XDYeMgIW278Zm-ZKiP51ZAUp4Py4Ymf0ag58VoCaVjWSzlj51ohjQuWC4rMmT7Y4sryyJ1dpH_nw_Lg-MBTWK7cq10iMJwiPph8IeOJbYTtSaKcjwiVnuUrKA");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1200px] mx-auto w-full px-6 py-12">
+<div class="mb-12 border-l-4 border-primary pl-6">
+<h1 class="text-primary text-6xl font-black leading-none tracking-tighter mb-2 uppercase italic">Service_Catalog.sys</h1>
+<div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 font-mono text-sm">
+<span class="bg-primary text-white px-2 py-0.5 text-[10px] font-bold tracking-tighter">LIVE_STATUS</span>
+<span>[PROTOCOL: DIGITAL_PIXEL_BLOCS]</span>
+<span class="hidden md:inline">// BEAUTY_REDEFINED_FOR_THE_NEW_AGE</span>
+</div>
+</div>
+<div class="flex border-b-2 border-primary/10 mb-12 overflow-x-auto no-scrollbar">
+<a class="flex items-center gap-2 border-b-4 border-primary text-primary px-6 pb-4 pt-2 font-black uppercase tracking-widest text-sm whitespace-nowrap" href="#">
+<span class="material-symbols-outlined text-base">grid_view</span> ALL_UNITS
+                    </a>
+<a class="flex items-center gap-2 border-b-4 border-transparent text-slate-400 hover:text-primary px-6 pb-4 pt-2 font-black uppercase tracking-widest text-sm transition-all whitespace-nowrap" href="#">
+<span class="material-symbols-outlined text-base">face</span> MINIMALIST_CORE
+                    </a>
+<a class="flex items-center gap-2 border-b-4 border-transparent text-slate-400 hover:text-primary px-6 pb-4 pt-2 font-black uppercase tracking-widest text-sm transition-all whitespace-nowrap" href="#">
+<span class="material-symbols-outlined text-base">texture</span> COIL_GEOMETRY
+                    </a>
+<a class="flex items-center gap-2 border-b-4 border-transparent text-slate-400 hover:text-primary px-6 pb-4 pt-2 font-black uppercase tracking-widest text-sm transition-all whitespace-nowrap" href="#">
+<span class="material-symbols-outlined text-base">precision_manufacturing</span> SKIN_ALGORITHMS
+                    </a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group relative flex flex-col bg-white dark:bg-slate-900 border-2 border-primary/20 p-2 hover:border-primary transition-all duration-300">
+<div class="absolute -top-1 -left-1 size-3 bg-primary"></div>
+<div class="absolute -bottom-1 -right-1 size-3 bg-primary"></div>
+<div class="relative w-full aspect-[4/5] bg-slate-200 overflow-hidden mb-4">
+<div class="absolute inset-0 scanline z-10 opacity-30 pointer-events-none"></div>
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="Stunning black model with minimalist makeup look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiXbceQhUK2M7mvpABcZV-8N6FESJuQQ1bj3G7lMPoysNDy9egEWZpjvAtThfu0RqS5kx5Hv_6aXPgdx_BKUikdw2ZGFJWAfzTscpJFUfM4IKxpNDnhTPW_0nrIWOFpQSD3ctmi3ExuUdDIeHGe1lfkXS1SofRNJfBpoENn68kpoKFA9xi_Y87Vzz4R-5-UQI6_TPjTotEwyvsWAARrfYB8H3VzOvj9H8oh7FPmmDLAJf4j6bzyVMhS2O55X7AXme48ohZK2swNkI"/>
+<div class="absolute top-4 left-4 bg-primary px-2 py-1 text-[10px] font-mono text-white z-20">MODEL_001_ACTIVE</div>
+<div class="absolute bottom-0 right-0 p-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm z-20 border-t-2 border-l-2 border-primary/20">
+<span class="text-primary font-mono text-xs font-bold">VAL: $150.00</span>
+</div>
+</div>
+<div class="px-2 pb-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-black uppercase tracking-tighter leading-none">UNIT_01: MINIMAL_GLOW</h3>
+<span class="font-mono text-[10px] text-primary bg-primary/10 px-1 border border-primary/20">PX-001</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium mb-4 uppercase leading-relaxed">
+                                High-precision skin correction for deep tones. Robotic blending for invisible transitions.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[9px] font-mono border border-slate-300 px-1.5 py-0.5 text-slate-400 uppercase">MATTE_FINISH</span>
+<span class="text-[9px] font-mono border border-slate-300 px-1.5 py-0.5 text-slate-400 uppercase">HYPER_PIXEL_SMOOTH</span>
+</div>
+<button class="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-[10px] font-bold uppercase tracking-[0.2em] border border-transparent group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                DEPLOY_PROCESS
+                            </button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white dark:bg-slate-900 border-2 border-primary/20 p-2 hover:border-primary transition-all duration-300">
+<div class="absolute -top-1 -left-1 size-3 bg-primary"></div>
+<div class="absolute -bottom-1 -right-1 size-3 bg-primary"></div>
+<div class="relative w-full aspect-[4/5] bg-slate-200 overflow-hidden mb-4">
+<div class="absolute inset-0 scanline z-10 opacity-30 pointer-events-none"></div>
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="Close up of architectural braided hairstyle on black woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuR2q0Wx2OkTvQM2V53XkCd0mf_GfP0nMf6L-H14C7xQwmmrJaUDW15ld_5s1O6syNqewxgE2o6gW382h1_IhzRFmmZQxaK_Km8ulUGobRRwV1x8qHiLdBe_8sN3hNxogE1K7_7Am7DIIFGSfoBcurf2hkaOEfRzzMoaMY5wS1vkGKaPwd-n_i73NDV-gNd7j9_6-YNivX3j26b5zEugzV6DXr92mPa-UrxQlbTG26j_m8vL2jtyI2YEnZ4Cmz_SDBgyvUd8Xlolc"/>
+<div class="absolute top-4 left-4 bg-primary px-2 py-1 text-[10px] font-mono text-white z-20">MODEL_002_ACTIVE</div>
+<div class="absolute bottom-0 right-0 p-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm z-20 border-t-2 border-l-2 border-primary/20">
+<span class="text-primary font-mono text-xs font-bold">VAL: $220.00</span>
+</div>
+</div>
+<div class="px-2 pb-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-black uppercase tracking-tighter leading-none">UNIT_02: TEXTURE_PRO</h3>
+<span class="font-mono text-[10px] text-primary bg-primary/10 px-1 border border-primary/20">PX-002</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium mb-4 uppercase leading-relaxed">
+                                Geometric hair architectural scuplting. Precision braided patterns using 4C-DNA optimization.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[9px] font-mono border border-slate-300 px-1.5 py-0.5 text-slate-400 uppercase">COIL_SCULPT</span>
+<span class="text-[9px] font-mono border border-slate-300 px-1.5 py-0.5 text-slate-400 uppercase">BIO_REINFORCED</span>
+</div>
+<button class="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-[10px] font-bold uppercase tracking-[0.2em] border border-transparent group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                DEPLOY_PROCESS
+                            </button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white dark:bg-slate-900 border-2 border-primary/20 p-2 hover:border-primary transition-all duration-300">
+<div class="absolute -top-1 -left-1 size-3 bg-primary"></div>
+<div class="absolute -bottom-1 -right-1 size-3 bg-primary"></div>
+<div class="relative w-full aspect-[4/5] bg-slate-200 overflow-hidden mb-4">
+<div class="absolute inset-0 scanline z-10 opacity-30 pointer-events-none"></div>
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="Experimental tech beauty look with neon accents on dark skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOAMDD5p06A9EEI6rgmLrKByRnpnQUuOB9TI7i3P8ZQKF_-bmAdho_Y0y5tCVRp2Jt0VCJASnaXX1oZ5cndwQ3RXF6OoeKvmAsUwjrQQzsbD75EUHYZhZTU8RB2nDn4TtOh0fjXpvTfhsZZB5aIqlrOLxzH9D6CVSyo7OAxPMKxAa23bq1cljaE5jH9t7rypI_nwM4w0_J_fqgXCVtFznDtXZoqy53K3uE2AE9IvoT-3aD0imyQGKITionS173l_obCgp5C7qYJyU"/>
+<div class="absolute top-4 left-4 bg-primary px-2 py-1 text-[10px] font-mono text-white z-20">MODEL_003_ACTIVE</div>
+<div class="absolute bottom-0 right-0 p-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm z-20 border-t-2 border-l-2 border-primary/20">
+<span class="text-primary font-mono text-xs font-bold">VAL: $290.00</span>
+</div>
+</div>
+<div class="px-2 pb-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-black uppercase tracking-tighter leading-none">UNIT_03: NEON_NATURAL</h3>
+<span class="font-mono text-[10px] text-primary bg-primary/10 px-1 border border-primary/20">PX-003</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium mb-4 uppercase leading-relaxed">
+                                Hybrid style merging natural textures with technical neon precise accents. 8K resolution ready.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[9px] font-mono border border-slate-300 px-1.5 py-0.5 text-slate-400 uppercase">GLOW_EMITTER</span>
+<span class="text-[9px] font-mono border border-slate-300 px-1.5 py-0.5 text-slate-400 uppercase">8K_OPTIMIZED</span>
+</div>
+<button class="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-[10px] font-bold uppercase tracking-[0.2em] border border-transparent group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                DEPLOY_PROCESS
+                            </button>
+</div>
+</div>
+</div>
+<div class="mt-20 border-2 border-primary/20 bg-primary/5 p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 font-mono text-[80px] leading-none text-primary opacity-5 select-none font-black">SYSTEM_INFO</div>
+<div class="relative z-10">
+<h2 class="text-2xl font-black uppercase tracking-tighter mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">analytics</span> SYSTEM_PROCESS_DETAILS
+                        </h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-2">
+<p class="text-xs font-mono text-primary">PROCESS_ID</p>
+<p class="text-xl font-bold font-mono">#CLE-7729-X</p>
+</div>
+<div class="space-y-2">
+<p class="text-xs font-mono text-primary">LATENCY_CORE</p>
+<p class="text-xl font-bold font-mono">0.002MS</p>
+</div>
+<div class="space-y-2">
+<p class="text-xs font-mono text-primary">Uptime</p>
+<p class="text-xl font-bold font-mono">99.999%</p>
+</div>
+<div class="space-y-2">
+<p class="text-xs font-mono text-primary">Location</p>
+<p class="text-xl font-bold font-mono uppercase">Node_Mainframe</p>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-primary/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex gap-4">
+<div class="size-2 bg-primary"></div>
+<div class="size-2 bg-primary/60"></div>
+<div class="size-2 bg-primary/30"></div>
+<div class="size-2 bg-primary/10"></div>
+</div>
+<p class="text-[10px] font-mono text-slate-400 uppercase tracking-widest">Digital Tech Pixel Blocs Protocol Active // Clé Beauty // All Pixels Reserved</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-primary/10 bg-white dark:bg-slate-950 py-10 px-10">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="max-w-xs">
+<div class="flex items-center gap-3 mb-4">
+<div class="size-6 bg-primary rounded-sm flex items-center justify-center">
+<img class="size-4 object-contain invert" data-alt="Small technical logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOBh9GZ7M5tYe1OBdKJy_tKBnfANt2lnEKLTxNdYoXWlVm1k0EziiRSK90e0iwFMeoCOliN6WppJFXmRzLM5I1GdclYylp52QUoi_sY1CDSo7Ms46I604ATJNR2CXUFPaEst4t3gmAptM33JwVfPD3wVsegh34rR8fl-X9LCp3p7aHFp_0DE961PczfzVOK9zKCxDXBBAvxCdmBLGsnmFDIFgjHGF7FlgP3B4_iHQcyk8kMvHzt7FkpgkeARYwnxWRjmamNEsyHWI"/>
+</div>
+<h3 class="text-primary text-sm font-black uppercase tracking-tighter">Clé Beauty</h3>
+</div>
+<p class="text-[10px] font-mono text-slate-400 uppercase leading-relaxed">
+                            Architectural beauty systems for the modern digital era. Engineered for performance. Designed for humans.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div class="flex flex-col gap-3">
+<p class="text-xs font-black uppercase text-primary mb-2">OPERATIONS</p>
+<a class="text-[10px] font-mono text-slate-500 hover:text-primary uppercase" href="#">Scheduler</a>
+<a class="text-[10px] font-mono text-slate-500 hover:text-primary uppercase" href="#">Protocol_Logs</a>
+<a class="text-[10px] font-mono text-slate-500 hover:text-primary uppercase" href="#">Mainframe</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-xs font-black uppercase text-primary mb-2">CONNECTION</p>
+<a class="text-[10px] font-mono text-slate-500 hover:text-primary uppercase" href="#">Instagram_Feed</a>
+<a class="text-[10px] font-mono text-slate-500 hover:text-primary uppercase" href="#">Terminal_Chat</a>
+<a class="text-[10px] font-mono text-slate-500 hover:text-primary uppercase" href="#">Neural_Link</a>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<span class="text-[8px] font-mono text-slate-300 uppercase tracking-[0.5em]">System_End_Transmission</span>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

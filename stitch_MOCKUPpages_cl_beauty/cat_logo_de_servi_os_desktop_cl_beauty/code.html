@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clé Beauty - Service Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pixel-grid {
+            background-size: 40px 40px;
+            background-image: radial-gradient(circle, #ee2b8c20 1px, transparent 1px);
+        }
+        .block-border {
+            border: 1px solid #ee2b8c30;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden pixel-grid">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b block-border px-4 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary flex items-center justify-center rounded-lg shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-2xl">grid_view</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-xl font-extrabold tracking-tighter uppercase leading-none text-slate-900 dark:text-slate-100">Clé Beauty</h1>
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">Digital Tech Pixel Blocs</span>
+</div>
+</div>
+<div class="hidden md:flex items-center flex-1 max-w-md mx-8">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">search</span>
+<input class="w-full bg-white dark:bg-slate-800 border-none rounded-lg py-2 pl-10 pr-4 focus:ring-2 focus:ring-primary/50 text-sm" placeholder="Find a treatment..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-lg hover:bg-primary/10 text-primary transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<div class="size-10 rounded-full border-2 border-primary p-0.5">
+<img alt="User avatar" class="w-full h-full rounded-full object-cover" data-alt="User profile portrait of a woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmZk5uJkQfxWMDtm7xb3a_59dLl_FDTAioO2rEaICGuPFj6AojJ9pvB7vdQPGzX3mCDCI287ZTOQXECrYz8gg7NE5gzoQOhn_VzovCqNjIc0B6dVR2oyc50fKbzk0CaYchKgEsAQ1NdrAcrxPpF_Ha4_xNkfosKMgcOdRctBa9OwY6WZidinCtV7C02IaUBwvX955DsrQYJx7XO33o95-e1lClCLs58nU_BKidOXzcBpxSezPZEDqdPlbhp5OdkdGxL_5SDP54YbY"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto w-full px-4 lg:px-20 py-8">
+<!-- Hero Block Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="md:col-span-2 p-8 rounded-xl bg-white dark:bg-slate-900 block-border shadow-xl flex flex-col justify-center relative overflow-hidden group">
+<div class="absolute -right-20 -top-20 size-64 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
+<h2 class="text-4xl font-black mb-4 leading-tight">Elevate Your <br/><span class="text-primary italic">Natural Aesthetic</span></h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-md mb-6">Experience the future of beauty with our tech-inspired minimalist treatments. Precision, pixels, and pure elegance.</p>
+<div class="flex gap-3">
+<span class="px-3 py-1 rounded bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest border border-primary/20">Now Trending</span>
+<span class="px-3 py-1 rounded bg-slate-100 dark:bg-slate-800 text-xs font-bold uppercase tracking-widest">Minimalist Collection</span>
+</div>
+</div>
+<div class="h-64 md:h-auto rounded-xl bg-primary block-border overflow-hidden relative group">
+<img alt="Beauty display" class="w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:scale-105 transition-transform" data-alt="High quality close up of pink makeup products" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJcu8LgCIurmop3AD3tkjmZ6jkxD-yEId2ru8DFYDKZy1edSs2PpL6D91LL655eniEH-BpNgjuXOn6DjJCkw6urDyulhmP3n4p33Yo5xDSkLfRBEWlKyAOrs_WU61aqkx264fVGCqYAnx6GJnfRhkBn3mj2RvjGgsci-2u2iDqthlMBF-t53zhiw9zHb6WbHklTX1fMwveftIGeTbPaYvYloMzLcSsFlCMHtnF1JS7Hrv8xnBJTU-PAhYlSeivqD9V_YLTYZfPF-M"/>
+<div class="absolute inset-0 p-6 flex flex-col justify-end text-white">
+<p class="text-xs font-bold uppercase tracking-widest mb-1 opacity-80">Flash Deal</p>
+<h3 class="text-xl font-bold">20% Off Natural Styling</h3>
+</div>
+</div>
+</section>
+<!-- Navigation Tabs -->
+<nav class="flex overflow-x-auto gap-2 mb-10 pb-2 no-scrollbar">
+<button class="whitespace-nowrap px-6 py-3 rounded-lg bg-primary text-white font-bold shadow-lg shadow-primary/30 flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">auto_fix_high</span> Minimalist Makeup
+                </button>
+<button class="whitespace-nowrap px-6 py-3 rounded-lg bg-white dark:bg-slate-900 block-border text-slate-600 dark:text-slate-400 font-bold hover:bg-primary/5 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">event_available</span> Event Makeup
+                </button>
+<button class="whitespace-nowrap px-6 py-3 rounded-lg bg-white dark:bg-slate-900 block-border text-slate-600 dark:text-slate-400 font-bold hover:bg-primary/5 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">content_cut</span> Natural Hair Styling
+                </button>
+</nav>
+<!-- Category: Minimalist Makeup -->
+<div class="mb-16">
+<div class="flex items-center gap-4 mb-8">
+<h3 class="text-2xl font-black uppercase tracking-tighter">Minimalist Makeup</h3>
+<div class="h-px bg-primary/20 flex-1"></div>
+<span class="material-symbols-outlined text-primary">sensors</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Item 1 -->
+<div class="group bg-white dark:bg-slate-900 block-border rounded-xl overflow-hidden hover:border-primary/50 transition-all">
+<div class="h-48 relative overflow-hidden">
+<img alt="Fresh Face Glow" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up portrait of a woman with natural glowing skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABkSlf5aMPTQO_RetN5Z33uapcY8vkpS5MMnE8onK0oCefId0I8ts-DD3G-vipwodx6vnTxhEL30rZoYiAIKus0opj-_5sWNC2qA7vSLnKxeEwqiOOnWUEHSdb46LuMkz4rzv_px1O2ZqeolaHp7zfMpH2tiu4oTZuSz8-iamqkBX0tvKi7334dxnN8oKw8r5LFMow4pmc9spXTcBkNmJtJcuPqIkLCTSt-biAT-t0iNXzS9I2vMJZOxIn5WtPnys31Qz4zzOjwh4"/>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold uppercase text-primary border border-primary/20">Best Seller</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-lg font-bold leading-tight">Fresh Face Glow</h4>
+<span class="text-primary font-black">$65</span>
+</div>
+<div class="flex items-center gap-3 text-xs text-slate-500 mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 45 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">task_alt</span> Tech-Infused</span>
+</div>
+<button class="w-full bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2 group/btn">
+<span>Book Now</span>
+<span class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group bg-white dark:bg-slate-900 block-border rounded-xl overflow-hidden hover:border-primary/50 transition-all">
+<div class="h-48 relative overflow-hidden">
+<img alt="Pixel Perfect Brow" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Extreme close up of perfectly shaped eyebrows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ87p2wZDGIIH8bKL5OhCS9RNr3xpujiH9u2S1kObAdYpmKGCjClQ4RQwrzkOfDlnfTM6JWZ5LMSG1IYLwTFKgiVdrNUIW6ahbHVXhXjJeTEEw1XxFDRtMZxWUegKBa9bFWvvPXUyQVBzHSP4Mff5gISwpb2sdWbUVNqLm5te2rvdUeBOFcvIJ7OZB0Ub3FQLpBKmQedC1G30fT8Ucapr2tYX0OsD0ITQOjMm3ZdqohEvhNeLCgcX7CrKw3l9GFfozCI42j5R-PJU"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-lg font-bold leading-tight">Pixel Perfect Brow</h4>
+<span class="text-primary font-black">$40</span>
+</div>
+<div class="flex items-center gap-3 text-xs text-slate-500 mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 30 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">grid_view</span> Modular</span>
+</div>
+<button class="w-full bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2 group/btn">
+<span>Book Now</span>
+<span class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group bg-white dark:bg-slate-900 block-border rounded-xl overflow-hidden hover:border-primary/50 transition-all">
+<div class="h-48 relative overflow-hidden">
+<img alt="Dewy Digital Finish" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Soft focused artistic beauty portrait with dewy skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_LvIU4OUjr5RCQgtlEyKpACQK1Gyn20hgG_St61s583BOUG2pZCaC59u20ey4eMY99z-QLpbYdXePAUXRsV7zA6Ks_WL_oywsc61X8vbovnpJWzB7U2Xo9JabOY3SkB3sqHPKz2vcZi2NQjCQoMpwZ-5QkKE4ICnOqJFtf8L6RK9uR_vLzXkFMOIpxqWR-QBI6mgQGCDxWYlhtFkZ2d6XsH8B3C1GWGw0P31jv8GEuKCjvyB4IjyE3kbNCw2UyHuT413UE_Ske3M"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-lg font-bold leading-tight">Dewy Digital Finish</h4>
+<span class="text-primary font-black">$55</span>
+</div>
+<div class="flex items-center gap-3 text-xs text-slate-500 mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 40 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">blur_on</span> High-Def</span>
+</div>
+<button class="w-full bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2 group/btn">
+<span>Book Now</span>
+<span class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Category: Event Makeup -->
+<div class="mb-16">
+<div class="flex items-center gap-4 mb-8">
+<h3 class="text-2xl font-black uppercase tracking-tighter">Event Makeup</h3>
+<div class="h-px bg-primary/20 flex-1"></div>
+<span class="material-symbols-outlined text-primary">star_shine</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-slate-900 block-border rounded-xl overflow-hidden flex flex-col sm:flex-row h-full group">
+<div class="sm:w-2/5 relative overflow-hidden">
+<img alt="Red Carpet Ready" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Dramatic glamour makeup with bold lipstick" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALl36rbt44lF7erYLw7G53p7zvvltfrHN9wlJoAJh8o_fpdsC5xWhDuYK45tcujKgRGNxUHc1v-vaiawYLyrWtDMKxte0mxkU3qwRa3TdrC6FgpzSVNoKyugHtrAkZQ3w2049vX_fOkPNhICTLOPOpVgPU0_LTNabkEkMTy4pgABnjEs0vgNIX-PLKEROWM-Um8_ckJ66Heiwkyx2BmEXTyWLBQ_LwD7KGJQ1xJ9H1hNtCkgPfRjuC3-rBvJV6Z25uCSoiiBDFrHI"/>
+</div>
+<div class="p-6 sm:w-3/5 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-xl font-bold">Red Carpet Ready</h4>
+<span class="text-primary font-black">$120</span>
+</div>
+<p class="text-sm text-slate-500 mb-4">A high-impact, long-wear look designed for 4K cameras and strobe lighting.</p>
+<div class="flex items-center gap-4 text-xs text-slate-500 mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 90 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">camera</span> Studio Grade</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">Book Session</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 block-border rounded-xl overflow-hidden flex flex-row h-full group">
+<div class="w-2/5 relative overflow-hidden">
+<img alt="Gala Glow" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Sophisticated evening makeup with subtle shimmer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWRYK1HiFiCp0UsPjm7wX5LWzIIM91uHgwJft9ElNaufsB6NqtY817h_cIL1peWAuuA0ZBtrvg0lPia3P53qmOQz9OTpSoslIktPVc8bdcZXEf74oOGLF8WX4lLrAyZub9TTx_jrYUmks_s_ZcCNqh4SQPfAaTF1uUyRwJ2AmUReMMxA3d69N0hf7X8aL5zxgteH3wobhDHpWZD5kXJialswue4WLzopWrX5t0bSqzgiN9ECn2EmV7KD_0J8EsMFcXTRPjvD_4aBU"/>
+</div>
+<div class="p-6 w-3/5 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-xl font-bold">Gala Glow</h4>
+<span class="text-primary font-black">$95</span>
+</div>
+<p class="text-sm text-slate-500 mb-4">Elegant shimmer and contouring tailored for formal evening environments.</p>
+<div class="flex items-center gap-4 text-xs text-slate-500 mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 60 mins</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">nightlight</span> Low-Light Op</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">Book Session</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Section -->
+<footer class="mt-20 border-t block-border pt-12 pb-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-8 bg-primary/20 flex items-center justify-center rounded border border-primary/40">
+<span class="material-symbols-outlined text-primary text-xl">grid_view</span>
+</div>
+<h2 class="text-lg font-extrabold uppercase tracking-tighter">Clé Beauty</h2>
+</div>
+<p class="text-sm text-slate-500 max-w-sm mb-6">The intersection of advanced skincare technology and minimalist beauty aesthetics. Serving the digital generation.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">language</span>
+<span class="material-symbols-outlined text-primary">share</span>
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-4 uppercase text-xs tracking-widest text-primary">Booking</h5>
+<ul class="text-sm text-slate-500 space-y-3">
+<li class="hover:text-primary cursor-pointer">Gift Cards</li>
+<li class="hover:text-primary cursor-pointer">Loyalty Program</li>
+<li class="hover:text-primary cursor-pointer">Privacy Policy</li>
+<li class="hover:text-primary cursor-pointer">Terms of Service</li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-4 uppercase text-xs tracking-widest text-primary">Contact</h5>
+<p class="text-sm text-slate-500">1024 Pixel Plaza<br/>Silicon Valley, CA<br/>+1 (555) 001-0101</p>
+</div>
+</footer>
+<div class="text-center py-8 text-[10px] uppercase font-bold text-slate-400 tracking-widest">
+                © 2024 Clé Beauty • Powered by Digital Tech Pixel Blocs
+            </div>
+</main>
+</div>
+</body></html>

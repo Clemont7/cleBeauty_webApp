@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00f2ff",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0a0a0a",
+                        "tech-gray": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px"},
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap" rel="stylesheet"/><title>Clé Beauty Booking</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen dark">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center bg-white dark:bg-background-dark p-4 border-b border-primary/10">
+<div class="flex items-center bg-black p-4 border-b-2 border-primary">
+<div class="size-8 flex items-center justify-center border border-primary/50 text-primary cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-sm font-black tracking-[0.2em] flex-1 text-center pr-8 text-white uppercase">CLE_BEAUTY // SYSTEM_V.1</h1>
+</div>
+</header>
+<!-- Progress Indicator -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-6">
+<div class="flex w-full flex-row items-center justify-center gap-1 py-4">
+<div class="h-1 w-12 bg-primary"></div>
+<div class="h-1 w-12 bg-tech-gray"></div>
+<div class="h-1 w-12 bg-tech-gray"></div>
+<div class="h-1 w-12 bg-tech-gray"></div>
+</div>
+</div>
+<!-- Content Area -->
+<main class="flex-1 px-4 pb-24">
+<!-- Section: Service -->
+<section class="mb-8">
+<div class="mb-4 border-l-4 border-primary pl-3">
+<h2 class="text-xs font-black uppercase tracking-widest text-slate-500">[01] SELECT_SERVICE</h2>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="border-2 border-primary bg-primary/10 p-3 flex flex-col gap-2 cursor-pointer">
+<p class="text-[10px] font-bold text-primary uppercase">Facial_03</p>
+<h3 class="text-xs font-black uppercase">Hydra Glow</h3>
+<p class="text-[10px] text-slate-400">75 MIN // $120</p>
+<div class="mt-auto flex justify-end">
+<span class="material-symbols-outlined text-primary">check_box</span>
+</div>
+</div>
+<div class="border border-slate-200 dark:border-tech-gray p-3 flex flex-col gap-2 cursor-pointer">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Hair_01</p>
+<h3 class="text-xs font-black uppercase text-slate-600">Signature Cut</h3>
+<p class="text-[10px] text-slate-400">60 MIN // $85</p>
+<div class="mt-auto flex justify-end">
+<span class="material-symbols-outlined text-slate-200">check_box_outline_blank</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Availability Grid -->
+<section class="mb-8">
+<div class="mb-4 border-l-4 border-primary pl-3">
+<h2 class="text-xs font-black uppercase tracking-widest text-slate-500">[02] DATE_TIME_PICKER</h2>
+</div>
+<div class="border border-slate-200 dark:border-tech-gray">
+<div class="flex justify-between items-center p-2 bg-slate-50 dark:bg-tech-gray border-b border-slate-200">
+<p class="text-[10px] font-bold uppercase">October_2024</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-xs cursor-pointer">arrow_left</span>
+<span class="material-symbols-outlined text-xs cursor-pointer">arrow_right</span>
+</div>
+</div>
+<div class="grid grid-cols-7 text-center">
+<div class="p-2 text-[10px] border-b border-r border-slate-100">S</div><div class="p-2 text-[10px] border-b border-r border-slate-100">M</div><div class="p-2 text-[10px] border-b border-r border-slate-100">T</div><div class="p-2 text-[10px] border-b border-r border-slate-100">W</div><div class="p-2 text-[10px] border-b border-r border-slate-100">T</div><div class="p-2 text-[10px] border-b border-r border-slate-100">F</div><div class="p-2 text-[10px] border-b border-slate-100">S</div>
+<div class="p-2 text-[10px] text-slate-300 border-r border-b border-slate-100">29</div>
+<div class="p-2 text-[10px] text-slate-300 border-r border-b border-slate-100">30</div>
+<div class="p-2 text-[10px] bg-black text-primary font-bold border-r border-b border-black">01</div>
+<div class="p-2 text-[10px] hover:bg-primary/10 border-r border-b border-slate-100">02</div>
+<div class="p-2 text-[10px] hover:bg-primary/10 border-r border-b border-slate-100">03</div>
+<div class="p-2 text-[10px] hover:bg-primary/10 border-r border-b border-slate-100">04</div>
+<div class="p-2 text-[10px] hover:bg-primary/10 border-b border-slate-100">05</div>
+</div>
+</div>
+</section>
+<!-- Section: Data Entry -->
+<section class="mb-12">
+<div class="mb-4 border-l-4 border-primary pl-3">
+<h2 class="text-xs font-black uppercase tracking-widest text-slate-500">[03] CLIENT_DETAILS</h2>
+</div>
+<div class="space-y-2">
+<div class="flex flex-col">
+<span class="text-[9px] font-bold text-slate-400 uppercase mb-1 ml-1">INPUT_NAME</span>
+<input class="bg-slate-50 dark:bg-tech-gray border-2 border-slate-200 dark:border-tech-gray p-3 text-xs uppercase focus:border-primary focus:ring-0" placeholder="SARAH_JENKINS" type="text"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[9px] font-bold text-slate-400 uppercase mb-1 ml-1">INPUT_EMAIL</span>
+<input class="bg-slate-50 dark:bg-tech-gray border-2 border-slate-200 dark:border-tech-gray p-3 text-xs uppercase focus:border-primary focus:ring-0" placeholder="SARAH@SYS.COM" type="email"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Actions -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 border-t border-primary/10">
+<div class="p-4 bg-black border-t-2 border-primary">
+<button class="w-full bg-primary text-black font-black uppercase tracking-widest py-4 flex items-center justify-center gap-3 hover:bg-white transition-colors">
+        EXECUTE_BOOKING_SEQUENCE
+        <span class="material-symbols-outlined">terminal</span>
+</button>
+</div>
+</div>
+<!-- Sticky Nav Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto hidden">
+<!-- This would be used on main screens, currently booking flow has its own action bar -->
+</nav>
+<!-- Notification Toast Example (Hidden) -->
+<div class="hidden absolute top-20 left-4 right-4 bg-slate-900 text-white p-4 rounded-xl flex items-center gap-3 shadow-2xl z-50">
+<div class="bg-primary size-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Booking Confirmed!</p>
+<p class="text-[10px] text-slate-400">Oct 1st at 10:30 AM</p>
+</div>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer">close</span>
+</div>
+</div>
+<!-- Bottom Nav Bar from Component List (Themed) -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md z-40">
+<div class="flex border-t border-slate-800 bg-black px-2 pb-2 pt-2">
+<a class="flex flex-1 flex-col items-center py-2 text-slate-600" href="#">
+<span class="material-symbols-outlined text-lg">grid_view</span>
+<p class="text-[8px] font-bold uppercase mt-1">DASH</p>
+</a>
+<a class="flex flex-1 flex-col items-center py-2 text-slate-600" href="#">
+<span class="material-symbols-outlined text-lg">category</span>
+<p class="text-[8px] font-bold uppercase mt-1">SRVC</p>
+</a>
+<a class="flex flex-1 flex-col items-center py-2 text-primary bg-primary/10" href="#">
+<span class="material-symbols-outlined text-lg">event_repeat</span>
+<p class="text-[8px] font-bold uppercase mt-1">BOOK</p>
+</a>
+<a class="flex flex-1 flex-col items-center py-2 text-slate-600" href="#">
+<span class="material-symbols-outlined text-lg">settings_input_component</span>
+<p class="text-[8px] font-bold uppercase mt-1">USER</p>
+</a>
+</div>
+</div>
+</body></html>

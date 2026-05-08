@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .pixel-pattern {
+            background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+        .tech-border {
+            border-image-source: linear-gradient(45deg, #ee2b8c, transparent);
+            border-image-slice: 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+<div class="mx-auto flex max-w-7xl items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="flex size-10 items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined">grid_view</span>
+</div>
+<h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white uppercase">Clé <span class="text-primary text-opacity-80">Beauty</span></h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Serviços</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Portfólio</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Sobre</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Contato</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-slate-100 dark:bg-slate-800 rounded-full px-4 py-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-slate-400" placeholder="Buscar serviço..." type="text"/>
+</div>
+<div class="size-10 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Avatar image of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc3eSkzET9yFch-bLOzAecTw2juLIDXc1ys3svNNQKyuAe9F75Lh1ho7wS14MJfxyMYtwVmLHIevFVIvNmnvFMWiMMXgJeQPhErY4VM8-qMQ88BGyp1RYqZNty1kIofjOnWX-VktoTfch9VYZ9eSJDTKhZM9xQp3QdwIG_pOKlQZ_CU3N92lZVU6wAiUuCUsc6Ox-PC_kWzDBn456qzDDB4FdqGUpLQlGkRYgtCkxn0tQqmc4f2gOIVTWPy4gtf5eLPt1njM-OeAo"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 px-6 md:px-20 py-12 max-w-7xl mx-auto w-full">
+<!-- Hero Section / Title -->
+<div class="mb-12 relative">
+<div class="absolute -top-10 -left-10 size-40 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-xs mb-3">
+<span class="size-2 bg-primary animate-pulse"></span>
+                        Digital Tech Experience
+                    </div>
+<h2 class="text-5xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight">
+                        Catálogo de <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-400">Serviços</span>
+</h2>
+<p class="mt-4 text-slate-600 dark:text-slate-400 max-w-xl text-lg">
+                        Onde a estética clássica encontra a precisão digital. Escolha o seu próximo look com acabamento pixel-perfect.
+                    </p>
+</div>
+</div>
+<!-- Category Filters -->
+<div class="flex flex-wrap gap-4 mb-12">
+<button class="px-6 py-2.5 bg-primary text-white rounded-xl font-bold text-sm shadow-lg shadow-primary/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">apps</span> Todos
+                </button>
+<button class="px-6 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-sm hover:border-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">face</span> Maquiagem
+                </button>
+<button class="px-6 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-sm hover:border-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">content_cut</span> Cabelo
+                </button>
+<button class="px-6 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-sm hover:border-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">auto_awesome</span> Pacotes
+                </button>
+</div>
+<!-- Services Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1: Minimalist Makeup -->
+<div class="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-xl shadow-slate-200/50 dark:shadow-none">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up of a minimalist natural makeup look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWURQNlRgVW9NdBf5pZfPvMqQMSdamScZE5KCaKapNG43p2tsnFcTx1DO9oESavsN7M7HzhrAPUe4mXKDKyL6TybBOZjHtvdrP5oZeRTPd3Ie52ZEEATutjbw2G643O52ECx2BGnERVMDUzzhBuiZFCgcRqkw_wm4eEGPoZ0iAQs0NqLr7al8osu7ygEIcVnux2VgIfBsiMuqHFs9yqToZ-m2ziPoIY2B4iAwAwdCn08tObSVvsK2H0xPXMquDWw5xCm0Y3OvGuLI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 45 MIN
+                            </span>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-black px-3 py-1.5 rounded-lg shadow-lg">R$ 150</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Minimalist Makeup</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Beleza essencial com acabamento pixel-perfect, focando na luminosidade natural da pele e realce sutil.</p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-50 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400">Duração</span>
+<span class="text-sm font-semibold">45 min</span>
+</div>
+<button class="px-6 py-2 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg font-bold text-sm transition-all flex items-center gap-2">
+                                Marcar <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="absolute top-0 left-0 w-2 h-0 group-hover:h-full bg-primary transition-all duration-300"></div>
+</div>
+<!-- Service 2: Event Makeup -->
+<div class="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-xl shadow-slate-200/50 dark:shadow-none">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Glamorous makeup look for events" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB536igTkoVmu14no9EJmjrtGCrTikywnJqTW9lAo7UA1nvrXnsjH9BrdNjKpzVk65jSqJnDEYKs2A4Z-qPYaReAVC9kl9LocBMYG8Uzj3dejrM9gSatWq_BtlQzXc5zePKbkq9Q8mzbGFvABVWeAU1Q_CJtxzDTbsffpGeAVAUacJUKTc8dJ-wbHej_WWUC0OBY536j-oBwKeVBTo2a_6nHnwhY9GPGn95JkuMs6YAZs-6mJCADt_UAcpOvgbcYGes2tPNZfAVywY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 90 MIN
+                            </span>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-black px-3 py-1.5 rounded-lg shadow-lg">R$ 280</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Event Makeup</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Look sofisticado e de alta durabilidade para festas, casamentos e eventos noturnos com contorno preciso.</p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-50 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400">Duração</span>
+<span class="text-sm font-semibold">90 min</span>
+</div>
+<button class="px-6 py-2 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg font-bold text-sm transition-all flex items-center gap-2">
+                                Marcar <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="absolute top-0 left-0 w-2 h-0 group-hover:h-full bg-primary transition-all duration-300"></div>
+</div>
+<!-- Service 3: Natural Hair Styling -->
+<div class="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-xl shadow-slate-200/50 dark:shadow-none">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Woman with beautiful natural wavy hair styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAApFqhb8vWRQ5HgE_PVFym9LWZEaNFEqcAymrtLueufkI3KW7Q9lefDR4qxqHA_FmlZHSvnPjrSR8UYd8TtQtJ6p7fk6ED2Fjh4jTmuiD-pRZzlA-MOqgpgBp75unfdsVDkzPUlqcGyKww5_cPFhenq_Hpn5wkSbIrefYYFeJ3xrewhBxTZxQc9Sr5kxSoVGPxz0l88buZXxiX_ONCDKm2uCT9sv01AqKaf7Ux67w_5mO--elCkGxiVp7ylWWEef8ixNGa1hFYT1g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 60 MIN
+                            </span>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-black px-3 py-1.5 rounded-lg shadow-lg">R$ 180</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Natural Hair Styling</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Escova modelada ou texturização natural que valoriza o movimento dos fios com produtos premium.</p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-50 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400">Duração</span>
+<span class="text-sm font-semibold">60 min</span>
+</div>
+<button class="px-6 py-2 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg font-bold text-sm transition-all flex items-center gap-2">
+                                Marcar <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="absolute top-0 left-0 w-2 h-0 group-hover:h-full bg-primary transition-all duration-300"></div>
+</div>
+<!-- Service 4: Tech Brow Lamination -->
+<div class="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-xl shadow-slate-200/50 dark:shadow-none">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Perfectly shaped eyebrows detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9bYoB_H-SOhSk44FBGL_3QgeQzVpxHzeGiERct2IxYPIZ3JYj99IrSx7CTj5A-DzXWwOzc4okM6IllSo9w9q5aTs_IciSHOXmImU6iWd_Tp9BB1atkoZHfdSh0D5U3za1ScUDqmyNHmeU4J4X0uQDUb49H23mEULWNify3Pwly0xSufnkj_QdWGO4S6gFnEUU4Mm8U2EnkndC8DQt0XQufsfX49_b8Ig4ihBM9rwZhaD_9Wnw7qVQx3IvjIyO7ASSUD1Vlopo2yI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 50 MIN
+                            </span>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-black px-3 py-1.5 rounded-lg shadow-lg">R$ 120</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Digital Brow Design</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Design estratégico com mapeamento facial para sobrancelhas impactantes e perfeitamente alinhadas.</p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-50 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400">Duração</span>
+<span class="text-sm font-semibold">50 min</span>
+</div>
+<button class="px-6 py-2 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg font-bold text-sm transition-all flex items-center gap-2">
+                                Marcar <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="absolute top-0 left-0 w-2 h-0 group-hover:h-full bg-primary transition-all duration-300"></div>
+</div>
+<!-- Service 5: Editorial Ponytail -->
+<div class="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-xl shadow-slate-200/50 dark:shadow-none">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern high ponytail hairstyle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlLc4hFbw6e7gkG-o8YYU6nQtg5P9xHteAfBleRIC422PD8JJ42EneX7glzAfxLm8kVb-fdAzWqqOMiNH4Dpa-kEDCo3oZbi-UVNlfb6fRXI62bSwoxp8bJ53DRmsqvpxM8DGaoufUyBfToAolJTvbnI_DQ65ZZ49NLpapnDtXYjJ45nVR2P8HQSanj-X9bBdjBw-I6l_S2OkmtwdD_My9ytGyQH2pxTr4DF68FfVIMHUJFuRnsDFBf9LECzSNP7PrOuKpCfz5iqQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 40 MIN
+                            </span>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-black px-3 py-1.5 rounded-lg shadow-lg">R$ 140</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Editorial Styling</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Penteados modernos e estruturados inspirados nas passarelas, perfeitos para fotos e vídeos de alta definição.</p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-50 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400">Duração</span>
+<span class="text-sm font-semibold">40 min</span>
+</div>
+<button class="px-6 py-2 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg font-bold text-sm transition-all flex items-center gap-2">
+                                Marcar <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="absolute top-0 left-0 w-2 h-0 group-hover:h-full bg-primary transition-all duration-300"></div>
+</div>
+<!-- Service 6: Tech Skin Care -->
+<div class="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-xl shadow-slate-200/50 dark:shadow-none">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Refreshing facial skincare treatment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRdC-e15FBsn60aAW0lGMBiWidDv8uoXImwfEgdQlaURBrrwLJ7XyRtqTqaS1VtnjxQHS97qevFrOg9J_XDZxuKDJxnJNarkRxcG-vwWWAOtggcT4P0RscEC6wDQYHYjsmZKRrdUi1lSKX_9bPi1D0Gi2bXOyuKva4FfVc3V7AOh4k3_YSmRjeXjB0U-Ra2fRgSvNOV0Rgoq_fv3vB7BD7_v2UuFj_Xo2twNf5aqtaaZFkj5Yn79hs_HUdpnXQ0agqkzRGevKS41k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 30 MIN
+                            </span>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-xs font-black px-3 py-1.5 rounded-lg shadow-lg">R$ 90</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Pixel Prep Glow</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Tratamento expresso de hidratação e priming para garantir que sua maquiagem dure e brilhe em qualquer luz.</p>
+<div class="flex items-center justify-between pt-6 border-t border-slate-50 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400">Duração</span>
+<span class="text-sm font-semibold">30 min</span>
+</div>
+<button class="px-6 py-2 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg font-bold text-sm transition-all flex items-center gap-2">
+                                Marcar <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="absolute top-0 left-0 w-2 h-0 group-hover:h-full bg-primary transition-all duration-300"></div>
+</div>
+</div>
+<!-- Promotion Banner (Tech Style) -->
+<div class="mt-20 relative overflow-hidden rounded-3xl bg-slate-900 text-white p-12">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+<div class="w-full h-full pixel-pattern text-primary"></div>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl font-black mb-4 leading-tight uppercase">Clé Beauty <br/><span class="text-primary italic">Subscription</span></h2>
+<p class="text-slate-400 text-lg">Assine nosso plano mensal e tenha acesso a 4 serviços de sua escolha com 20% de desconto real e prioridade na agenda digital.</p>
+</div>
+<div class="shrink-0">
+<button class="px-10 py-5 bg-primary rounded-2xl font-black text-lg uppercase tracking-wider hover:scale-105 transition-transform shadow-2xl shadow-primary/40">Assinar Agora</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-100 dark:border-slate-800 px-6 md:px-20 py-12 mt-20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<div class="flex items-center gap-3 mb-6">
+<div class="flex size-8 items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined text-base">grid_view</span>
+</div>
+<h1 class="text-lg font-extrabold tracking-tight text-slate-900 dark:text-white uppercase">Clé Beauty</h1>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        A primeira experiência de beleza digital tech do país. Unindo tecnologia e estética para um resultado extraordinário.
+                    </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-black uppercase text-slate-400">Menu</h4>
+<a class="text-sm font-semibold hover:text-primary" href="#">Serviços</a>
+<a class="text-sm font-semibold hover:text-primary" href="#">Sobre</a>
+<a class="text-sm font-semibold hover:text-primary" href="#">FAQ</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-black uppercase text-slate-400">Social</h4>
+<a class="text-sm font-semibold hover:text-primary" href="#">Instagram</a>
+<a class="text-sm font-semibold hover:text-primary" href="#">TikTok</a>
+<a class="text-sm font-semibold hover:text-primary" href="#">Pinterest</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-black uppercase text-slate-400">Local</h4>
+<p class="text-sm font-semibold">São Paulo, SP</p>
+<p class="text-xs text-slate-400">Rua da Beleza, 1024 - Pixel District</p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-50 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-400">© 2024 Clé Beauty. Todos os direitos reservados.</p>
+<div class="flex items-center gap-2 text-xs text-slate-400">
+<span class="material-symbols-outlined text-sm">terminal</span> Designed with code
+                </div>
+</div>
+</footer>
+</div>
+</body></html>

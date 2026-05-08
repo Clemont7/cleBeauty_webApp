@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clé Beauty | Enhance Your Natural Glow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .pixel-grid {
+            background-size: 20px 20px;
+            background-image: radial-gradient(circle, #ee2b8c22 1px, transparent 1px);
+        }
+        .dot-grid {
+            background-image: radial-gradient(#ee2b8c33 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+        .pixel-border {
+            box-shadow: 4px 0 0 0 #ee2b8c, -4px 0 0 0 #ee2b8c, 0 4px 0 0 #ee2b8c, 0 -4px 0 0 #ee2b8c;
+        }
+        .wireframe-shape {
+            border: 1px solid rgba(238, 43, 140, 0.3);
+            position: relative;
+        }
+        .wireframe-shape::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border: 1px solid rgba(238, 43, 140, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white dot-grid">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-2 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary text-white">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-extrabold leading-tight tracking-tighter uppercase">Clé Beauty</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-10 items-center">
+<div class="hidden lg:block text-[10px] font-mono text-primary/40 uppercase tracking-widest mr-4">
+    LOC: 34.0522° N / 118.2437° W
+</div><nav class="flex items-center gap-8">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#philosophy">Philosophy</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#services">Services</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#portfolio">Portfolio</a>
+</nav>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center border-2 border-primary bg-primary text-white text-xs font-black uppercase py-2 px-6 hover:bg-transparent hover:text-primary transition-all shadow-[4px_4px_0px_0px_rgba(238,43,140,0.3)] rounded-none">
+                        Book Now
+                    </button>
+</div>
+</header>
+<main class="flex flex-col">
+<!-- Hero Section -->
+<section class="relative px-6 md:px-20 py-12 md:py-24 overflow-hidden pixel-grid">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8 z-10">
+<div class="inline-flex items-center gap-2 bg-primary text-white px-3 py-1 w-fit">
+<span class="size-2 bg-white animate-pulse"></span>
+<span class="text-[10px] font-black uppercase tracking-widest">System // Precision_v02</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter">
+                                ENHANCE YOUR <br/>
+<span class="text-primary italic">NATURAL GLOW</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-md leading-relaxed">
+                                Minimalist makeup and natural hair services designed to reveal your authentic self. Where digital precision meets feminine elegance.
+                            </p>
+<div class="flex flex-wrap gap-4">
+<button class="h-14 px-8 bg-primary text-white font-black uppercase tracking-tighter text-sm flex items-center justify-center shadow-[6px_6px_0px_0px_rgba(0,0,0,0.1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all rounded-none">
+                                    Explore Services
+                                </button>
+<button class="h-14 px-8 border-2 border-slate-900 dark:border-slate-100 text-slate-900 dark:text-slate-100 font-black uppercase tracking-tighter text-sm flex items-center justify-center hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all rounded-none">
+                                    View Portfolio
+                                </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-slate-200 dark:bg-slate-800 overflow-hidden border-2 border-primary shadow-[12px_12px_0px_0px_rgba(238,43,140,0.1)] relative z-10 hero-image-container" data-alt="Close up of high-fashion minimalist makeup look" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaOReBwIlVX7cvPpEeem1UH2ljWh3xRl32IXk4G9XL8uNs49E60eHJrmMQ0mL6X4PmDXiNt1Dl90wOh71Oo9D98mHy7Qtz0VQ1FDBVHnYCHu2wSi_9mw10erLNFq5Lt0Lfp4Zap-F1DhBqwgq62kVJ3E938zrD0x9vdgOnJ2ISu2eMmKN7vTDm9lZceqJMbz445PdVcTXV_3FSsD5n17pWFCW6mPTqq11ewZaN48yN45WSyu5GSjP_FZWF1dEFjphSy9LGbYQVB8A'); background-size: cover; background-position: center;">
+</div>
+<div class="absolute -top-4 -right-4 size-32 border-2 border-primary/20 z-0"></div>
+<div class="absolute -bottom-10 -left-10 size-64 border border-primary/30 rounded-lg z-0 pixel-grid"></div>
+<!-- Pixel Art Elements -->
+<div class="absolute -top-10 right-0 flex flex-col gap-1 z-20">
+<div class="size-4 bg-primary"></div>
+<div class="size-4 bg-primary/60"></div>
+<div class="size-4 bg-primary/30"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="px-6 md:px-20 py-20 bg-white dark:bg-background-dark/50" id="philosophy">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16 border-b-2 border-primary/10 pb-10">
+<div class="max-w-2xl">
+<h2 class="text-primary text-sm font-black uppercase tracking-[0.3em] mb-4">Our Philosophy</h2>
+<h3 class="text-slate-900 dark:text-slate-100 text-4xl md:text-5xl font-black tracking-tight leading-tight">
+                                    The Clé Standard: <br/>Sophistication via Minimalism
+                                </h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-base max-w-xs pb-1">
+                                We blend technical pixel-perfection with the soft flow of nature to celebrate your unique features.
+                            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group p-8 border-2 border-primary/10 hover:border-primary transition-all bg-white dark:bg-background-dark relative overflow-hidden">
+<div class="absolute top-0 right-0 w-8 h-8 bg-primary/10 group-hover:bg-primary transition-colors flex items-center justify-center">
+<span class="text-[10px] font-mono text-primary group-hover:text-white">00{{loop_index}}</span>
+</div>
+<div class="mb-6 text-primary">
+<span class="material-symbols-outlined !text-4xl">grid_4x4</span>
+</div>
+<h4 class="text-xl font-extrabold mb-3 uppercase tracking-tighter">Pixel-Perfect Precision</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                    Our application techniques are inspired by digital clarity—every stroke is intentional and measured for HD-ready results.
+                                </p>
+</div>
+<!-- Card 2 -->
+<div class="group p-8 border-2 border-primary/10 hover:border-primary transition-all bg-white dark:bg-background-dark relative overflow-hidden">
+<div class="absolute top-0 right-0 w-8 h-8 bg-primary/10 group-hover:bg-primary transition-colors flex items-center justify-center">
+<span class="text-[10px] font-mono text-primary group-hover:text-white">00{{loop_index}}</span>
+</div>
+<div class="mb-6 text-primary">
+<span class="material-symbols-outlined !text-4xl">waves</span>
+</div>
+<h4 class="text-xl font-extrabold mb-3 uppercase tracking-tighter">Natural Texture</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                    We don't mask; we enhance. Your natural hair texture is the canvas, and we provide the expert flow it deserves.
+                                </p>
+</div>
+<!-- Card 3 -->
+<div class="group p-8 border-2 border-primary/10 hover:border-primary transition-all bg-white dark:bg-background-dark relative overflow-hidden">
+<div class="absolute top-0 right-0 w-8 h-8 bg-primary/10 group-hover:bg-primary transition-colors flex items-center justify-center">
+<span class="text-[10px] font-mono text-primary group-hover:text-white">00{{loop_index}}</span>
+</div>
+<div class="mb-6 text-primary">
+<span class="material-symbols-outlined !text-4xl">blur_on</span>
+</div>
+<h4 class="text-xl font-extrabold mb-3 uppercase tracking-tighter">Minimalist Ethos</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                    Less is more. We focus on key focal points to create a high-impact aesthetic without the weight of traditional styling.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Highlights -->
+<section class="px-6 md:px-20 py-20 bg-background-light dark:bg-background-dark" id="portfolio">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center gap-4 mb-12">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl font-black uppercase tracking-tighter">Portfolio Highlights</h2>
+<div class="h-[2px] grow bg-primary/20"></div>
+<a class="text-primary text-xs font-black uppercase tracking-widest hover:underline underline-offset-4 transition-all" href="#">View All Work</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<div class="aspect-[3/4] bg-slate-200 dark:bg-slate-800 relative group overflow-hidden cursor-pointer border-2 border-primary/5 hover:border-primary transition-all">
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">add</span>
+</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Portrait of a woman with minimalist makeup" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7LzuCiZpuyILlojEfAqtZ_hDa72vK7UF8ao2egTBNKMx7SHc_cYfkNv3Nbudgbc3qy3Npvb25NYrK3XsIb9ClRhnCJI2Wr-cOWkNNslv487hekTmz510J0IkZjsenRHDacqCKQjN86YqT6126Vv6L1kRGWzFaMXCuUNdhJsTPNY24PPPq8ZfwSZaB-wUnQvqb_akHoOv86tMtB2_l68PBvb04g1FCqpuyyf9bvkZj-9zWYN7MZ3xfCx7ywjPRTpFWntDQFzEgXYM')"></div>
+<div class="absolute bottom-2 left-2 text-[8px] font-mono text-primary bg-white/80 px-1 z-20 opacity-0 group-hover:opacity-100 transition-opacity">PX_DATA_LOG</div></div>
+<div class="aspect-[3/4] bg-slate-200 dark:bg-slate-800 relative group overflow-hidden cursor-pointer md:mt-12 border-2 border-primary/5 hover:border-primary transition-all">
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">add</span>
+</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Stylized natural hair photoshoot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCS7CD7FnCJW6l-q6zpc1R6PgcGpgTpBNzVLA2qx-R0CDa4QBjbBlBxplFYezd9fXRF11BDxiMpRHSU0Q3CdOwfSaOd8cSCR3ONbk1X2X6B7UY9jDoWidNjbrJsScgGU-8Rsv_YSYaoUA9QH_WfJjGmpR2DxkOfVcWCbfq8FEJDnawGIrrK3DkOF2ZJof6KVkcYV_IvPosjP3vXXkUlMtDzrAfgXWe1QlZHvUAbQFGxTsAO3oweIHX-lysVZmvohp83_WNrrJEo8NM')"></div>
+<div class="absolute bottom-2 left-2 text-[8px] font-mono text-primary bg-white/80 px-1 z-20 opacity-0 group-hover:opacity-100 transition-opacity">PX_DATA_LOG</div></div>
+<div class="aspect-[3/4] bg-slate-200 dark:bg-slate-800 relative group overflow-hidden cursor-pointer border-2 border-primary/5 hover:border-primary transition-all">
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">add</span>
+</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Soft aesthetic makeup details" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGN5Ah_M_hT1knqvSrgcFzWwVf2m6vDRZsORH4Dj288llIG7c8XOkovoQtevN_ynIp_saW8wQWQns7kuOX0Om9eoVF_-i3_GyzNvCUtYKgjXG99k9J5ixKTDpG1ASJEx80zNxpVQ8TIjMKpxAujWZ2wlq_tUaTRfK1Wp7v99-_rAAtl5G2E4CCblbDnmMVnPhBjiB4eaMfi8SB_WHDgBf2RwOBlTe5ItzAzH0XSjTW4VKSo9ZXcZt7ccin20YTvNwtvZ50wl3jAew')"></div>
+<div class="absolute bottom-2 left-2 text-[8px] font-mono text-primary bg-white/80 px-1 z-20 opacity-0 group-hover:opacity-100 transition-opacity">PX_DATA_LOG</div></div>
+<div class="aspect-[3/4] bg-slate-200 dark:bg-slate-800 relative group overflow-hidden cursor-pointer md:mt-12 border-2 border-primary/5 hover:border-primary transition-all">
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl">add</span>
+</div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Abstract beauty close up" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC83-1B9a5wyUkhlIV8Xnu_toxLNJLAJRCjZdI8TMcigk8d-aZfpVBqIDaN8fe1i5XmD73S4m_EqWJsvGiRiEZB2DPkobbrjhgZAACRiN7--NXvlhJY-Lm0gXUFhYYFI5gFt14cVbCgswWYkVosn5MWVRkGcohREkOj5lIYFoioDUBKJJAjJ7AsGgVl4GSMw_8MDdIiwwe1E6MMkLeOm0pXMHU-ccX26F_GvIanNNgMmwuYBQzQNzqYDcSko1QvXTW3nEjHC5hqZGs')"></div>
+<div class="absolute bottom-2 left-2 text-[8px] font-mono text-primary bg-white/80 px-1 z-20 opacity-0 group-hover:opacity-100 transition-opacity">PX_DATA_LOG</div></div>
+</div>
+</div>
+</section>
+<!-- Services / CTA Section -->
+<section class="px-6 md:px-20 py-24 bg-primary text-white relative overflow-hidden border-y-8 border-primary/20" id="services">
+<!-- Tech Background Elements -->
+<div class="absolute inset-0 opacity-10 pixel-grid"></div>
+<div class="absolute right-0 top-0 size-64 border-l border-b border-white/20"></div>
+<div class="absolute left-10 bottom-10 size-40 border border-white/10 flex items-center justify-center opacity-30">
+<div class="size-32 border border-white/20"></div>
+</div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tighter uppercase">Ready to refine your <br/><span class="bg-white text-primary px-4 inline-block">aesthetic?</span></h2>
+<p class="text-white/80 text-lg mb-12 max-w-2xl mx-auto font-medium">
+                            Join the Clé community for a personalized beauty experience that respects your natural canvas and enhances it with digital-age precision.
+                        </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+<button class="w-full md:w-auto px-12 py-5 bg-white text-primary font-black uppercase text-sm tracking-widest shadow-xl hover:bg-background-light transition-all flex items-center justify-center gap-2 rounded-none">
+<span class="material-symbols-outlined text-xl">calendar_today</span>
+                                Book Appointment
+                            </button>
+<button class="w-full md:w-auto px-12 py-5 border-2 border-white text-white font-black uppercase text-sm tracking-widest hover:bg-white/10 transition-all rounded-none">
+                                View Services Menu
+                            </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="px-6 md:px-20 py-12 bg-white dark:bg-background-dark border-t border-primary/10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 text-primary mb-6">
+<div class="size-6 bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">grid_view</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-extrabold uppercase tracking-tighter">Clé Beauty</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm max-w-sm mb-6">
+                            A contemporary sanctuary where high-tech methods meet high-fashion grace. Redefining minimalist beauty for the modern age.
+                        </p>
+<div class="flex gap-4">
+<a class="size-10 border-2 border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="size-10 border-2 border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-black uppercase text-xs tracking-[0.2em] mb-6">Studio</h4>
+<ul class="flex flex-col gap-3 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Our Story</a></li>
+<li><a class="hover:text-primary" href="#">Services</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Privacy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-black uppercase text-xs tracking-[0.2em] mb-6">Connect</h4>
+<ul class="flex flex-col gap-3 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary" href="#">Instagram</a></li>
+<li><a class="hover:text-primary" href="#">TikTok</a></li>
+<li><a class="hover:text-primary" href="#">Pinterest</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-400 font-medium">© 2024 Clé Beauty. All pixels intended.</p>
+<div class="flex gap-2">
+<div class="size-3 bg-primary"></div>
+<div class="size-3 bg-primary/40"></div>
+<div class="size-3 bg-primary/10"></div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
