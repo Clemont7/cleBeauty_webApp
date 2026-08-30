@@ -1,46 +1,123 @@
+// Clé Beauty — data model
+// Local dev uses SQLite for zero-setup. To move to Postgres:
+//   1. set provider = "postgresql"
+//   2. set DATABASE_URL to your Postgres connection string
+//   3. run `npm run prisma:migrate`
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
-model Service {
+model User {
+  id           String       @id @default(cuid())
+  email        String       @unique
+  name         String
+  passwordHash String
+  createdAt    DateTime     @default(now())
+  orders       Order[]
+  enrollments  Enrollment[]
+}
+
+/// Products for sale (makeup + hair). Some carry a virtual try-on filter.
+model Product {
   id          String   @id @default(cuid())
-  title       String
+  name        String
   description String
-  price       String
-  duration    String
-  createdAt   DateTime @default(now())
-}
-
-model Booking {
-  id        String   @id @default(cuid())
-  service   String
-  date      DateTime
-  time      String
-  name      String
-  contact   String
-  status    String   @default("pending")
-  createdAt DateTime @default(now())
-}
-
-model Class {
-  id          String   @id @default(cuid())
-  title       String
-  description String
-  videoUrl    String?
-  isLocked    Boolean  @default(true)
-  createdAt   DateTime @default(now())
-}
-
-model PortfolioItem {
-  id          String   @id @default(cuid())
-  title       String
+  /// price in cents (e.g. 2500 = 25.00)
+  priceCents  Int
+  /// "makeup" | "hair"
   category    String
+  /// "lipstick" | "blush" | "brow" | null  -> drives the try-on studio
+  filterType  String?
+  /// hex colour applied by the try-on filter, e.g. "#c0392b"
+  filterColor String?
+  /// human label for the shade, e.g. "Terracota 04"
+  shade       String?
   imageUrl    String
-  beforeAfter Boolean  @default(false)
+  stock       Int      @default(50)
+  featured    Boolean  @default(false)
   createdAt   DateTime @default(now())
+
+  orderItems OrderItem[]
+}
+
+/// Paid self-makeup courses.
+model Course {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  /// short blurb shown to everyone
+  summary     String
+  /// full description shown on the course page
+  description String
+  priceCents  Int
+  coverUrl    String
+  level       String   @default("Iniciante")
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  lessons     Lesson[]
+  orderItems  OrderItem[]
+  enrollments Enrollment[]
+}
+
+model Lesson {
+  id            String  @id @default(cuid())
+  courseId      String
+  course        Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  title         String
+  /// only returned by the API when the caller owns the course
+  videoUrl      String
+  durationLabel String  @default("00:00")
+  order         Int     @default(0)
+  /// a single lesson can be marked as a free preview
+  freePreview   Boolean @default(false)
+}
+
+model Order {
+  id           String      @id @default(cuid())
+  userId       String
+  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// total in cents
+  totalCents   Int
+  /// "paid" (simulated checkout) | "pending"
+  status       String      @default("paid")
+  customerName String
+  address      String
+  city         String
+  phone        String
+  createdAt    DateTime    @default(now())
+  items        OrderItem[]
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  /// "product" | "course"
+  kind      String
+  name      String
+  priceCents Int
+  quantity  Int     @default(1)
+
+  productId String?
+  product   Product? @relation(fields: [productId], references: [id])
+  courseId  String?
+  course    Course?  @relation(fields: [courseId], references: [id])
+}
+
+/// Grants a user access to a course's lesson videos.
+model Enrollment {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, courseId])
 }

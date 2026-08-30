@@ -1,27 +1,40 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Press_Start_2P, Silkscreen } from "next/font/google";
+import { Providers } from "@/components/Providers";
+import { NavBar } from "@/components/NavBar";
+import { Footer } from "@/components/Footer";
+
+const display = Press_Start_2P({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const pixel = Silkscreen({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-pixel",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Clé Beauty",
-  description: "Maquilhagem minimalista, penteados naturais e estética editorial."
+  title: "Clé Beauty — Academia & Loja",
+  description:
+    "Cursos de automaquiagem, produtos de maquilhagem e cabelo, e provador virtual de batom, blush e sobrancelhas.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>{children}</body>
+    <html lang="pt" className={`${display.variable} ${pixel.variable}`}>
+      <body>
+        <Providers>
+          <NavBar />
+          <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6">{children}</main>
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }
